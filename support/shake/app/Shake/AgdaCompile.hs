@@ -129,7 +129,7 @@ agdaRules = do
 -- | Compile the top-level Agda file.
 compileAgda :: IORef (Maybe TCState) -> Action CompileA
 compileAgda stateVar = do
-  files <- map ("src-translated" </>) <$> getDirectoryFiles "src-translated" ["**/*.agda", "**/*.lagda.md"]
+  files <- map ("src-zh" </>) <$> getDirectoryFiles "src-zh" ["**/*.agda", "**/*.lagda.md"]
   changed <- needHasChanged $ "_build/all-pages.agda":files
 
   watching <- getWatching
@@ -177,7 +177,7 @@ emitAgda
   -> (String -> Action (Hm.HashMap T.Text Identifier))
   -> T.Text -> Action ()
 emitAgda (CompileA tcState _) getTypes modName = do
-  basepn <- filePath <$> liftIO (absolute "src-translated/")
+  basepn <- filePath <$> liftIO (absolute "src-zh/")
 
   let tlModName = toTopLevel tcState modName
       iface = getInterface tcState tlModName

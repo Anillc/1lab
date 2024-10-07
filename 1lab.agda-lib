@@ -1,6 +1,6 @@
 name: 1lab
 include:
-  src-translated
+  src-zh
   wip
   _build
   .

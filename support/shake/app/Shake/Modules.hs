@@ -60,10 +60,10 @@ moduleRules = do
     gitOnly <- getGitOnly
 
     let
-      isAgda x = any (?== x) ["src-translated//*.agda", "src-translated//*.lagda.md"]
+      isAgda x = any (?== x) ["src-zh//*.agda", "src-zh//*.lagda.md"]
       getFiles = if gitOnly
         then map dropDirectory1 . filter isAgda <$> gitFiles
-        else getDirectoryFiles "src-translated" ["**/*.agda", "**/*.lagda.md"]
+        else getDirectoryFiles "src-zh" ["**/*.agda", "**/*.lagda.md"]
 
       toOut x | takeExtensions x == ".lagda.md"
               = (moduleName (dropExtensions x), WithText)

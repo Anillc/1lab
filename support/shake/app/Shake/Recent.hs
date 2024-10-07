@@ -44,7 +44,7 @@ recentAdditions = do
     [ "log", "--diff-filter=A"
     , "--pretty=format:%H%x00%aN%x00%s%x00%ad"
     , "--date=format:%B %d, %Y"
-    , "--", "src-translated/"
+    , "--", "src-zh/"
     ]
 
   allMods <- getOurModules

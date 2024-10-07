@@ -255,7 +255,7 @@ findModule :: MonadIO m => String -> m FilePath
 findModule modname = do
   let toPath '.' = '/'
       toPath c = c
-  let modfile = "src-translated" </> map toPath modname
+  let modfile = "src-zh" </> map toPath modname
 
   exists <- liftIO $ Dir.doesFileExist (modfile <.> "lagda.md")
   pure $ if exists
@@ -529,4 +529,4 @@ htmlInl = RawInline "html"
 pageTemplateName, talkTemplateName, bibliographyName :: FilePath
 pageTemplateName = "support/web/template.html"
 talkTemplateName = "support/web/template.reveal.html"
-bibliographyName = "src-translated/bibliography.bibtex"
+bibliographyName = "src-zh/bibliography.bibtex"

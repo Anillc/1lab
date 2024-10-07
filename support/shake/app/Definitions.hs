@@ -141,7 +141,7 @@ glossaryRules = do
     traced "parsing definitions" (parseDefinitions modn fp)
 
   _ <- addOracle \GlossaryQ -> do
-    md   <- fmap ("src-translated" </>) <$> getDirectoryFiles "src-translated" ["**/*.lagda.md"]
+    md   <- fmap ("src-zh" </>) <$> getDirectoryFiles "src-zh" ["**/*.lagda.md"]
     need md
     outs <- askOracles (ModuleGlossaryQ <$> md)
 

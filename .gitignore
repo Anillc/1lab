@@ -3,7 +3,7 @@
 
 # Canonical location for work-in-progress stuff
 src/wip/
-src-translated/wip/
+src-zh/wip/
 
 # Developer configuration
 /Makefile

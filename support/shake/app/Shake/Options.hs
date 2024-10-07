@@ -81,7 +81,7 @@ _1LabOptDescrs =
   , Option [] ["skip-types"] (NoArg (\r -> r { _optSkipTypes = True }))
       "Skip generating type tooltips when compiling Agda to HTML."
   , Option [] ["skip-agda"] (NoArg (\r -> r { _optSkipAgda = True, _optSkipTypes = True }))
-      "Skip typechecking Agda. Markdown files are read from src-translated/ directly."
+      "Skip typechecking Agda. Markdown files are read from src-zh/ directly."
   , Option "b" ["base-url"] (ReqArg (\s r -> r { _optBaseUrl = s }) "URL")
       "The base URL to use for absolute links. Should include the protocol."
   , Option [] ["git-only"] (NoArg (\r -> r { _optGitOnly = True }))
