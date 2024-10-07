@@ -23,11 +23,7 @@ jobs:
       - name: Install Nix ❄️
         uses: cachix/install-nix-action@v26
 
-      - name: Set up Cachix ♻️
-        uses: cachix/cachix-action@v14
-        with:
-          name: 1lab
-          skipPush: true
+      - uses: DeterminateSystems/magic-nix-cache-action@main
 
       - name: Build the Shakefile 🧰
         run: |
