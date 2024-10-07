@@ -26,6 +26,7 @@ jobs:
           extra_nix_config: |
             extra-substituters = https://1lab.cachix.org
             extra-trusted-public-keys = 1lab.cachix.org-1:eYjd9F9RfibulS4OSFBYeaTMxWojPYLyMqgJHDvG1fs=
+            access-tokens = github.com=${{ github.token }}
 
       - uses: DeterminateSystems/magic-nix-cache-action@main
 
