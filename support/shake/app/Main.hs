@@ -89,7 +89,7 @@ rules = do
       let
         input = case modName of
           "all-pages" -> "_build/all-pages"
-          _ -> "src" </> map (\c -> if c == '.' then '/' else c) modName
+          _ -> "src-translated" </> map (\c -> if c == '.' then '/' else c) modName
       in
       case modKind of
         Just WithText -> buildMarkdown modName (input <.> ".lagda.md") out
@@ -254,7 +254,7 @@ main = do
       (_, clean) <- buildOnce db wanted
 
       toRebuild <- atomically $ newTVar Set.empty
-      _ <- Watch.watchTree mgr "src" (isFile . Watch.eventIsDirectory) (logEvent toRebuild)
+      _ <- Watch.watchTree mgr "src-translated" (isFile . Watch.eventIsDirectory) (logEvent toRebuild)
       _ <- Watch.watchTree mgr "support" (isFile . Watch.eventIsDirectory) (logEvent toRebuild)
 
       root <- Dir.canonicalizePath "."
@@ -302,6 +302,6 @@ main = do
     toModule path
       | (path, ext) <- splitExtensions path
       , ext == ".lagda.md" || ext == ".agda"
-      , ("src":rest) <- splitDirectories path
+      , ("src-translated":rest) <- splitDirectories path
       = Just $ intercalate "." rest
       | otherwise = Nothing

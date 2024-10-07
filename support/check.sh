@@ -18,8 +18,8 @@ fi
 
 add-module () {
   echo "$1"                             | \
-    # Remove the leading `src/`, and turn slashes into dots
-    sed -re 's@^src/@@;s@/@.@g'         | \
+    # Remove the leading `src-translated/`, and turn slashes into dots
+    sed -re 's@^src-translated/@@;s@/@.@g'         | \
 
     # Remove the trailing file extension
     sed -re 's@(\.lagda\.md|\.agda)$@@' | \
@@ -30,7 +30,7 @@ add-module () {
 
 echo ">>> Building _build/all-pages.agda"
 
-git ls-files --full-name src/ | while IFS='' read file; do
+git ls-files --full-name src-translated/ | while IFS='' read file; do
   if echo "${file}" | egrep "l?agda(.md)?$" >/dev/null; then
     printf '.'
     add-module "${file}"

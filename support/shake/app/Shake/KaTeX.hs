@@ -56,8 +56,8 @@ getParsedPreamble = askOracle $ ParsedPreamble ()
 katexRules :: Rules ()
 katexRules = versioned 2 do
   _ <- addOracle \(ParsedPreamble _) -> do
-    need ["src/preamble.tex"]
-    t <- liftIO $ Text.readFile "src/preamble.tex"
+    need ["src-translated/preamble.tex"]
+    t <- liftIO $ Text.readFile "src-translated/preamble.tex"
     case parsePreamble t of
       Just p -> pure p
       Nothing -> error "Failed to parse preamble.tex!"

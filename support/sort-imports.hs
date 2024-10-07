@@ -31,7 +31,7 @@ main = do
   traverse_ sortImports =<< if null args then getAgdaFiles else pure args
 
 getAgdaFiles :: IO [FilePath]
-getAgdaFiles = map ("src" </>) <$> getDirectoryFilesIO "src" ["**/*.lagda.md", "**/*.agda"]
+getAgdaFiles = map ("src-translated" </>) <$> getDirectoryFilesIO "src-translated" ["**/*.lagda.md", "**/*.agda"]
 
 sortImports :: FilePath -> IO ()
 sortImports path
