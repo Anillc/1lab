@@ -1,0 +1,521 @@
+<!--
+```agda
+open import Cat.Functor.FullSubcategory
+open import Cat.Displayed.Univalence
+open import Cat.Functor.Conservative
+open import Cat.Functor.Properties
+open import Cat.Displayed.Total
+open import Cat.Functor.Adjoint
+open import Cat.Displayed.Base
+open import Cat.Functor.Base
+open import Cat.Prelude
+
+import Cat.Displayed.Morphism
+import Cat.Functor.Reasoning
+import Cat.Reasoning
+
+open _=>_ using (is-natural)
+open Displayed
+open Total-hom
+open Functor
+```
+-->
+
+```agda
+module Cat.Diagram.Monad where
+```
+
+<!--
+```
+module _ {o h : _} (C : Precategory o h) where
+  private module C = Cat.Reasoning C
+```
+-->
+
+# Monads {defines=monad}
+
+A **monad on a category** $\cC$ is one way of categorifying the
+concept of [monoid]. Specifically, rather than living in a monoidal
+category, a monad lives in a bicategory. Here, we concern ourselves with
+the case of monads in the bicategory of categories, so that we may say:
+A monad is an endofunctor $M$, equipped with a `unit`{.Agda} natural
+transformation $\Id \To M$, and a `multiplication`{.Agda
+ident=mult} $(M \circ M) \To M$.
+
+[monoid]: Algebra.Monoid.html
+
+```agda
+  record Monad : Type (o ⊔ h) where
+    no-eta-equality
+    field
+      M    : Functor C C
+      unit : Id => M
+      mult : (M F∘ M) => M
+```
+
+<!--
+```agda
+    module unit = _=>_ unit
+    module mult = _=>_ mult
+
+    M₀   = M .F₀
+    M₁   = M .F₁
+    M-id = M .F-id
+    M-∘  = M .F-∘
+    open unit using (η) public
+    open mult renaming (η to μ) using () public
+```
+-->
+
+Furthermore, these natural transformations must satisfy identity and
+associativity laws exactly analogous to those of a monoid.
+
+```agda
+    field
+      left-ident  : ∀ {x} → μ x C.∘ M₁ (η x) ≡ C.id
+      right-ident : ∀ {x} → μ x C.∘ η (M₀ x) ≡ C.id
+      mult-assoc  : ∀ {x} → μ x C.∘ M₁ (μ x) ≡ μ x C.∘ μ (M₀ x)
+```
+
+# Algebras over a monad {defines="monad-algebra algebra-over-a-monad"}
+
+One way of interpreting a monad $M$ is as giving a _signature_ for an
+algebraic theory. For instance, the [[free monoid]] monad describes the
+signature for the theory of monoids, and the [[free group|free group
+construction]] monad describes the theory of groups.
+
+Under this light, an **algebra over a monad** is a way of _evaluating_
+the abstract operations given by a monadic expression to a concrete
+value. Formally, an algebra for $M$ is given by a choice of object $A$
+and a morphism $\nu : M(A) \to A$.
+
+```agda
+  record Algebra-on (M : Monad) (ob : C.Ob) : Type (o ⊔ h) where
+    no-eta-equality
+    open Monad M
+
+    field
+      ν : C.Hom (M₀ ob) ob
+```
+
+This morphism must satisfy equations categorifying those which define a
+monoid action. If we think of $M$ as specifying a signature of
+_effects_, then `v-unit`{.Agda} says that the `unit`{.Agda} has no
+effects, and `v-mult`{.Agda} says that, given two layers $M(M(A))$, it
+doesn't matter whether you first join then evaluate, or evaluate twice.
+
+```agda
+      ν-unit : ν C.∘ η ob ≡ C.id
+      ν-mult : ν C.∘ M₁ ν ≡ ν C.∘ μ ob
+```
+
+<!--
+```agda
+  Algebra-on-pathp
+    : ∀ {M} {X Y} (p : X ≡ Y) {A : Algebra-on M X} {B : Algebra-on M Y}
+    → PathP (λ i → C.Hom (Monad.M₀ M (p i)) (p i)) (A .Algebra-on.ν) (B .Algebra-on.ν)
+    → PathP (λ i → Algebra-on M (p i)) A B
+  Algebra-on-pathp over mults i .Algebra-on.ν = mults i
+  Algebra-on-pathp {M} over {A} {B} mults i .Algebra-on.ν-unit =
+    is-prop→pathp (λ i → C.Hom-set _ _ (mults i C.∘ M.η _) (C.id {x = over i}))
+      (A .Algebra-on.ν-unit) (B .Algebra-on.ν-unit) i
+    where module M = Monad M
+  Algebra-on-pathp {M} over {A} {B} mults i .Algebra-on.ν-mult =
+    is-prop→pathp (λ i → C.Hom-set _ _ (mults i C.∘ M.M₁ (mults i)) (mults i C.∘ M.μ _))
+      (A .Algebra-on.ν-mult) (B .Algebra-on.ν-mult) i
+    where module M = Monad M
+
+instance
+  Extensional-Algebra-on
+    : ∀ {o ℓ ℓr} {C : Precategory o ℓ} {M : Monad C}
+    → (let open Precategory C)
+    → ∀ {X}
+    → ⦃ sa : Extensional (Hom (Monad.M₀ M X) X) ℓr ⦄
+    → Extensional (Algebra-on C M X) ℓr
+  Extensional-Algebra-on {C = C} ⦃ sa ⦄ =
+    injection→extensional! (Algebra-on-pathp C refl) sa
+```
+-->
+
+# Eilenberg-Moore category {defines=eilenberg-moore-category}
+
+If we take a monad $M$ as the signature of an (algebraic) theory, and
+$M$-algebras as giving _models_ of that theory, then we can ask (like
+with everything in category theory): Are there maps between
+interpretations? The answer (as always!) is yes: An `algebra
+homomorphism`{.Agda ident=Algebra-hom} is a map of the underlying
+objects which "commutes with the algebras".
+
+We can be more specific about "commuting with the algebras" by drawing a
+square: A map $m : X \to Y$ in the ambient category is a homomorphism of
+$M$-algebras when the square below commutes.
+
+```{.quiver}
+\[\begin{tikzcd}
+  {M(X)} && {M(Y)} \\
+  \\
+  {X} && {Y}
+  \arrow["{M_1(m)}", from=1-1, to=1-3]
+  \arrow["{\nu}"', from=1-1, to=3-1]
+  \arrow["{\nu\prime}", from=1-3, to=3-3]
+  \arrow["m"', from=3-1, to=3-3]
+\end{tikzcd}\]
+```
+
+We can assemble $M$-algebras and their homomorphisms into a
+[[displayed category]] over $\cC$: the type of objects over some $A$
+consists of all possible algebra structures on $A$, and the type of
+morphisms over $f : \cC(A,B)$ are proofs that $f$ is an $M$-algebra
+homomorphism.
+
+<!--
+```agda
+module _ {o ℓ} {C : Precategory o ℓ} (M : Monad C) where
+  private
+    module C = Cat.Reasoning C
+    module M = Monad M
+    module MR = Cat.Functor.Reasoning M.M
+  open M hiding (M)
+  open Algebra-on
+
+```
+-->
+
+```agda
+  Monad-algebras : Displayed C (o ⊔ ℓ) ℓ
+  Monad-algebras .Ob[_] X = Algebra-on C M X
+  Monad-algebras .Hom[_] f α β = f C.∘ α .ν ≡ β .ν C.∘ M₁ f
+  Monad-algebras .Hom[_]-set _ _ _ = hlevel 2
+```
+
+Defining the identity and composition maps is mostly an exercise in
+categorical yoga:
+
+```agda
+  Monad-algebras .id' {X} {α} =
+    C.id C.∘ α .ν    ≡⟨ C.idl _ ∙ C.intror M-id ⟩
+    α .ν C.∘ M₁ C.id ∎
+  Monad-algebras ._∘'_ {_} {_} {_} {α} {β} {γ} {f = f} {g = g} p q =
+    (f C.∘ g) C.∘ α .ν       ≡⟨ C.pullr q ⟩
+    f C.∘ β .ν C.∘ M₁ g      ≡⟨ C.pulll p ⟩
+    (γ .ν C.∘ M₁ f) C.∘ M₁ g ≡⟨ C.pullr (sym (M-∘ _ _)) ⟩
+    γ .ν C.∘ M₁ (f C.∘ g)    ∎
+```
+
+<details>
+<summary>
+The equations all hold trivially, as the type of displayed morphisms
+over $f$ is a proposition.
+</summary>
+
+```agda
+  Monad-algebras .idr' _ = prop!
+  Monad-algebras .idl' _ = prop!
+  Monad-algebras .assoc' _ _ _ = prop!
+```
+
+</details>
+
+The [[total category]] of this displayed category is referred
+to as the **Eilenberg Moore** category of $M$.
+
+```agda
+  Eilenberg-Moore : Precategory (o ⊔ ℓ) ℓ
+  Eilenberg-Moore = ∫ Monad-algebras
+
+  private
+    module EM = Cat.Reasoning Eilenberg-Moore
+
+  Algebra : Type _
+  Algebra = EM.Ob
+
+  Algebra-hom : (X Y : Algebra) → Type _
+  Algebra-hom X Y = EM.Hom X Y
+```
+
+<!--
+```agda
+module _ {o ℓ} {C : Precategory o ℓ} {M : Monad C} where
+  private
+    module C = Cat.Reasoning C
+    module M = Monad M
+    module MR = Cat.Functor.Reasoning M.M
+    module EM = Cat.Reasoning (Eilenberg-Moore M)
+  open M hiding (M)
+  open Algebra-on
+
+  instance
+    Extensional-Algebra-Hom
+      : ∀ {ℓr} {a b} {A : Algebra-on C M a} {B : Algebra-on C M b}
+      → ⦃ sa : Extensional (C.Hom a b) ℓr ⦄
+      → Extensional (Algebra-hom M (a , A) (b , B)) ℓr
+    Extensional-Algebra-Hom ⦃ sa ⦄ = injection→extensional!
+      (λ p → total-hom-path (Monad-algebras M) p prop!) sa
+```
+-->
+
+By projecting the underlying object of the algebras, and the underlying
+morphisms of the homomorphisms between them, we can define a functor
+from `Eilenberg-Moore`{.Agda} back to the underlying category:
+
+```agda
+  Forget-EM : Functor (Eilenberg-Moore M) C
+  Forget-EM = πᶠ (Monad-algebras M)
+```
+
+This functor is [[faithful]] as the maps in the Eilenberg-Moore category
+are structured maps of $\cC$.
+
+```agda
+  Forget-EM-is-faithful : is-faithful Forget-EM
+  Forget-EM-is-faithful = ext
+```
+
+Moreover, this functor is [[conservative]]. This follows from a bit of
+routine algebra.
+
+```agda
+  Forget-EM-is-conservative : is-conservative Forget-EM
+  Forget-EM-is-conservative {X , α} {Y , β} {f = f} f-inv =
+    EM.make-invertible f-alg-inv (ext invl) (ext invr)
+    where
+      open C.is-invertible f-inv
+
+      f-alg-inv : Algebra-hom M (Y , β) (X , α)
+      f-alg-inv .hom = inv
+      f-alg-inv .preserves =
+        inv C.∘ β .ν                                 ≡⟨ ap₂ C._∘_ refl (C.intror (MR.annihilate invl)) ⟩
+        inv C.∘ β .ν C.∘ M₁ (f .hom) C.∘ M.M₁ inv    ≡⟨ ap₂ C._∘_ refl (C.extendl (sym (f .preserves))) ⟩
+        inv C.∘ f .hom C.∘ α .ν C.∘ M.M₁ inv         ≡⟨ C.cancell invr ⟩
+        α .ν C.∘ M₁ inv                              ∎
+```
+
+### Univalence
+
+The displayed category of monad algebras is a
+[[displayed univalent category]]. This is relatively straightforward
+to show: first, note that the type of displayed isomorphisms must
+be a proposition. Next, we can perform a bit of simple algebra to show
+that the actions of two isomorphic $M$-algebras are, in fact, equal.
+
+```agda
+  Monad-algebras-is-category : is-category-displayed (Monad-algebras M)
+  Monad-algebras-is-category f α (β , p) (γ , q) =
+    Σ-prop-path (λ _ _ _ → ext prop!) $ ext $
+      β .ν                         ≡⟨ C.introl invl ⟩
+      (to C.∘ from) C.∘ β .ν       ≡⟨ C.pullr (p .from') ⟩
+      to C.∘ α .ν C.∘ M₁ from      ≡⟨ C.pulll (q .to') ⟩
+      (γ .ν C.∘ M₁ to) C.∘ M₁ from ≡⟨ MR.cancelr invl ⟩
+      γ .ν                         ∎
+    where
+      open C._≅_ f
+      open Cat.Displayed.Morphism (Monad-algebras M)
+```
+
+By [[univalence of total categories]], we can immediately deduce that
+the Eilenberg-Moore category inherits univalence from the base category.
+
+```agda
+  EM-is-category : is-category C → is-category (Eilenberg-Moore M)
+  EM-is-category cat =
+    is-category-total (Monad-algebras M) cat Monad-algebras-is-category
+```
+
+## Free algebras {defines="free-algebra kleisli-category"}
+
+In exactly the same way that we may construct a _[free group]_ by taking
+the inhabitants of some set $X$ as generating the "words" of a group, we
+can, given an object $A$ of the underlying category, build a **free
+$M$-algebra** on $A$. Keeping with our interpretation of monads as
+logical signatures, this is the _syntactic model_ of $M$, with a set of
+"neutrals" chosen from the object $A$.
+
+[free group]: Algebra.Group.Free.html
+
+This construction is a lot simpler to do in generality than in any
+specific case: We can always turn $A$ into an $M$-algebra by taking the
+underlying object to be $M(A)$, and the algebra map to be the monadic
+multiplication; The associativity and unit laws of the monad _itself_
+become those of the $M$-action.
+
+```agda
+  Free-EM : Functor C (Eilenberg-Moore M)
+  Free-EM .F₀ A .fst = M₀ A
+  Free-EM .F₀ A .snd .ν = μ A
+  Free-EM .F₀ A .snd .ν-mult = mult-assoc
+  Free-EM .F₀ A .snd .ν-unit = right-ident
+```
+
+The construction of free $M$-algebras is furthermore functorial on the
+underlying objects; Since the monadic multiplication is a natural
+transformation $M\circ M \To M$, the naturality condition (drawn below)
+doubles as showing that the functorial action of $M$ can be taken as an
+algebraic action:
+
+```{.quiver}
+\[\begin{tikzcd}
+  MMA && MMB \\
+  \\
+  MA && MB
+  \arrow["MMf", from=1-1, to=1-3]
+  \arrow["Mf"', from=3-1, to=3-3]
+  \arrow["{\mu_A}"', from=1-1, to=3-1]
+  \arrow["{\mu_B}", from=1-3, to=3-3]
+\end{tikzcd}\]
+```
+
+```agda
+  Free-EM .F₁ f .hom = M₁ f
+  Free-EM .F₁ f .preserves = sym $ mult.is-natural _ _ _
+  Free-EM .F-id = ext M-id
+  Free-EM .F-∘ f g = ext (M-∘ f g)
+```
+
+This is a free construction in the precise sense of the word: it's the
+[left adjoint] to the functor `Forget-EM`{.Agda}, so in particular it
+provides a systematic, \[\[universal|universal-morphism]] way of mapping from $\cC$ to
+$\cC^M$.
+
+[left adjoint]: Cat.Functor.Adjoint.html
+
+```agda
+  open _⊣_
+
+  Free-EM⊣Forget-EM : Free-EM ⊣ Forget-EM
+  Free-EM⊣Forget-EM .unit =
+    NT M.η M.unit.is-natural
+  Free-EM⊣Forget-EM .counit =
+    NT (λ x → total-hom (x .snd .ν) (sym (x .snd .ν-mult)))
+      (λ x y f → ext (sym (f .preserves)))
+  Free-EM⊣Forget-EM .zig = ext left-ident
+  Free-EM⊣Forget-EM .zag {x} = x .snd .ν-unit
+```
+
+The [[full subcategory]] of free $M$-algebras is often referred to
+as the **Kleisli category** of $M$.
+
+<!--
+```agda
+module _ {o ℓ} {C : Precategory o ℓ} (M : Monad C) where
+  private
+    module C = Cat.Reasoning C
+    module M = Monad M
+    module MR = Cat.Functor.Reasoning M.M
+  open M hiding (M)
+  open Algebra-on
+
+```
+-->
+
+```agda
+  Kleisli : Precategory (o ⊔ ℓ) ℓ
+  Kleisli = Essential-image (Free-EM {M = M})
+```
+
+If $\cC$ is univalent then so is the Kleisli category as it is a
+full subcategory of a univalent category.
+
+<!--
+```agda
+module _ {o ℓ} {C : Precategory o ℓ} {M : Monad C} where
+  private
+    module C = Cat.Reasoning C
+    module M = Monad M
+    module MR = Cat.Functor.Reasoning M.M
+  open M hiding (M)
+  open Algebra-on
+
+```
+-->
+
+```agda
+  Kleisli-is-category : is-category C → is-category (Kleisli M)
+  Kleisli-is-category cat = Essential-image-is-category Free-EM
+    (EM-is-category cat)
+```
+
+As the Kleisli category is a full subcategory, there is a canonical
+full inclusion into the Eilenberg-Moore category.
+
+```agda
+  Kleisli→EM : Functor (Kleisli M) (Eilenberg-Moore M)
+  Kleisli→EM = Forget-full-subcat
+
+  Kleisli→EM-is-ff : is-fully-faithful Kleisli→EM
+  Kleisli→EM-is-ff = id-equiv
+```
+
+Additionally, the free/forgetful adjunction between $\cC$ and the
+Eilenberg-Moore category can be restricted to the Kleisli category.
+
+```agda
+  Forget-Kleisli : Functor (Kleisli M) C
+  Forget-Kleisli = Forget-EM F∘ Kleisli→EM
+
+  Free-Kleisli : Functor C (Kleisli M)
+  Free-Kleisli = Essential-inc Free-EM
+
+  Free-Kleisli⊣Forget-Kleisli : Free-Kleisli ⊣ Forget-Kleisli
+  Free-Kleisli⊣Forget-Kleisli ._⊣_.unit ._=>_.η = η
+  Free-Kleisli⊣Forget-Kleisli ._⊣_.unit .is-natural = unit.is-natural
+  Free-Kleisli⊣Forget-Kleisli ._⊣_.counit ._=>_.η ((X , α) , free) =
+    total-hom (α .ν) (sym (α .ν-mult))
+  Free-Kleisli⊣Forget-Kleisli ._⊣_.counit .is-natural _ _ f =
+    ext (sym (f .preserves))
+  Free-Kleisli⊣Forget-Kleisli ._⊣_.zig =
+    ext left-ident
+  Free-Kleisli⊣Forget-Kleisli ._⊣_.zag {(X , α) , free} =
+    α . ν-unit
+```
+
+Note that the forgetful functor from the Kleisli category of $M$
+to $\cC$ is also faithful and conservative.
+
+```agda
+  Forget-Kleisli-is-faithful : is-faithful Forget-Kleisli
+  Forget-Kleisli-is-faithful = Forget-EM-is-faithful
+
+  Forget-Kleisli-is-conservative : is-conservative Forget-Kleisli
+  Forget-Kleisli-is-conservative f-inv =
+    super-inv→sub-inv _ $
+    Forget-EM-is-conservative f-inv
+```
+
+<!--
+```agda
+module _ {o h : _} {C : Precategory o h} {M N : Monad C} where
+  private
+    module C = Cat.Reasoning C
+    module M = Monad M
+    module N = Monad N
+
+  Monad-path
+    : (p0 : ∀ x → M.M₀ x ≡ N.M₀ x)
+    → (p1 : ∀ {x y} (f : C.Hom x y) → PathP (λ i → C.Hom (p0 x i) (p0 y i)) (M.M₁ f) (N.M₁ f))
+    → (∀ x → PathP (λ i → C.Hom x (p0 x i)) (M.η x) (N.η x))
+    → (∀ x → PathP (λ i → C.Hom (p0 (p0 x i) i) (p0 x i)) (M.μ x) (N.μ x))
+    → M ≡ N
+  Monad-path p0 p1 punit pmult = path where
+    M=N : M.M ≡ N.M
+    M=N = Functor-path p0 p1
+
+    path : M ≡ N
+    path i .Monad.M = M=N i
+    path i .Monad.unit =
+      Nat-pathp refl M=N {a = M.unit} {b = N.unit} punit i
+    path i .Monad.mult =
+      Nat-pathp (ap₂ _F∘_ M=N M=N) M=N {a = M.mult} {b = N.mult} pmult i
+    path i .Monad.left-ident {x = x} =
+      is-prop→pathp (λ i → C.Hom-set (p0 x i) (p0 x i) (pmult x i C.∘ p1 (punit x i) i) C.id)
+        M.left-ident
+        N.left-ident i
+    path i .Monad.right-ident {x = x} =
+      is-prop→pathp (λ i → C.Hom-set (p0 x i) (p0 x i) (pmult x i C.∘ punit (p0 x i) i) C.id)
+        M.right-ident
+        N.right-ident i
+    path i .Monad.mult-assoc {x} =
+      is-prop→pathp (λ i → C.Hom-set (p0 (p0 (p0 x i) i) i) (p0 x i) (pmult x i C.∘ p1 (pmult x i) i) (pmult x i C.∘ pmult (p0 x i) i))
+        M.mult-assoc
+        N.mult-assoc i
+```
+-->
