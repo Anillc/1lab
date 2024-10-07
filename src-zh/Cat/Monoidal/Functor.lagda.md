@@ -128,7 +128,7 @@ yielding the notion of a **braided monoidal functor**.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {FA \otimes FB} & {F(A \otimes B)} \\
+  {FA \otimes FB} & {F(A \otimes B)} \
   {FB \otimes FA} & {F(B \otimes A)}
   \arrow["\varphi", from=1-1, to=1-2]
   \arrow["\beta"', from=1-1, to=2-1]
@@ -185,7 +185,7 @@ functor that makes the following diagram commute:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  FA \\
+  FA \
   {FA \otimes FA} & {F(A \otimes A)}
   \arrow["\delta"', from=1-1, to=2-1]
   \arrow["\varphi"', from=2-1, to=2-2]
@@ -231,7 +231,7 @@ diagrams commute.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {FA \otimes FB} & {GA \otimes GB} \\
+  {FA \otimes FB} & {GA \otimes GB} \
   {F(A \otimes B)} & {G(A \otimes B)}
   \arrow[from=1-1, to=2-1]
   \arrow["{\alpha_A \otimes \alpha_B}", from=1-1, to=1-2]
@@ -242,7 +242,7 @@ diagrams commute.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  1 \\
+  1 \
   F1 & G1
   \arrow[from=1-1, to=2-1]
   \arrow["{\alpha_1}"', from=2-1, to=2-2]

@@ -33,8 +33,8 @@ of $F$ along $p$".
 
 ```{.quiver}
 \[\begin{tikzcd}
-  C && D \\
-  \\
+  C && D \
+  \
   {C'}
   \arrow["F", from=1-1, to=1-3]
   \arrow["p"', from=1-1, to=3-1]
@@ -77,10 +77,10 @@ triangle _are the same_.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  && \cC \\
-  \\
-  {\cC'} &&&& \cD \\
-  \\
+  && \cC \
+  \
+  {\cC'} &&&& \cD \
+  \
   && \cC
   \arrow["F", from=1-3, to=3-5]
   \arrow["p"', from=1-3, to=3-1]

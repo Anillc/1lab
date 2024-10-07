@@ -361,9 +361,9 @@ Assume we have a prism of isomorphisms, as in the following diagram:
 
 ```{.quiver}
 \begin{tikzcd}
-  & v \\
-  u && w \\
-  & y \\
+  & v \
+  u && w \
+  & y \
   x && z
   \arrow["c"{description, pos=0.7}, from=2-1, to=2-3]
   \arrow["i"{description}, from=4-1, to=4-3]

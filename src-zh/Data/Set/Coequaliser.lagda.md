@@ -47,7 +47,7 @@ the diagram below.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  A & B & {\rm{coeq}(f,g)} \\
+  A & B & {\rm{coeq}(f,g)} \
   && C
   \arrow["f", shift left=1, from=1-1, to=1-2]
   \arrow["g"', shift right=1, from=1-1, to=1-2]

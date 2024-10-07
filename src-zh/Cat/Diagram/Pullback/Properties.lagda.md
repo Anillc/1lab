@@ -33,7 +33,7 @@ Degenerate squares where two opposite sides are identities are pullbacks.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a & a \\
+  a & a \
   b & b
   \arrow[Rightarrow, no head, from=1-1, to=1-2]
   \arrow["f"', from=1-1, to=2-1]
@@ -62,8 +62,8 @@ through.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && b && c \\
-  \\
+  a && b && c \
+  \
   d && e && f
   \arrow[from=1-1, to=3-1]
   \arrow[from=1-1, to=1-3]
@@ -93,9 +93,9 @@ the two arrows we assume commutative.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  x \\
-  & a && b && c \\
-  \\
+  x \
+  & a && b && c \
+  \
   & d && e && f
   \arrow[from=2-2, to=4-2]
   \arrow[from=2-2, to=2-4]
@@ -199,8 +199,8 @@ is a monomorphism iff. the square below is a pullback.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && a \\
-  \\
+  a && a \
+  \
   a && b
   \arrow["f", from=1-3, to=3-3]
   \arrow["f"', from=3-1, to=3-3]

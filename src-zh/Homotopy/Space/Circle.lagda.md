@@ -185,8 +185,8 @@ loop, which we can picture as the boundary of a square.  Namely,
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\rm{base}} && {\rm{base}} \\
-  \\
+  {\rm{base}} && {\rm{base}} \
+  \
   {\rm{base}} && {\rm{base}}
   \arrow["{\rm{loop}^n}", from=1-3, to=3-3]
   \arrow["{\rm{loop}}"', from=3-1, to=3-3]
@@ -207,10 +207,10 @@ face has a dotted boundary.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\rm{base}} &&&& {\rm{base}} \\
-  & {\rm{base}} && {\rm{base}} \\
-  \\
-  & {\rm{base}} && {\rm{base}} \\
+  {\rm{base}} &&&& {\rm{base}} \
+  & {\rm{base}} && {\rm{base}} \
+  \
+  & {\rm{base}} && {\rm{base}} \
   {\rm{base}} &&&& {\rm{base}}
   \arrow["{\rm{refl}}", from=2-2, to=2-4]
   \arrow[""{name=0, anchor=center, inner sep=0}, "{\rm{loop}^{1+n}}"', from=2-2, to=4-2]

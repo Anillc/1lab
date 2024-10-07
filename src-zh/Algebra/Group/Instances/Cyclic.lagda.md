@@ -216,7 +216,7 @@ equivalences:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\mathbb{Z}/2\mathbb{Z}} & {S_2} \\
+  {\mathbb{Z}/2\mathbb{Z}} & {S_2} \
   {[2]} & {[2]}
   \arrow["f", from=1-1, to=1-2]
   \arrow["\simeq", from=1-2, to=2-2]

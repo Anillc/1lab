@@ -347,8 +347,8 @@ same:
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  {ff\inv fx} \&\& fx \\
-  \\
+  {ff\inv fx} \&\& fx \
+  \
   fx \&\& fx
   \arrow["{f(\eta x)}", from=1-1, to=1-3]
   \arrow["{\eps (fx)}"', from=1-1, to=3-1]
@@ -481,8 +481,8 @@ $f$.  Diagrammatically, these fit together into a square:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {g\ y} && {g\ (f\ x_0)} \\
-  \\
+  {g\ y} && {g\ (f\ x_0)} \
+  \
   {g\ y} && {x_0}
   \arrow["{g\ y}"', from=1-1, to=3-1]
   \arrow["{t\ x_0\ k}", from=1-3, to=3-3]
@@ -518,8 +518,8 @@ $\theta_1$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {g\ y} && {g\ (f\ x_1)} \\
-  \\
+  {g\ y} && {g\ (f\ x_1)} \
+  \
   {g\ y} && {x_1}
   \arrow["{g\ y}"', from=1-1, to=3-1]
   \arrow["{t\ x_1\ k}", from=1-3, to=3-3]
@@ -609,10 +609,10 @@ the $j = \rm{i0}$ (top) face is `t (π i) (~ k)`, and similarly for $i =
 
 ```{.quiver}
 \[\begin{tikzcd}
-  \textcolor{rgb,255:red,214;green,92;blue,92}{g\ (f\ (g\ x_0))} &&&& \textcolor{rgb,255:red,214;green,92;blue,92}{g\ (f\ (g\ x_1))} \\
-  & \textcolor{rgb,255:red,92;green,92;blue,214}{x_0} && \textcolor{rgb,255:red,92;green,92;blue,214}{x_1} \\
-  \\
-  & \textcolor{rgb,255:red,92;green,92;blue,214}{g\ y} && \textcolor{rgb,255:red,92;green,92;blue,214}{g\ y} \\
+  \textcolor{rgb,255:red,214;green,92;blue,92}{g\ (f\ (g\ x_0))} &&&& \textcolor{rgb,255:red,214;green,92;blue,92}{g\ (f\ (g\ x_1))} \
+  & \textcolor{rgb,255:red,92;green,92;blue,214}{x_0} && \textcolor{rgb,255:red,92;green,92;blue,214}{x_1} \
+  \
+  & \textcolor{rgb,255:red,92;green,92;blue,214}{g\ y} && \textcolor{rgb,255:red,92;green,92;blue,214}{g\ y} \
   \textcolor{rgb,255:red,214;green,92;blue,92}{g\ y} &&&& \textcolor{rgb,255:red,214;green,92;blue,92}{g\ y}
   \arrow[""{name=0, anchor=center, inner sep=0}, "\pi"', color={rgb,255:red,92;green,92;blue,214}, from=2-2, to=2-4]
   \arrow[""{name=1, anchor=center, inner sep=0}, "{g\ y}", color={rgb,255:red,92;green,92;blue,214}, from=4-2, to=4-4]
@@ -658,10 +658,10 @@ cubical diagram below. Once more, left is $i = \rm{i0}$, right is $i =
 ```{.quiver}
 \small
 \[\begin{tikzcd}
-  \textcolor{rgb,255:red,214;green,92;blue,92}{f(x_0)} &&&& \textcolor{rgb,255:red,214;green,92;blue,92}{f(x_1)} \\
-  & \textcolor{rgb,255:red,92;green,92;blue,214}{f(g(f(g\ x_0)))} && \textcolor{rgb,255:red,92;green,92;blue,214}{f(g(f(g\ x_1)))} \\
-  && \textcolor{rgb,255:red,92;green,92;blue,214}{f\ (\iota\ i\ j)} \\
-  & \textcolor{rgb,255:red,92;green,92;blue,214}{f\ (g\ y)} && \textcolor{rgb,255:red,92;green,92;blue,214}{f\ (g\ y)} \\
+  \textcolor{rgb,255:red,214;green,92;blue,92}{f(x_0)} &&&& \textcolor{rgb,255:red,214;green,92;blue,92}{f(x_1)} \
+  & \textcolor{rgb,255:red,92;green,92;blue,214}{f(g(f(g\ x_0)))} && \textcolor{rgb,255:red,92;green,92;blue,214}{f(g(f(g\ x_1)))} \
+  && \textcolor{rgb,255:red,92;green,92;blue,214}{f\ (\iota\ i\ j)} \
+  & \textcolor{rgb,255:red,92;green,92;blue,214}{f\ (g\ y)} && \textcolor{rgb,255:red,92;green,92;blue,214}{f\ (g\ y)} \
   \textcolor{rgb,255:red,214;green,92;blue,92}{y} &&&& \textcolor{rgb,255:red,214;green,92;blue,92}{y}
   \arrow[""{name=0, anchor=center, inner sep=0}, "{p_1}", from=1-5, to=5-5]
   \arrow[""{name=1, anchor=center, inner sep=0}, "{\ap{f}{\pi}}", color={rgb,255:red,214;green,92;blue,92}, from=1-1, to=1-5]

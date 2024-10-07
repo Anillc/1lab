@@ -32,7 +32,7 @@ $P$:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & Q \\
+  & Q \
   A & P & B
   \arrow[from=2-2, to=2-1]
   \arrow[from=2-2, to=2-3]
@@ -121,8 +121,8 @@ one below:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & P \\
-  A && B \\
+  & P \
+  A && B \
   & {P'}
   \arrow[from=3-2, to=2-3]
   \arrow[from=1-2, to=2-3]
@@ -137,8 +137,8 @@ an isomorphism $P \cong P'$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & P \\
-  A && B \\
+  & P \
+  A && B \
   & {P'}
   \arrow[from=3-2, to=2-3]
   \arrow[from=1-2, to=2-3]

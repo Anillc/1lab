@@ -30,8 +30,8 @@ identities.
 
 ```{.quiver}
 \[\begin{tikzcd}
-	{\mathcal E} && {\mathcal F} \\
-	\\
+	{\mathcal E} && {\mathcal F} \
+	\
 	\mathcal A && \mathcal B
 	\arrow["{\mathbf{L}}", curve={height=-12pt}, from=1-1, to=1-3]
 	\arrow["{\mathbf R}", curve={height=-12pt}, from=1-3, to=1-1]

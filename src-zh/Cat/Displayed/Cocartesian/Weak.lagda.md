@@ -217,9 +217,9 @@ morphism $h' : x' \to_{mf} u'$, as depicted in the following diagram
 
 ```{.quiver}
 \begin{tikzcd}
-  && {} && {u'} \\
-  {x'} && {y'} \\
-  &&&& u \\
+  && {} && {u'} \
+  {x'} && {y'} \
+  &&&& u \
   x && y
   \arrow[lies over, from=2-1, to=4-1]
   \arrow[lies over, from=2-3, to=4-3]
@@ -237,9 +237,9 @@ which we have highlighted in red.
 
 ```{.quiver}
 \begin{tikzcd}
-  && \textcolor{rgb,255:red,214;green,92;blue,92}{y^{*}} && {u'} \\
-  {x'} && {y'} \\
-  &&&& u \\
+  && \textcolor{rgb,255:red,214;green,92;blue,92}{y^{*}} && {u'} \
+  {x'} && {y'} \
+  &&&& u \
   x && y
   \arrow[lies over, from=2-1, to=4-1]
   \arrow[lies over, from=2-3, to=4-3]
@@ -269,9 +269,9 @@ universal factorisation of $h'$ through $m^{_}$.
 
 ```{.quiver}
 \begin{tikzcd}
-  && {y^{*}} && {u'} \\
-  {x'} && {y'} \\
-  &&&& u \\
+  && {y^{*}} && {u'} \
+  {x'} && {y'} \
+  &&&& u \
   x && y
   \arrow[lies over, from=2-1, to=4-1]
   \arrow[lies over, from=2-3, to=4-3]
@@ -301,9 +301,9 @@ as $f'$ is weakly cartesian.
 
 ```{.quiver}
 \begin{tikzcd}
-  && {y^{*}} && {u'} \\
-  {x'} && {y'} \\
-  &&&& u \\
+  && {y^{*}} && {u'} \
+  {x'} && {y'} \
+  &&&& u \
   x && y
   \arrow[lies over, from=2-1, to=4-1]
   \arrow[lies over, from=2-3, to=4-3]
@@ -346,9 +346,9 @@ in the following diagram commutes.
 
 ```{.quiver}
 \begin{tikzcd}
-  && {y^{*}} && {u'} \\
-  {x'} && {y'} \\
-  &&&& u \\
+  && {y^{*}} && {u'} \
+  {x'} && {y'} \
+  &&&& u \
   x && y
   \arrow[lies over, from=2-1, to=4-1]
   \arrow[lies over, from=2-3, to=4-3]
@@ -371,9 +371,9 @@ denote this morphism as $id\*$.
 
 ```{.quiver}
 \begin{tikzcd}
-  && {y^{*}} && {u'} \\
-  {x'} && {y'} \\
-  &&&& u \\
+  && {y^{*}} && {u'} \
+  {x'} && {y'} \
+  &&&& u \
   x && y
   \arrow[lies over, from=2-1, to=4-1]
   \arrow[lies over, from=2-3, to=4-3]
@@ -396,9 +396,9 @@ blue commutes.
 
 ```{.quiver}
 \begin{tikzcd}
-  && {y^{*}} && {u'} \\
-  {x'} && {y'} \\
-  &&&& u \\
+  && {y^{*}} && {u'} \
+  {x'} && {y'} \
+  &&&& u \
   x && y
   \arrow[lies over, from=2-1, to=4-1]
   \arrow[lies over, from=2-3, to=4-3]

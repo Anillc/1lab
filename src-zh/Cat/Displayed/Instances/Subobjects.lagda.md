@@ -137,9 +137,9 @@ remind ourselves of the universal property:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  \textcolor{rgb,255:red,214;green,92;blue,92}{u'} \\
-  & \textcolor{rgb,255:red,92;green,92;blue,214}{x \times_y y'} && {y'} \\
-  \textcolor{rgb,255:red,214;green,92;blue,92}{u} \\
+  \textcolor{rgb,255:red,214;green,92;blue,92}{u'} \
+  & \textcolor{rgb,255:red,92;green,92;blue,214}{x \times_y y'} && {y'} \
+  \textcolor{rgb,255:red,214;green,92;blue,92}{u} \
   & x && y
   \arrow[hook, from=2-4, to=4-4]
   \arrow["f"', from=4-2, to=4-4]
@@ -206,8 +206,8 @@ factorisation looks like a kite:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && {\im f} && m \\
-  \\
+  a && {\im f} && m \
+  \
   && b
   \arrow[from=1-1, to=1-3]
   \arrow[hook, from=1-3, to=3-3]
@@ -223,8 +223,8 @@ co-cartesian lift:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {x'} && {f_!x'} && {u'} \\
-  \\
+  {x'} && {f_!x'} && {u'} \
+  \
   x && y
   \arrow[hook, from=1-1, to=3-1]
   \arrow["f"', from=3-1, to=3-3]

@@ -69,8 +69,8 @@ that `path`{.Agda} is a group homomorphism. More specifically,
 
 ```{.quiver}
 \[\begin{tikzcd}
-  \bullet && \bullet \\
-  \\
+  \bullet && \bullet \
+  \
   \bullet && \bullet
   \arrow["{\refl}"', from=1-1, to=3-1]
   \arrow["{\rm{path}(x)}", from=1-1, to=1-3]
@@ -395,8 +395,8 @@ loops $x_0$, $x_1$ fiting into a commutative square
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  {\rm{base}} \&\& {\rm{base}} \\
-  \\
+  {\rm{base}} \&\& {\rm{base}} \
+  \
   {\rm{base}} \&\& {\rm{base}}
   \arrow["{x_1}", from=1-1, to=1-3]
   \arrow["{\rm{path}(b)}"', from=1-1, to=3-1]

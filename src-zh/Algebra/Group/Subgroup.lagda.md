@@ -245,7 +245,7 @@ mentioned above).
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\ker f} & A & {A/\ker(f)} \\
+  {\ker f} & A & {A/\ker(f)} \
   && F
   \arrow["0", shift left=2, from=1-1, to=1-2]
   \arrow[shift right=2, hook, from=1-1, to=1-2]

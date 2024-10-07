@@ -57,7 +57,7 @@ as follows:
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  \& b \&\& d \\
+  \& b \&\& d \
   a \&\& c
   \arrow["f"', color={rgb,255:red,214;green,92;blue,214}, from=1-2, to=2-1]
   \arrow["g"', from=1-2, to=2-3]
@@ -101,7 +101,7 @@ we have a zigzag starting with
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  \& b \&\& \dots \\
+  \& b \&\& \dots \
   a \&\& a
   \arrow["f"', color={rgb,255:red,214;green,92;blue,214}, from=1-2, to=2-1]
   \arrow["f", from=1-2, to=2-3]

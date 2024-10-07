@@ -54,8 +54,8 @@ commuting _squares_, of the form
 
 ```{.quiver}
 \[\begin{tikzcd}
-  x' && y' \\
-  \\
+  x' && y' \
+  \
   x && {y\text{,}}
   \arrow["{p_x}"', dashed, from=1-1, to=3-1]
   \arrow["{p_y}"', dashed, from=1-3, to=3-3]
@@ -182,8 +182,8 @@ A map $f' : x' \to y'$ over $f : x \to y$ in the codomain fibration is
 
 ```{.quiver}
 \begin{tikzcd}
-  {x'} && {y'} \\
-  \\
+  {x'} && {y'} \
+  \
   x && y
   \arrow["f"', from=3-1, to=3-3]
   \arrow["g"', from=1-1, to=3-1]

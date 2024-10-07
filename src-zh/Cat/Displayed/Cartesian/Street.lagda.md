@@ -52,7 +52,7 @@ P(u) \cong x$. But visually, we depict them as
 
 ```{.quiver}
 \[\begin{tikzcd}
-  u \\
+  u \
   {P(u)} & {x\text{,}}
   \arrow[lies over, from=1-1, to=2-1]
   \arrow["\phi"', from=2-1, to=2-2]
@@ -72,8 +72,8 @@ condition is for the lower shape, which is a distorted square.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & u && v \\
-  & {P(u)} && {P(v)} \\
+  & u && v \
+  & {P(u)} && {P(v)} \
   x &&&& y
   \arrow[lies over, from=1-2, to=2-2]
   \arrow[lies over, from=1-4, to=2-4]

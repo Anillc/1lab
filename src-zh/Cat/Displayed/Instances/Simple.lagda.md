@@ -151,10 +151,10 @@ the map $\pi_2 : \Gamma \times Y \to Y$, as in the following diagram:
 
 ```{.quiver}
 \begin{tikzcd}
-  Y \\
-  & X && Y \\
-  \Gamma \\
-  & \Gamma && \Delta \\
+  Y \
+  & X && Y \
+  \Gamma \
+  & \Gamma && \Delta \
   \arrow["{\exists ! i}", dashed, from=1-1, to=2-2]
   \arrow["{f'}", from=2-2, to=2-4]
   \arrow[lies over, from=2-2, to=4-2]
@@ -198,11 +198,11 @@ to $\pi_2$. To see this, consider the following diagram
 
 ```{.quiver}
 \begin{tikzcd}
-  X \\
-  & Y \\
-  \Gamma && X && Y \\
-  & \Gamma \\
-  && \Gamma && \Delta \\
+  X \
+  & Y \
+  \Gamma && X && Y \
+  & \Gamma \
+  && \Gamma && \Delta \
   \arrow["{\exists ! i}", dashed, from=2-2, to=3-3]
   \arrow["{f'}", from=3-3, to=3-5]
   \arrow[lies over, from=3-3, to=5-3]

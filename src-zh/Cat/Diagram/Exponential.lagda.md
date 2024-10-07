@@ -334,8 +334,8 @@ Suppose $B$ is exponentiable. The value $\Pi_B(f)$ on a family $f : A
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  {\Pi_B(f)} \&\& {A^B} \\
-  \\
+  {\Pi_B(f)} \&\& {A^B} \
+  \
   1 \&\& {B^B\text{,}}
   \arrow[from=1-1, to=3-1]
   \arrow["{\lambda(\pi_2)}"', from=3-1, to=3-3]

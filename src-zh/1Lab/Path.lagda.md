@@ -386,8 +386,8 @@ horizontal direction.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && a \\
-  & {\footnotesize \text{drop-i}} \\
+  a && a \
+  & {\footnotesize \text{drop-i}} \
   b && b
   \arrow["{p(\iZ)~ =~ a}", from=1-1, to=1-3]
   \arrow["{p(\iO)~ =~ b}"', from=3-1, to=3-3]
@@ -398,8 +398,8 @@ horizontal direction.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && b \\
-	& {\footnotesize \text{drop-j}} \\
+  a && b \
+	& {\footnotesize \text{drop-j}} \
   a && b
   \arrow["p(i)", from=1-1, to=1-3]
   \arrow["p(i)"', from=3-1, to=3-3]

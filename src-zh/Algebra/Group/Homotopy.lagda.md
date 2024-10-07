@@ -96,10 +96,10 @@ have `p` and `q` slip by each other.
 
 ```{.quiver}
 \[\begin{tikzcd}
-	{\refl} &&& {\refl} &&& {\refl} \\
-	& {\refl \cdot \refl} && {\refl \cdot \refl} && {\refl \cdot \refl} \\
-	\\
-	& {\refl \cdot \refl} && {\refl \cdot \refl} && {\refl \cdot \refl} \\
+	{\refl} &&& {\refl} &&& {\refl} \
+	& {\refl \cdot \refl} && {\refl \cdot \refl} && {\refl \cdot \refl} \
+	\
+	& {\refl \cdot \refl} && {\refl \cdot \refl} && {\refl \cdot \refl} \
 	{\refl} &&& {\refl} &&& {\refl}
 	\arrow[from=2-2, to=4-2]
 	\arrow["{p\ \neg i \cdot q\ i}"{description}, color={rgb,255:red,214;green,92;blue,214}, from=2-4, to=4-4]

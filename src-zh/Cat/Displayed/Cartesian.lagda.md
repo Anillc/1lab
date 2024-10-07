@@ -45,8 +45,8 @@ so are implicit in the type dependency.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {a'} && {b'} \\
-  \\
+  {a'} && {b'} \
+  \
   a && b
   \arrow["{f'}"', from=1-1, to=1-3]
   \arrow["f", from=3-1, to=3-3]
@@ -70,9 +70,9 @@ through a map $u' \to a'$ (in green, marked $\exists!$).
 
 ```{.quiver}
 \[\begin{tikzcd}
-  \textcolor{rgb,255:red,124;green,50;blue,189}{u'} \\
-  & {a'} && {b'} \\
-  \textcolor{rgb,255:red,124;green,50;blue,189}{u} \\
+  \textcolor{rgb,255:red,124;green,50;blue,189}{u'} \
+  & {a'} && {b'} \
+  \textcolor{rgb,255:red,124;green,50;blue,189}{u} \
   & a && b
   \arrow["{f'}"', from=2-2, to=2-4]
   \arrow["f", from=4-2, to=4-4]
@@ -99,8 +99,8 @@ input data consists of $a$, $b$, $f : a \to b$ and $b'$ over $a$,
 
 ```{.quiver}
 \[\begin{tikzcd}
-  && {b'} \\
-  \\
+  && {b'} \
+  \
   a && {b\text{,}}
   \arrow[lies over, from=1-3, to=3-3]
   \arrow["f"', from=3-1, to=3-3]
@@ -365,9 +365,9 @@ one below.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {a_2'} \\
-  & {a_1'} && {b'} \\
-  \\
+  {a_2'} \
+  & {a_1'} && {b'} \
+  \
   a & a && b
   \arrow["{f_2}", curve={height=-12pt}, from=1-1, to=2-4]
   \arrow["{f_1}", from=2-2, to=2-4]
@@ -387,7 +387,7 @@ $h$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {a_2'} \\
+  {a_2'} \
   {a_1'} & b'
   \arrow["g"', shift right=2, dashed, from=1-1, to=2-1]
   \arrow["h"', shift right=2, dashed, from=2-1, to=1-1]
@@ -404,7 +404,7 @@ of $f_2$ being Cartesian. Consider the following diagram:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {a_2'} & b' \\
+  {a_2'} & b' \
   {a_1'} & {a_2'}
   \arrow["g"', shift right=2, dashed, from=1-1, to=2-1]
   \arrow["{f_1}"', from=2-1, to=1-2]

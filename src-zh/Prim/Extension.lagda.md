@@ -18,8 +18,8 @@ partial element $p$ fits into a commutative diagram
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\sqcup^n_\varphi} && A \\
-  \\
+  {\sqcup^n_\varphi} && A \
+  \
   {\square^n}
   \arrow[dashed, from=1-1, to=3-1]
   \arrow["p", from=1-1, to=1-3]

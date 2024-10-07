@@ -83,8 +83,8 @@ square below (this is the `comp`{.Agda} term):
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {g(y)} && {g(y)} \\
-  \\
+  {g(y)} && {g(y)} \
+  \
   {f(g(y))} && y
   \arrow["{v(j,y)}", from=1-3, to=3-3]
   \arrow["{u(j,g\ y)}"', from=1-1, to=3-1]
@@ -122,8 +122,8 @@ what we need to equate the fibres:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  y && y \\
-  \\
+  y && y \
+  \
   {f\ x_0} && {f\ x_1}
   \arrow["y", from=1-1, to=1-3]
   \arrow["{f(\omega\ i)}"', from=3-1, to=3-3]
@@ -144,8 +144,8 @@ look at, so focus on the diagram: It connects `β₀`{.Agda} and
 
 ```{.quiver}
 \[\begin{tikzcd}
-  y && {f\ x_0} \\
-  \\
+  y && {f\ x_0} \
+  \
   {g\ y} && {x_0}
   \arrow["{\omega_0}"', dashed, from=3-1, to=3-3]
   \arrow["{v(\neg i,y)}"', from=1-1, to=3-1]
@@ -172,8 +172,8 @@ and that, as the dashed line and filler of the square below:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  y && {f\ x_1} \\
-  \\
+  y && {f\ x_1} \
+  \
   {g\ y} && {x_1}
   \arrow["{\omega_0}"', dashed, from=3-1, to=3-3]
   \arrow["{v(\neg i,y)}"', from=1-1, to=3-1]
@@ -197,8 +197,8 @@ below:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {g\ y} && {g\ y} \\
-  \\
+  {g\ y} && {g\ y} \
+  \
   {x_0} && {x_1}
   \arrow["\omega"', dashed, from=3-1, to=3-3]
   \arrow["{\omega_0\ j}"', from=1-1, to=3-1]
@@ -238,10 +238,10 @@ The full cube is right after the definition:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  \textcolor{rgb,255:red,171;green,43;blue,43}{y} &&&& \textcolor{rgb,255:red,171;green,43;blue,43}{y} \\
-  & \textcolor{rgb,255:red,92;green,92;blue,214}{g\ y} && \textcolor{rgb,255:red,92;green,92;blue,214}{g\ y} \\
-  \\
-  & \textcolor{rgb,255:red,92;green,92;blue,214}{x_0} && \textcolor{rgb,255:red,92;green,92;blue,214}{x_1} \\
+  \textcolor{rgb,255:red,171;green,43;blue,43}{y} &&&& \textcolor{rgb,255:red,171;green,43;blue,43}{y} \
+  & \textcolor{rgb,255:red,92;green,92;blue,214}{g\ y} && \textcolor{rgb,255:red,92;green,92;blue,214}{g\ y} \
+  \
+  & \textcolor{rgb,255:red,92;green,92;blue,214}{x_0} && \textcolor{rgb,255:red,92;green,92;blue,214}{x_1} \
   \textcolor{rgb,255:red,171;green,43;blue,43}{f\ x_0} &&&& \textcolor{rgb,255:red,171;green,43;blue,43}{f\ x_1}
   \arrow[""{name=0, anchor=center, inner sep=0}, "\omega", color={rgb,255:red,92;green,92;blue,214}, from=4-2, to=4-4]
   \arrow[""{name=1, anchor=center, inner sep=0}, "{\omega_0\ j}", color={rgb,255:red,92;green,92;blue,214}, from=2-2, to=4-2]

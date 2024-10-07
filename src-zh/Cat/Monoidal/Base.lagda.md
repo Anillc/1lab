@@ -141,9 +141,9 @@ path `pentagon`{.Agda} witnesses commutativity of the diagram
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {A\otimes(B\otimes(C\otimes D))} \\
-  {(A\otimes B)\otimes(C\otimes D)} && {A \otimes ((B \otimes C) \otimes D)} \\
-  \\
+  & {A\otimes(B\otimes(C\otimes D))} \
+  {(A\otimes B)\otimes(C\otimes D)} && {A \otimes ((B \otimes C) \otimes D)} \
+  \
   {((A\otimes B)\otimes C)\otimes D} && {(A \otimes (B\otimes C)) \otimes D\text{,}}
   \arrow[from=4-1, to=4-3]
   \arrow[from=4-3, to=2-3]
@@ -276,9 +276,9 @@ with given sides and lid, as in the following diagram:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {((1 \otimes 1) \otimes A)\otimes B} \\
-  {(1 \otimes (1 \otimes A))\otimes B} & {(1 \otimes 1)\otimes (A \otimes B)} & {(1 \otimes A)\otimes B} \\
-  & {1 \otimes (1 \otimes (A\otimes B))} \\
+  & {((1 \otimes 1) \otimes A)\otimes B} \
+  {(1 \otimes (1 \otimes A))\otimes B} & {(1 \otimes 1)\otimes (A \otimes B)} & {(1 \otimes A)\otimes B} \
+  & {1 \otimes (1 \otimes (A\otimes B))} \
   {1\otimes((1\otimes A)\otimes B)} && {1\otimes (A\otimes B)}
   \arrow["{1 \otimes (\lambda \otimes B)}"', from=4-1, to=4-3]
   \arrow["\alpha", from=2-1, to=4-1]
