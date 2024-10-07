@@ -1,0 +1,181 @@
+% Of the highest importance:
+\renewcommand{\phi}{\varphi}
+
+% Saner abbreviations for font faces (take an argument rather than
+% applying to the current context).
+\renewcommand{\rm}[1]{\mathrm{#1}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\renewcommand{\bf}[1]{\mathbf{#1}}
+
+% Define \cA..\cZ
+\definealphabet{c}{\mathcal}{A}{Z}
+% Define \bA..\bZ
+\definealphabet{b}{\mathbb}{A}{Z}
+
+% Notation for lambda abstractions and function application. $~$
+% is the spacing that should be used between arguments.
+\newcommand{\lam}[2]{\lambda #1.\ #2}
+
+% Notation for paths, the interval, and its operations.
+\newcommand{\is}{\equiv}
+\newcommand{\PathP}[3]{\rm{PathP}~ {#1}~ {#2}~ {#3}}
+\newcommand{\Path}[3]{\rm{Path}~ {#1}~ {#2}~ {#3}}
+\newcommand{\Square}[4]{\rm{Square}~ {#1}~ {#2}~ {#3}~ {#4}}
+\newcommand{\ap}[2]{\rm{ap}~ {#1}~ {#2}}
+
+\newcommand{\subst}{\operatorname{subst}}
+\newcommand{\ua}{\operatorname{ua}}
+
+\newcommand{\iZ}{\rm{i0}}
+\newcommand{\iO}{\rm{i1}}
+
+\newcommand{\ineg}{\lnot}
+\newcommand{\imin}{\land}
+\newcommand{\imax}{\lor}
+
+\newcommand{\transport}[2]{\rm{transport}~ #1~ #2}
+\newcommand{\transp}[3]{\rm{transp}~ #1~ #2~ #3}
+\newcommand{\Partial}[2]{\rm{Partial}~ #1~ #2}
+\newcommand{\dcomp}{\mathrel{\cdot\cdot}}
+\newcommand{\Extn}[2]{{#1}[#2]}
+
+\DeclareMathOperator{\inS}{inS}
+\DeclareMathOperator{\outS}{outS}
+
+\newcommand{\thecat}[1]{\mathbf{#1}}     % Names of "concrete" categories
+\newcommand{\thebicat}[1]{\mathfrak{#1}} % Names of "concrete" bicategories
+\newcommand{\bicat}[1]{\mathbf{#1}}  % Names of variable bicategories
+\newcommand{\ca}[1]{\mathcal{#1}}    % Names of variable categories
+\newcommand{\ica}[1]{\mathbb{#1}}    % Names of internal categories
+
+\newcommand{\Arr}[1]{%% The arrow category of a category.
+  \rm{Arr}(#1)}
+
+% \liesover arrow is only allowed in KaTeX:
+\newcommand{\liesover}\katex{\mathrel{\htmlClass{liesover}{\hspace{1.366em}}}}
+
+% \yo for よ is only allowed in KaTeX:
+\newcommand{\yo}\katex{よ}
+\newcommand{\zap}\katex{↯}
+
+\newcommand{\knowncat}[1]{\newcommand{\csname #1\endcsname}{\thecat{#1}}}
+\newcommand{\knownbicat}[1]{\newcommand{\csname #1\endcsname}{\thebicat{#1}}}
+
+\newcommand{\ty}{\rm{Type}}
+\newcommand{\set}{\rm{Set}}
+\newcommand{\prop}{\rm{Prop}}
+\newcommand{\psh}{\rm{PSh}}
+
+\DeclareMathOperator{\Sh}{Sh}
+
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Id}{Id}
+
+\knowncat{Sets}
+\knowncat{Ab}
+\knowncat{Graphs}
+\knowncat{MarkedGraphs}
+\knowncat{Props}
+\knowncat{FinSets}
+\knowncat{Rings}
+\knowncat{Grp}
+\knowncat{Rel}
+\knowncat{Par}
+\knowncat{Pos}
+\knownbicat{Cat}
+\knownbicat{Topos}
+\knownbicat{Grpd}
+
+\newcommand{\strcat}{\Cat_\rm{strict}}
+\newcommand{\intcat}{\{0 \le 1\}}
+\newcommand{\twocat}{\mathbf{2}}
+\newcommand{\igpd}{\text{$\infty$-\textbf{Grpd}}}
+\newcommand{\io}{(\infty,1)}
+
+% "Postfix" operators that have a subscript and are annoying to write
+% out:
+\newcommand{\inv}{^{-1}}
+\newcommand{\op}{^{\rm{op}}}
+
+\newcommand{\ot}{\leftarrow}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\To}{\Rightarrow}
+\newcommand{\later}{\mathop{\blacktriangleright}}
+\newcommand{\adj}{\rightleftarrows}
+\newcommand{\epi}{\twoheadrightarrow}
+\newcommand{\mono}{\hookrightarrow}
+\newcommand{\iso}{\cong}
+\newcommand{\tto}{\rightrightarrows}
+\newcommand{\rel}{\mathrel{\looparrowright}}
+\newcommand{\heyt}{\mathrel{\scriptsize{⇨}}} % Heyting implication
+
+\newcommand{\xadj}[2]{\xrightleftarrows[#2]{#1}}
+\newcommand{\xto}[1]{\xrightarrow{#1}}
+\newcommand{\xot}[1]{\xleftarrow{#1}}
+\newcommand{\xepi}[1]{\xtwoheadrightarrow{#1}}
+\newcommand{\xmono}[1]{\xhookrightarrow{#1}}
+\newcommand{\within}[1]{\overset{#1}{\approx}}
+
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator*{\colim}{colim}
+\DeclareMathOperator*{\im}{im}
+\DeclareMathOperator*{\Sub}{Sub}
+\DeclareMathOperator*{\baut}{\mathbf{B}}
+\newcommand{\B}[1]{\mathbf{B} #1}
+\newcommand{\point}[1]{\bullet_{#1}}
+\newcommand{\List}[1]{\operatorname{List}(#1)}
+
+\DeclareMathOperator{\Lan}{Lan}
+\DeclareMathOperator{\Ran}{Ran}
+
+\DeclareMathOperator{\src}{src}
+\DeclareMathOperator{\tgt}{tgt}
+\newcommand{\restrict}[1]{#1^{\downarrow}}
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\II}{\mathbb{I}}
+
+\renewcommand{\hom}{\mathbf{Hom}}
+\newcommand{\ortho}{\mathrel{\bot}}
+
+\newcommand{\Mod}[1][R]{{#1}\text{-}\thecat{Mod}}
+\newcommand{\refl}{\mathrm{refl}}
+\newcommand{\lsq}{\sqsubseteq}
+
+\DeclareMathOperator{\isiso}{is-iso}
+\DeclareMathOperator{\isequiv}{is-equiv}
+
+\DeclareMathOperator{\Spans}{Spans}
+
+\newcommand{\sem}[1]{\llbracket #1 \rrbracket}
+\newcommand{\forces}{\Vdash}
+\DeclareMathOperator{\Ne}{Ne}
+\DeclareMathOperator{\Nf}{Nf}
+\DeclareMathOperator{\reify}{reify}
+\DeclareMathOperator{\reflect}{reflect}
+
+\DeclareMathOperator{\Susp}{\Sigma}
+\DeclareMathOperator{\merid}{merid}
+
+\DeclareMathOperator{\Glue}{Glue}
+\DeclareMathOperator{\glue}{glue}
+\DeclareMathOperator{\unglue}{unglue}
+
+\renewcommand{\day}[1]{\operatorname{day}(#1)}
+
+\newcommand{\loc}[1]{[{#1}\inv]}
+
+\newcommand{\indicatortwod}[2]{
+  \begin{tikzpicture}
+  \draw[->] (0,0) -- (1,0)  node[midway, above] {$#1$};
+  \draw[->] (0,0) -- (0,-1) node[midway, left]  {$#2$};
+  \end{tikzpicture}
+}
+
+\newcommand{\abs}[1]{\lvert x \rvert}
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\ndiv}{\mathbin{/}}
