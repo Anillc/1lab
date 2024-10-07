@@ -151,7 +151,7 @@ following square:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {f(\point{G})} & {f(\point{G})} \\
+  {f(\point{G})} & {f(\point{G})} \
   {f(\point{G})} & {f(\point{G})}
   \arrow["{\alpha}", from=1-1, to=1-2]
   \arrow["{\alpha}"', from=2-1, to=2-2]

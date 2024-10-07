@@ -35,8 +35,8 @@ any mono, and $u$, $v$ arbitrarily fit into a commutative diagram like
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && b \\
-  \\
+  a && b \
+  \
   c && {d\text{,}}
   \arrow[two heads, "f", from=1-1, to=1-3]
   \arrow[hook, "g"', from=3-1, to=3-3]
@@ -80,8 +80,8 @@ $\beta$, as in
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && b \\
-  \\
+  a && b \
+  \
   c && {d\text{.}}
   \arrow["\alpha"', shift right=1, from=1-3, to=3-1]
   \arrow[two heads, "f", from=1-1, to=1-3]
@@ -104,8 +104,8 @@ in a skewed commutative _rectangle_ like
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && b && c \\
-  \\
+  a && b && c \
+  \
   d &&&& e
   \arrow["g", two heads, from=1-1, to=1-3]
   \arrow["f", two heads, from=1-3, to=1-5]
@@ -196,8 +196,8 @@ we want to lift against.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  r & a && b \\
-  \\
+  r & a && b \
+  \
   & c && d
   \arrow["s", shift left=1, from=1-1, to=1-2]
   \arrow["t"', shift right=1, from=1-1, to=1-2]

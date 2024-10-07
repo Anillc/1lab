@@ -49,8 +49,8 @@ a candidate for a left extension, as in the following diagram.
 
 ```{.quiver}
 \begin{tikzcd}
-  && {\cC'} \\
-  \\
+  && {\cC'} \
+  \
   \cC &&&& \cD
   \arrow[""{name=0, anchor=center, inner sep=0}, "F"', from=3-1, to=3-5]
   \arrow["p"', from=3-1, to=1-3]

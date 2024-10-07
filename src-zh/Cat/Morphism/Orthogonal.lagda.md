@@ -24,8 +24,8 @@ diagram like
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && b \\
-  \\
+  a && b \
+  \
   c && {d\text{,}}
   \arrow["f", from=1-1, to=1-3]
   \arrow["g", from=3-1, to=3-3]

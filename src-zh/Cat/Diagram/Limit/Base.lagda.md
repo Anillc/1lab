@@ -111,8 +111,8 @@ diagram. We can describe this situation diagrammatically like so:
 
 ```{.quiver}
 \begin{tikzcd}
-  && \{*\} \\
-  \\
+  && \{*\} \
+  \
   {\cJ} &&& {} & {\cC}
   \arrow[from=3-1, to=1-3]
   \arrow["{!X}"', from=1-3, to=3-5]
@@ -131,8 +131,8 @@ instead.
 
 ```{.quiver}
 \begin{tikzcd}
-  && {\{*\}} \\
-  \\
+  && {\{*\}} \
+  \
   {\cJ} &&& {} & {\cC}
   \arrow[from=3-1, to=1-3]
   \arrow[""{name=0, anchor=center, inner sep=0}, "{!x}"', from=1-3, to=3-5]
@@ -215,8 +215,8 @@ triangles
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {\mathrm{apex}} \\
-  \\
+  & {\mathrm{apex}} \
+  \
   Fx && {Fy\text{.}}
   \arrow["{\psi_x}"', curve={height=6pt}, from=1-2, to=3-1]
   \arrow["{\psi_y}", curve={height=-6pt}, from=1-2, to=3-3]

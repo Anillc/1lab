@@ -182,9 +182,9 @@ This time, if $A$ holds, we have to fill a _cube_ with the given four edges:
 
 ```{.quiver}
 \[\begin{tikzcd}
-	N &&& S \\
-	& N & N \\
-	& S & S \\
+	N &&& S \
+	& N & N \
+	& S & S \
 	N &&& S
 	\arrow[Rightarrow, no head, from=2-2, to=1-1]
 	\arrow["{\mathrm{merid}\ c}"{description}, color={rgb,255:red,214;green,92;blue,92}, from=2-3, to=1-4]

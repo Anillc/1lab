@@ -40,8 +40,8 @@ naturally fit into a commutative diagram
 
 ```{.quiver}
 \[\begin{tikzcd}
-  \mathcal{C} && \mathcal{D} \\
-  \\
+  \mathcal{C} && \mathcal{D} \
+  \
   {\mathcal{C}'}
   \arrow["F", from=1-1, to=1-3]
   \arrow["p"', from=1-1, to=3-1]
@@ -53,8 +53,8 @@ crying out for a third edge $\cC' \to \cD$
 
 ```{.quiver}
 \[\begin{tikzcd}
-  \mathcal{C} && \mathcal{D} \\
-  \\
+  \mathcal{C} && \mathcal{D} \
+  \
   {\mathcal{C}'}
   \arrow["F", from=1-1, to=1-3]
   \arrow["p"', from=1-1, to=3-1]
@@ -100,8 +100,8 @@ that $\eta$ does for $\Lan_p F$), the 2-cell exists and is unique.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  C && D \\
-  \\
+  C && D \
+  \
   {C'}
   \arrow["F", from=1-1, to=1-3]
   \arrow["p"', from=1-1, to=3-1]
@@ -162,8 +162,8 @@ terminal situation using the following diagram.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\mathcal{C}} && {\mathcal{D}} \\
-  \\
+  {\mathcal{C}} && {\mathcal{D}} \
+  \
   {\mathcal{C}'}
   \arrow["F", from=1-1, to=1-3]
   \arrow["p"', from=1-1, to=3-1]
@@ -277,8 +277,8 @@ obtaining the following diagram.
 
 ```{.quiver}
 \begin{tikzcd}
-  C &&&& E \\
-  \\
+  C &&&& E \
+  \
   && {C'}
   \arrow["p"', from=1-1, to=3-3]
   \arrow[""{name=0, anchor=center, inner sep=0}, "HF", from=1-1, to=1-5]

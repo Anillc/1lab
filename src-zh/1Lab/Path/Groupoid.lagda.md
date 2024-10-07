@@ -292,7 +292,7 @@ $p \bullet q \equiv p \bullet q$:
 
 ```{.quiver}
 \[\begin{tikzcd}
-	a & b \\
+	a & b \
 	b & c
 	\arrow["p", from=1-1, to=1-2]
 	\arrow["p"', from=1-1, to=2-1]

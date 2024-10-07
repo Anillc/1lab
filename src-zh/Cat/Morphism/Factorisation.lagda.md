@@ -141,8 +141,8 @@ and since both $vu$ and the identity are in that diagonal, $uv =
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && {r(f)} \\
-  \\
+  a && {r(f)} \
+  \
   {r(f)} && b
   \arrow["e", from=1-1, to=1-3]
   \arrow["m"', from=3-1, to=3-3]
@@ -249,8 +249,8 @@ orthogonal to $m$, we can fit it into a lifting diagram
 
 ```{.quiver}
 \[\begin{tikzcd}
-  A && B \\
-  \\
+  A && B \
+  \
   {r(f)} && {B\text{,}}
   \arrow["f", from=1-1, to=1-3]
   \arrow["g", dashed, from=1-3, to=3-1]
@@ -275,8 +275,8 @@ needed.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  A && {r(f)} \\
-  \\
+  A && {r(f)} \
+  \
   {r(f)} && B
   \arrow["e", from=1-1, to=1-3]
   \arrow["m", from=1-3, to=3-3]

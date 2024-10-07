@@ -77,7 +77,7 @@ Drawn as a diagram, the path above factors like:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {f(g(y))} && y \\
+  {f(g(y))} && y \
   {f(g(f(g(y))))} && {f(g(y))}
   \arrow["{\rm{sym}\ (\varepsilon(f(g(y))))}"', from=1-1, to=2-1]
   \arrow["{\ap{f}{(\eta(g(y)))}}"', from=2-1, to=2-3]

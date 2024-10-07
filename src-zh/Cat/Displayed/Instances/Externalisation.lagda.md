@@ -52,8 +52,8 @@ of the following form:
 
 ```{.quiver}
 \begin{tikzcd}
-  && \Delta \\
-  &&& \Gamma \\
+  && \Delta \
+  &&& \Gamma \
   {C_0} && {C_1} && {C_0}
   \arrow["u", from=1-3, to=2-4]
   \arrow["y", from=2-4, to=3-5]

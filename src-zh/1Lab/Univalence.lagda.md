@@ -113,8 +113,8 @@ defined type, we get a type which [[extends|extension type]] $T$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {T(i0)} && {T(i1)} \\
-  \\
+  {T(i0)} && {T(i1)} \
+  \
   {A(i0)} && {A(i1)}
   \arrow[dashed, from=1-1, to=1-3]
   \arrow["A", from=3-1, to=3-3]

@@ -20,8 +20,8 @@ functors, fitting together into a diagram
 
 ```{.quiver}
 \begin{tikzcd}
-  A && B \\
-  \\
+  A && B \
+  \
   {A'} && {B'\text{,}}
   \arrow[""{name=0, anchor=center, inner sep=0}, "U", curve={height=-6pt}, from=1-3, to=1-1]
   \arrow[""{name=1, anchor=center, inner sep=0}, "F", curve={height=-6pt}, from=1-1, to=1-3]
@@ -41,8 +41,8 @@ sends
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  B \&\& {B'} \\
-  \\
+  B \&\& {B'} \
+  \
   A \&\& {A'}
   \arrow["Y", from=1-1, to=1-3]
   \arrow["{U'}", from=1-3, to=3-3]
@@ -56,8 +56,8 @@ to
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  \textcolor{rgb,255:red,92;green,92;blue,214}{A} \&\& \textcolor{rgb,255:red,92;green,92;blue,214}{B} \&\& \textcolor{rgb,255:red,92;green,92;blue,214}{B} \&\& \textcolor{rgb,255:red,214;green,92;blue,92}{B'} \\
-  \\
+  \textcolor{rgb,255:red,92;green,92;blue,214}{A} \&\& \textcolor{rgb,255:red,92;green,92;blue,214}{B} \&\& \textcolor{rgb,255:red,92;green,92;blue,214}{B} \&\& \textcolor{rgb,255:red,214;green,92;blue,92}{B'} \
+  \
   \&\& \textcolor{rgb,255:red,214;green,92;blue,92}{A} \&\& \textcolor{rgb,255:red,214;green,92;blue,92}{A'\text{.}}
   \arrow["{\Id}", from=1-5, to=1-7]
   \arrow["Y", color={rgb,255:red,92;green,92;blue,214}, from=1-3, to=1-5]

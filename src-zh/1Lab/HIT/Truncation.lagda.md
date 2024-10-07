@@ -422,9 +422,9 @@ or, since we're doing cubical type theory, a "cubical tetrahedron":
 
 ```{.quiver}
 \[\begin{tikzcd}
-	a &&& a \\
-	& b & b \\
-	& c & d \\
+	a &&& a \
+	& b & b \
+	& c & d \
 	a &&& a
 	\arrow[""{name=0, anchor=center, inner sep=0}, from=3-2, to=3-3]
 	\arrow[""{name=1, anchor=center, inner sep=0}, Rightarrow, no head, from=2-2, to=2-3]

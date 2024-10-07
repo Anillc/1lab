@@ -32,8 +32,8 @@ _different_ bases, as in
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\mathcal{E}} && {\mathcal{F}} \\
-  \\
+  {\mathcal{E}} && {\mathcal{F}} \
+  \
   {\mathcal{A}} && {\mathcal{B}\text{,}}
   \arrow["{\mathbf{F}}", from=1-1, to=1-3]
   \arrow["{F}"', from=3-1, to=3-3]
@@ -544,8 +544,8 @@ lying over $\eta$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-	{\mathcal E} && {\mathcal F} \\
-	\\
+	{\mathcal E} && {\mathcal F} \
+	\
 	\mathcal A && \mathcal B
 	\arrow[""{name=0, anchor=center, inner sep=0}, "{\mathbf{F}}", curve={height=-12pt}, from=1-1, to=1-3]
 	\arrow[""{name=1, anchor=center, inner sep=0}, "{\mathbf{G}}"', curve={height=12pt}, from=1-1, to=1-3]

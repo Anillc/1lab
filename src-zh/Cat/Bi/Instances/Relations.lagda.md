@@ -117,8 +117,8 @@ compose them at the level of spans by taking the pullback
 
 ```{.quiver}
 \[\begin{tikzcd}
-  && {R \times_BS} \\
-  & S && R \\
+  && {R \times_BS} \
+  & S && R \
   A && B && C
   \arrow[from=1-3, to=2-4]
   \arrow["s", from=2-4, to=3-3]

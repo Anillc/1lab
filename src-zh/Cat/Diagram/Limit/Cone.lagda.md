@@ -67,7 +67,7 @@ has to be the same as following the right leg.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {\operatorname{apex}} \\
+  & {\operatorname{apex}} \
   {F(x)} && {F(y)}
   \arrow["{F(f)}"', from=2-1, to=2-3]
   \arrow["{\psi_x}"', from=1-2, to=2-1]

@@ -43,7 +43,7 @@ following shape:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  X & Z \\
+  X & Z \
   Y & P
   \arrow["f"', from=1-1, to=2-1]
   \arrow["{i_1}", from=2-1, to=2-2]

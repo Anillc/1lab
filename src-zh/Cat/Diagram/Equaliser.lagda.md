@@ -58,7 +58,7 @@ We can visualise the situation using the commutative diagram below:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  E & A & B \\
+  E & A & B \
   F
   \arrow["f", shift left=1, from=1-2, to=1-3]
   \arrow["g"', shift right=1, from=1-2, to=1-3]

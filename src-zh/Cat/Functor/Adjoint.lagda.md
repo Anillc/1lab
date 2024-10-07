@@ -109,7 +109,7 @@ commutative diagrams:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  R & RLR \\
+  R & RLR \
   & R
   \arrow[from=1-1, to=2-2]
   \arrow["{\eta R}", from=1-1, to=1-2]
@@ -119,7 +119,7 @@ commutative diagrams:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  L & LRL \\
+  L & LRL \
   & L
   \arrow[from=1-1, to=2-2]
   \arrow["L\eta", from=1-1, to=1-2]

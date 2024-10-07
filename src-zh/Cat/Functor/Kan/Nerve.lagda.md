@@ -112,8 +112,8 @@ the nerve functor associated to $F$ is the \[\[left Kan extension]] of $\cC$'s
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\cC} && {\psh(\cC)} \\
-  \\
+  {\cC} && {\psh(\cC)} \
+  \
   {\cD}
   \arrow["{\rm{yo}_\cC}", from=1-1, to=1-3]
   \arrow["F"', from=1-1, to=3-1]

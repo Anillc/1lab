@@ -53,7 +53,7 @@ be limiting).
 
 ```{.quiver}
 \[\begin{tikzcd}
-  K & \textcolor{rgb,255:red,214;green,92;blue,214}{L} \\
+  K & \textcolor{rgb,255:red,214;green,92;blue,214}{L} \
   \textcolor{rgb,255:red,214;green,92;blue,214}{F(K)} & \textcolor{rgb,255:red,214;green,92;blue,214}{F(L)}
   \arrow[maps to, from=1-2, to=2-2]
   \arrow[maps to, from=1-1, to=2-1]

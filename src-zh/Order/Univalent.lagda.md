@@ -75,8 +75,8 @@ top and bottom faces in a square:
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  {x \le_P y} \&\& {x\le_Q y} \\
-  \\
+  {x \le_P y} \&\& {x\le_Q y} \
+  \
   {f(x) \le_Q f(y)} \&\& {x \le_Q y}
   \arrow[dashed, from=1-1, to=1-3]
   \arrow["{qx \le_Q qy}"', from=3-1, to=3-3]
@@ -98,8 +98,8 @@ The definition above corresponds to the top face in the square
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  {x \le_P y} \&\& {x\le_Q y} \\
-  \\
+  {x \le_P y} \&\& {x\le_Q y} \
+  \
   {f(x) \le_Q f(y)} \&\& {x \le_Q y}
   \arrow[dashed, from=1-1, to=1-3]
   \arrow["{qx \le_Q qy}"', from=3-1, to=3-3]
