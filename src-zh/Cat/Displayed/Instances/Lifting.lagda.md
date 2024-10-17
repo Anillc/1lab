@@ -36,8 +36,8 @@ diagram:
 
 ```{.quiver}
 \begin{tikzcd}
-  \cJ && \cE \\
-  \\
+  \cJ && \cE \
+  \
   && \cB
   \arrow["\pi", lies over, from=1-3, to=3-3]
   \arrow["F"', from=1-1, to=3-3]
@@ -210,9 +210,9 @@ Diagrammatically, the situation is as follows:
 
 ```{.quiver}
 \begin{tikzcd}
-  \cJ &&& \cE \\
-  \\
-  \\
+  \cJ &&& \cE \
+  \
+  \
   &&& \cB
   \arrow["\pi", from=1-4, to=4-4]
   \arrow[""{name=0, anchor=center, inner sep=0}, "F"{description}, curve={height=12pt}, from=1-1, to=4-4]

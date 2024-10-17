@@ -260,8 +260,8 @@ name _disjoint coproduct_: If $\bot$ is an initial object, then $F\_i
 
 ```{.quiver}
 \[\begin{tikzcd}
-  \bot && {F_i} \\
-  \\
+  \bot && {F_i} \
+  \
   {F_j} && {\sum F}
   \arrow[from=1-1, to=1-3]
   \arrow[from=1-3, to=3-3]

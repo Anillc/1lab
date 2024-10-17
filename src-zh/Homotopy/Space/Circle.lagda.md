@@ -20,7 +20,7 @@ open import Data.Int
 module Homotopy.Space.Circle where
 ```
 
-# Spaces: The circle {defines="circle"}
+# 空间：圆周 {defines="circle"}
 
 The first example of nontrivial space one typically encounters when
 studying synthetic homotopy theory is the circle: it is, in a sense, the
@@ -111,7 +111,7 @@ always-loop : (x : S¹) → x ≡ x
 always-loop = S¹-elim loop (double-connection loop loop)
 ```
 
-## Fundamental group {defines="loop-space-of-the-circle"}
+## 基本群 {defines="loop-space-of-the-circle"}
 
 We now calculate the loop space of the circle, relative to an
 _arbitrary_ implementation of the integers: any type that satisfies
@@ -185,8 +185,8 @@ loop, which we can picture as the boundary of a square.  Namely,
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\rm{base}} && {\rm{base}} \\
-  \\
+  {\rm{base}} && {\rm{base}} \
+  \
   {\rm{base}} && {\rm{base}}
   \arrow["{\rm{loop}^n}", from=1-3, to=3-3]
   \arrow["{\rm{loop}}"', from=3-1, to=3-3]
@@ -207,10 +207,10 @@ face has a dotted boundary.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\rm{base}} &&&& {\rm{base}} \\
-  & {\rm{base}} && {\rm{base}} \\
-  \\
-  & {\rm{base}} && {\rm{base}} \\
+  {\rm{base}} &&&& {\rm{base}} \
+  & {\rm{base}} && {\rm{base}} \
+  \
+  & {\rm{base}} && {\rm{base}} \
   {\rm{base}} &&&& {\rm{base}}
   \arrow["{\rm{refl}}", from=2-2, to=2-4]
   \arrow[""{name=0, anchor=center, inner sep=0}, "{\rm{loop}^{1+n}}"', from=2-2, to=4-2]

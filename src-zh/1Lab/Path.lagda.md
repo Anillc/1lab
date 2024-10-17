@@ -35,7 +35,7 @@ private
 ```
 -->
 
-# Paths and the interval
+# 路径和区间
 
 One of the key observations behind HoTT is that [[the inductive
 _identity type_|inductive identity]] can be given a _spatial_
@@ -277,7 +277,7 @@ Path : ∀ {ℓ} (A : Type ℓ) (x y : A) → Type ℓ
 Path A x y = PathP (λ i → A) x y
 ```
 
-## Symmetry
+## 对称性
 
 Now that we have the notion of paths, we'll spend the rest of this
 module setting up the structure _around_ them that makes them useful. A
@@ -386,8 +386,8 @@ horizontal direction.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && a \\
-  & {\footnotesize \text{drop-i}} \\
+  a && a \
+  & {\footnotesize \text{drop-i}} \
   b && b
   \arrow["{p(\iZ)~ =~ a}", from=1-1, to=1-3]
   \arrow["{p(\iO)~ =~ b}"', from=3-1, to=3-3]
@@ -398,8 +398,8 @@ horizontal direction.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && b \\
-	& {\footnotesize \text{drop-j}} \\
+  a && b \
+	& {\footnotesize \text{drop-j}} \
   a && b
   \arrow["p(i)", from=1-1, to=1-3]
   \arrow["p(i)"', from=3-1, to=3-3]

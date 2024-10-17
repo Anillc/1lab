@@ -95,8 +95,8 @@ fitting into a square with $f$ and $g$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & C \\
-  A && B \\
+  & C \
+  A && B \
   & {A +_C B}
   \arrow["f"', from=1-2, to=2-1]
   \arrow["g", from=1-2, to=2-3]

@@ -41,8 +41,8 @@ dashed line in
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & C \\
-  A && {B\text{,}} \\
+  & C \
+  A && {B\text{,}} \
   & {C'}
   \arrow[from=1-2, to=2-1]
   \arrow[from=1-2, to=2-3]
@@ -121,7 +121,7 @@ can fit them in an M-shaped diagram like
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & S && {S'} \\
+  & S && {S'} \
   A && B && C
   \arrow[from=1-2, to=2-3]
   \arrow[from=1-2, to=2-1]
@@ -189,8 +189,8 @@ a pullback diagram like
 
 ```{.quiver}
 \[\begin{tikzcd}
-  && {A \times_A S} && {A \times_A S} \\
-  & A && S \\
+  && {A \times_A S} && {A \times_A S} \
+  & A && S \
   A && A && {B\text{,}}
   \arrow["{p_1}"', from=1-3, to=2-2]
   \arrow["{p_2}", from=1-3, to=2-4]
@@ -235,8 +235,8 @@ three morphisms fits into a diagram like
 
 ```{.quiver}
 \[\begin{tikzcd}
-  && {S\times_BS'} && {S'\times_CS''} \\
-  & S && {S'} && {S''} \\
+  && {S\times_BS'} && {S'\times_CS''} \
+  & S && {S'} && {S''} \
   A && B && C && D
   \arrow["f", from=2-2, to=3-1]
   \arrow["g"', from=2-2, to=3-3]

@@ -42,8 +42,8 @@ associated with cartesian maps.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {a'} && {b'} \\
-  \\
+  {a'} && {b'} \
+  \
   a && b
   \arrow["{f'}"', from=1-1, to=1-3]
   \arrow["f", from=3-1, to=3-3]
@@ -70,9 +70,9 @@ to a unique universal factorisation of $h'$ through a map $b' \to_{m} u'$
 
 ```{.quiver}
 \begin{tikzcd}
-	&&& \textcolor{rgb,255:red,124;green,50;blue,189}{u'} \\
-	{a'} && {b'} \\
-	&&& \textcolor{rgb,255:red,124;green,50;blue,189}{u} \\
+	&&& \textcolor{rgb,255:red,124;green,50;blue,189}{u'} \
+	{a'} && {b'} \
+	&&& \textcolor{rgb,255:red,124;green,50;blue,189}{u} \
 	a && b
 	\arrow[lies over, from=2-1, to=4-1]
 	\arrow["f", from=4-1, to=4-3]

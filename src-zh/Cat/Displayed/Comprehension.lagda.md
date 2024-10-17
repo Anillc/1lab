@@ -58,8 +58,8 @@ $\sigma. t : \Gamma.A \to \Delta.B$ such that the following square commutes.
 
 ```{.quiver}
 \begin{tikzcd}
-  {\Gamma.A} && {\Delta.B} \\
-  \\
+  {\Gamma.A} && {\Delta.B} \
+  \
   \Gamma && \Delta
   \arrow["\sigma", from=3-1, to=3-3]
   \arrow["\pi"', from=1-1, to=3-1]
@@ -87,8 +87,8 @@ such that the following square commutes:
 
 ```{.quiver}
 \begin{tikzcd}
-  {\Gamma.A} && {\Delta.B} \\
-  \\
+  {\Gamma.A} && {\Delta.B} \
+  \
   \Gamma && \Delta
   \arrow["\sigma", from=3-1, to=3-3]
   \arrow["\pi"', from=1-1, to=3-1]
@@ -236,9 +236,9 @@ duplicates the variable $A$ via the following pullback square.
 
 ```{.quiver}
 \begin{tikzcd}
-  {\Gamma.A} \\
-  & {\Gamma.A.A} && {\Gamma.A} \\
-  \\
+  {\Gamma.A} \
+  & {\Gamma.A.A} && {\Gamma.A} \
+  \
   & {\Gamma.A} && \Gamma
   \arrow["\pi", from=4-2, to=4-4]
   \arrow["\pi"', from=2-2, to=4-2]
@@ -389,8 +389,8 @@ following form is a pullback square, provided that $f$ is cartesian.
 
 ```{.quiver}
 \begin{tikzcd}
-  {W (\Gamma, X)} && {W (\Delta, Y)} \\
-  \\
+  {W (\Gamma, X)} && {W (\Delta, Y)} \
+  \
   {(\Gamma, X)} && {(\Delta, Y)}
   \arrow["{(\sigma, f)}"', from=3-1, to=3-3]
   \arrow["\eps"', from=1-1, to=3-1]

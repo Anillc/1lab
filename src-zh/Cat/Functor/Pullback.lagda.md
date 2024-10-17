@@ -48,8 +48,8 @@ functor gives is the vertical arrow $Y \times_X K \to Y$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {Y \times_X K} && K \\
-  {(K,K\xrightarrow{g}X)} \\
+  & {Y \times_X K} && K \
+  {(K,K\xrightarrow{g}X)} \
   & Y && X
   \arrow[""{name=0, anchor=center, inner sep=0}, "{f^*g}", from=1-2, to=3-2]
   \arrow[from=1-2, to=1-4]
@@ -74,8 +74,8 @@ diagram below is a cone over $K' \to X \ot Y$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {Y\times_XK} && {K'} \\
-  \\
+  {Y\times_XK} && {K'} \
+  \
   X && Y
   \arrow["{p^*}", from=1-1, to=3-1]
   \arrow["{p'}", from=1-3, to=3-3]
@@ -222,7 +222,7 @@ A [[natural transformation]] $F \To G$ is called **equifibred**, or
 
 ```{.quiver}
 \[\begin{tikzcd}
-  Fa & Fb \\
+  Fa & Fb \
   Ga & Gb
   \arrow["Ff", from=1-1, to=1-2]
   \arrow["{\alpha_a}"', from=1-1, to=2-1]

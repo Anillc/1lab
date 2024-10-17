@@ -14,7 +14,7 @@ open import Cat.Prelude
 module Algebra.Group.Ab.Hom where
 ```
 
-# Maps between abelian groups
+# 交换群间的映射
 
 <!--
 ```agda

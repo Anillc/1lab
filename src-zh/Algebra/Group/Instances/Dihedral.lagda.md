@@ -16,7 +16,7 @@ open import Cat.Prelude
 module Algebra.Group.Instances.Dihedral where
 ```
 
-# Dihedral groups {defines="dihedral-group generalised-dihedral-group"}
+# 二面体群 {defines="dihedral-group generalised-dihedral-group"}
 
 The [[group]] of symmetries of a regular $n$-gon, comprising rotations
 around the center and reflections, is called the **dihedral group**

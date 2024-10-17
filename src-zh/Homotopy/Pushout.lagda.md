@@ -10,14 +10,14 @@ open import Homotopy.Space.Suspension
 module Homotopy.Pushout where
 ```
 
-# Pushouts {defines="pushout"}
+# 推出 {defines="pushout"}
 
 Given the following span:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  C && B \\
-  \\
+  C && B \
+  \
   A
   \arrow["g", from=1-1, to=1-3]
   \arrow["f"', from=1-1, to=3-1]
@@ -41,8 +41,8 @@ These combine to give the following:
 
 ```{.quiver}
 \[\begin{tikzcd}
-	C && B \\
-	\\
+	C && B \
+	\
 	A && {\rm{Pushout}}
 	\arrow["g", from=1-1, to=1-3]
 	\arrow["f"', from=1-1, to=3-1]
@@ -59,8 +59,8 @@ of the span $\top \ot A \to \top$:
 
 ```{.quiver}
 \[\begin{tikzcd}
-	C && \top \\
-	\\
+	C && \top \
+	\
 	\top && {\rm{Pushout}}
 	\arrow["{\rm{!}}", from=1-1, to=1-3]
 	\arrow["{\rm{!}}"', from=1-1, to=3-1]
@@ -145,8 +145,8 @@ $h : (c : C) \to i (f c) \is j (g c)$, forming:
 
 ~~~{.quiver}
 \[\begin{tikzcd}
-	C && B \\
-	\\
+	C && B \
+	\
 	A && D
 	\arrow["g", from=1-1, to=1-3]
 	\arrow["f"', from=1-1, to=3-1]

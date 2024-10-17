@@ -18,9 +18,9 @@ open import Homotopy.Base
 module Homotopy.Space.Suspension.Properties where
 ```
 
-# Properties of suspensions
+# 纬悬的性质
 
-## Connectedness {defines="connectedness-of-suspensions"}
+## 连通性 {defines="connectedness-of-suspensions"}
 
 This section contains the aforementioned proof that suspension increases
 the [[connectedness]] of a space.
@@ -75,7 +75,7 @@ instance
 ```
 -->
 
-## Truncatedness
+## 截断性
 
 While there is no similarly pleasant characterisation of the [[truncatedness]]
 of suspensions^[for instance, while the [[circle]] is a groupoid, its suspension,
@@ -182,9 +182,9 @@ This time, if $A$ holds, we have to fill a _cube_ with the given four edges:
 
 ```{.quiver}
 \[\begin{tikzcd}
-	N &&& S \\
-	& N & N \\
-	& S & S \\
+	N &&& S \
+	& N & N \
+	& S & S \
 	N &&& S
 	\arrow[Rightarrow, no head, from=2-2, to=1-1]
 	\arrow["{\mathrm{merid}\ c}"{description}, color={rgb,255:red,214;green,92;blue,92}, from=2-3, to=1-4]

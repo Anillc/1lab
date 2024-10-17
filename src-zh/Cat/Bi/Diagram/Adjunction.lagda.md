@@ -30,7 +30,7 @@ and $g$ are functors, we say they are **adjoints** if there exist
 
 ```{.quiver}
 \[\begin{tikzcd}
-  f && {(fg)f} \\
+  f && {(fg)f} \
   && f
   \arrow["{\mathrm{id}}"', from=1-1, to=2-3]
   \arrow["{\alpha\otimes(f\blacktriangleright \eta)\otimes\rho}", from=1-1, to=1-3]
@@ -42,8 +42,8 @@ and
 
 ```{.quiver}
 \[\begin{tikzcd}
-  g & {g\mathrm{id}} & gfg \\
-  \\
+  g & {g\mathrm{id}} & gfg \
+  \
   && {g\text{,}}
   \arrow["\rho", from=1-1, to=1-2]
   \arrow["{g \blacktriangleright \eta}", from=1-2, to=1-3]
@@ -81,8 +81,8 @@ commutative altars):
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & fgf && {(fg)f} \\
-  \\
+  & fgf && {(fg)f} \
+  \
   {f\mathrm{id}} && f && {\mathrm{id}f}
   \arrow["\lambda"', from=3-5, to=3-3]
   \arrow["\rho"', from=3-3, to=3-1]

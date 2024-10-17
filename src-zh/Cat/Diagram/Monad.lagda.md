@@ -152,8 +152,8 @@ $M$-algebras when the square below commutes.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {M(X)} && {M(Y)} \\
-  \\
+  {M(X)} && {M(Y)} \
+  \
   {X} && {Y}
   \arrow["{M_1(m)}", from=1-1, to=1-3]
   \arrow["{\nu}"', from=1-1, to=3-1]
@@ -354,8 +354,8 @@ algebraic action:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  MMA && MMB \\
-  \\
+  MMA && MMB \
+  \
   MA && MB
   \arrow["MMf", from=1-1, to=1-3]
   \arrow["Mf"', from=3-1, to=3-3]

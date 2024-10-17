@@ -338,8 +338,8 @@ The unit laws are witnessed by the commutativity of this diagram:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {1\otimes FX} && FX && {FX \otimes 1} \\
-  & {F(1\otimes X)} & {F(X\otimes X)} & {F(X \otimes 1)} \\
+  {1\otimes FX} && FX && {FX \otimes 1} \
+  & {F(1\otimes X)} & {F(X\otimes X)} & {F(X \otimes 1)} \
   {F1\otimes FX} && {FX \otimes FX} && {FX \otimes F1}
   \arrow["{\epsilon\otimes FX}"', from=1-1, to=3-1]
   \arrow["\lambda", from=1-1, to=1-3]
@@ -377,10 +377,10 @@ The unit laws are witnessed by the commutativity of this diagram:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {FX \otimes (FX \otimes FX)} & {FX \otimes F(X \otimes X)} & {FX \otimes FX} \\
-  & {F(X \otimes (X \otimes X))} & {F(X \otimes X)} \\
-  && FX \\
-  & {F((X \otimes X) \otimes X)} & {F(X \otimes X)} \\
+  {FX \otimes (FX \otimes FX)} & {FX \otimes F(X \otimes X)} & {FX \otimes FX} \
+  & {F(X \otimes (X \otimes X))} & {F(X \otimes X)} \
+  && FX \
+  & {F((X \otimes X) \otimes X)} & {F(X \otimes X)} \
   {(FX \otimes FX) \otimes FX} & {F(X \otimes X) \otimes FX} & {FX \otimes FX}
   \arrow["{FX \otimes \varphi}", from=1-1, to=1-2]
   \arrow["{FX \otimes F\mu}", from=1-2, to=1-3]

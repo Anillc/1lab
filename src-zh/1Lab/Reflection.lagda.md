@@ -345,7 +345,7 @@ instance
   Has-visibility-Telescope .set-visibility v tel = ×-map₂ (set-visibility v) <$> tel
 ```
 
-## Debugging tools
+## 调试工具
 
 ```agda
 debug! : ∀ {ℓ} {A : Type ℓ} → Term → TC A

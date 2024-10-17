@@ -48,8 +48,8 @@ a $s : P \to X$ such that $e \circ s = p$, as in the following diagram:
 
 ```{.quiver}
 \begin{tikzcd}
-  && X \\
-  \\
+  && X \
+  \
   P && Y
   \arrow["e", two heads, from=1-3, to=3-3]
   \arrow["\exists s", dashed, from=3-1, to=1-3]

@@ -18,7 +18,7 @@ private variable
 ```
 -->
 
-# Semigroups {defines=semigroup}
+# 半群 {defines=semigroup}
 
 ```agda
 record is-semigroup {A : Type ℓ} (_⋆_ : A → A → A) : Type ℓ where
@@ -54,9 +54,9 @@ of the language of higher categories:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {(a \star b) \star (c\star d)} \\
-  {((a \star b) \star c)\star d} && {a\star(b\star(c\star d)))} \\
-  \\
+  & {(a \star b) \star (c\star d)} \
+  {((a \star b) \star c)\star d} && {a\star(b\star(c\star d)))} \
+  \
   {(a\star(b\star c))\star d} && {a\star((b\star c)\star d)}
   \arrow[Rightarrow, no head, from=2-1, to=1-2]
   \arrow[Rightarrow, no head, from=1-2, to=2-3]

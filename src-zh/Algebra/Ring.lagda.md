@@ -23,7 +23,7 @@ import Cat.Reasoning
 module Algebra.Ring where
 ```
 
-# Rings {defines=ring}
+# 环 {defines=ring}
 
 The **ring** is one of the basic objects of study in algebra, which
 abstracts the best bits of the common algebraic structures: The integers

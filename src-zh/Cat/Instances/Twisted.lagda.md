@@ -24,8 +24,8 @@ the diagram below commute.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {a_0} && {b_0} \\
-  \\
+  {a_0} && {b_0} \
+  \
   {a_1} && {b_1}
   \arrow["a"', from=1-1, to=3-1]
   \arrow["b", from=1-3, to=3-3]

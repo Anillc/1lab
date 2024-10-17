@@ -190,8 +190,8 @@ sequencing the effects from left to right or from right to left:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {M (A \otimes MB)} & {M^2 (A \otimes B)} \\
-  {MA \otimes MB} &&& {M (A \otimes B)} \\
+  & {M (A \otimes MB)} & {M^2 (A \otimes B)} \
+  {MA \otimes MB} &&& {M (A \otimes B)} \
   & {M (MA \otimes B)} & {M^2 (A \otimes B)}
   \arrow["\tau", from=2-1, to=1-2]
   \arrow["M\sigma", from=1-2, to=1-3]
@@ -247,13 +247,13 @@ commutative diagram.
 
 ```{.quiver}
 \[\begin{tikzcd}[column sep=0.4em]
-  {(MA\otimes MB)\otimes MC} &&&& {MA\otimes(MB\otimes MC)} \\
-  {M(A\otimes MB)\otimes MC} & {M((A\otimes MB)\otimes MC)} & {M(A\otimes (MB\otimes MC))} && {MA\otimes M(B\otimes MC)} \\
-  {M^2(A\otimes B)\otimes MC} & {M(M(A\otimes B)\otimes MC)} & {M(A\otimes M(B\otimes MC))} & {M(A\otimes M^2(B\otimes C))} & {MA\otimes M^2(B\otimes C)} \\
-  {M(A\otimes B)\otimes MC} & {M^2((A\otimes B)\otimes MC)} & {M^2(A\otimes(B\otimes MC))} & {M^2(A\otimes M(B\otimes C))} & {MA\otimes M(B\otimes C)} \\
-  {M((A\otimes B)\otimes MC)} && {M(A\otimes (B\otimes MC))} & {M^3(A\otimes (B\otimes C))} & {M(A\otimes M(B\otimes C))} \\
-  && {M(A\otimes M(B\otimes C))} \\
-  {M^2((A\otimes B)\otimes C)} &&&& {M^2(A\otimes (B\otimes C))} \\
+  {(MA\otimes MB)\otimes MC} &&&& {MA\otimes(MB\otimes MC)} \
+  {M(A\otimes MB)\otimes MC} & {M((A\otimes MB)\otimes MC)} & {M(A\otimes (MB\otimes MC))} && {MA\otimes M(B\otimes MC)} \
+  {M^2(A\otimes B)\otimes MC} & {M(M(A\otimes B)\otimes MC)} & {M(A\otimes M(B\otimes MC))} & {M(A\otimes M^2(B\otimes C))} & {MA\otimes M^2(B\otimes C)} \
+  {M(A\otimes B)\otimes MC} & {M^2((A\otimes B)\otimes MC)} & {M^2(A\otimes(B\otimes MC))} & {M^2(A\otimes M(B\otimes C))} & {MA\otimes M(B\otimes C)} \
+  {M((A\otimes B)\otimes MC)} && {M(A\otimes (B\otimes MC))} & {M^3(A\otimes (B\otimes C))} & {M(A\otimes M(B\otimes C))} \
+  && {M(A\otimes M(B\otimes C))} \
+  {M^2((A\otimes B)\otimes C)} &&&& {M^2(A\otimes (B\otimes C))} \
   {M((A\otimes B)\otimes C)} &&&& {M(A\otimes (B\otimes C))}
   \arrow[from=1-1, to=1-5]
   \arrow[from=1-1, to=2-1]

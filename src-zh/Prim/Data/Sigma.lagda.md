@@ -11,7 +11,7 @@ open import Prim.Kan
 module Prim.Data.Sigma where
 ```
 
-# Primitives: Sigma types
+# 原始类型：Σ 类型
 
 The dependent sum type, total space, or type of dependent pairs, is
 defined as a record, so that it enjoys definitional η.
@@ -44,7 +44,7 @@ instance
 ```
 -->
 
-Similarly, for the unit type:
+类似地，对于单位类型：
 
 ```agda
 record ⊤ : Type where

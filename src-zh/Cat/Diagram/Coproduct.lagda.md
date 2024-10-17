@@ -30,8 +30,8 @@ $Q$. This is best explained by a commutative diagram:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  A & P & B \\
-  & Q \\
+  A & P & B \
+  & Q \
   & {}
   \arrow[from=1-1, to=1-2]
   \arrow[from=1-3, to=1-2]

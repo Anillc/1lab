@@ -44,8 +44,8 @@ _object of composable pairs_.
 
 ```{.quiver}
 \begin{tikzcd}
-  {C_1 \times_{C_0} C_1} && {C_1} \\
-  \\
+  {C_1 \times_{C_0} C_1} && {C_1} \
+  \
   {C_1} && {C_0}
   \arrow[from=1-1, to=1-3]
   \arrow[from=1-1, to=3-1]
@@ -62,9 +62,9 @@ constraints.
 
 ```{.quiver}
 \begin{tikzcd}
-  {C_1 \times_{C_0} (C_1 \times_{C_0} C_1)} &&& {C_1 \times_{C_0} C_1} \\
-  \\
-  \\
+  {C_1 \times_{C_0} (C_1 \times_{C_0} C_1)} &&& {C_1 \times_{C_0} C_1} \
+  \
+  \
   {C_1 \times_{C_0} C_1} &&& {C_1}
   \arrow["{id \times c}"', from=1-1, to=4-1]
   \arrow["c"', from=4-1, to=4-4]
@@ -111,9 +111,9 @@ making the following diagram commute.
 
 ```{.quiver}
 \begin{tikzcd}
-  & \Gamma \\
-  \\
-  & {C_1} \\
+  & \Gamma \
+  \
+  & {C_1} \
   {C_0} && {C_0}
   \arrow["hom"{description}, from=1-2, to=3-2]
   \arrow["x"', curve={height=6pt}, from=1-2, to=4-1]

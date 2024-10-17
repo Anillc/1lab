@@ -24,10 +24,10 @@ open Lub
 ```
 -->
 
-# Bottom elements {defines="bottom-element"}
+# 底元素 {defines="bottom-element"}
 
-A **bottom element** in a partial order $(P, \le)$ is an element $\bot :
-P$ that is smaller than any other element of $P$. This is the same as
+一个偏序 $(P, \le)$ 的**底元素** $\bot :
+P$ 比 $P$ 中的任何其他元素都要小。 This is the same as
 being a least upper upper bound for the empty family $\bot \to P$.
 
 ```agda
@@ -88,7 +88,7 @@ Bottom≃Lub = biimp-is-equiv! _ Lub→Bottom
 ```
 -->
 
-## As initial objects
+## 作为始对象
 
 Bottoms are the decategorifcation of [[initial objects]]; we don't need to
 require the uniqueness of the universal morphism, as we've replaced our

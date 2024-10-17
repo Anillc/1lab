@@ -19,7 +19,7 @@ import Cat.Functor.Bifunctor as Bifunctor
 module Algebra.Group.Ab.Tensor where
 ```
 
-# Bilinear maps
+# 双线性映射
 
 <!--
 ```agda

@@ -247,10 +247,10 @@ witnesses commutativity of the diagram
 
 ```{.quiver}
 \[\begin{tikzcd}
-  && {f(g(hi))} \\
-  \\
-  {(fg)(hi)} &&&& {f((gh)i)} \\
-  \\
+  && {f(g(hi))} \
+  \
+  {(fg)(hi)} &&&& {f((gh)i)} \
+  \
   & {((fg)h)i} && {(f(gh))i\text{.}}
   \arrow["{\alpha({f,g,h})\triangleleft i}"', from=5-2, to=5-4]
   \arrow["{\alpha(f,gh, i)}"', from=5-4, to=3-5]
@@ -451,10 +451,10 @@ squares).
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {F(hg)Ff} && {F((hg)f)} \\
-  \\
-  {(FhFg)Ff} &&&& {F(h(gf))} \\
-  \\
+  & {F(hg)Ff} && {F((hg)f)} \
+  \
+  {(FhFg)Ff} &&&& {F(h(gf))} \
+  \
   & {Fh(FgFf)} && {FhF(gf)}
   \arrow["\alpha", from=3-1, to=5-2]
   \arrow["{\gamma \blacktriangleleft Ff}"', from=3-1, to=1-2]
@@ -546,8 +546,8 @@ witnesses commutativity of the diagram
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\mathbf{B}(A,B)} && {\mathbf{C}(FA,FB)} \\
-  \\
+  {\mathbf{B}(A,B)} && {\mathbf{C}(FA,FB)} \
+  \
   {\mathbf{C}(GA,GB)} && {\mathbf{C}(FA,GB)\text{,}}
   \arrow["F", from=1-1, to=1-3]
   \arrow["G"', from=1-1, to=3-1]

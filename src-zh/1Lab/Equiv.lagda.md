@@ -14,7 +14,7 @@ open is-contr
 module 1Lab.Equiv where
 ```
 
-# Equivalences
+# 等价
 
 The key principle that distinguishes HoTT from other type theories is
 the [[univalence]] principle: _isomorphic_ types can be
@@ -76,7 +76,7 @@ private variable
 ```
 -->
 
-## Isomorphisms {defines="quasi-inverse"}
+## 同构 {defines="quasi-inverse"}
 
 Before we set about defining and working with equivalences, we'll warm
 up by defining, and proving basic things about, isomorphisms. First, we
@@ -299,7 +299,7 @@ equiv-path e y = e .snd .is-eqv y .paths
 ```
 -->
 
-### is-equiv is a proposition
+### is-equiv 是一个命题
 
 Since being contractible is a proposition, and being an equivalence
 simply quantifies contractibility over each fibre, we can directly
@@ -785,7 +785,7 @@ Having established the three desiderata for a notion of equivalence, we
 will spend the rest of this module constructing readily-available
 equivalences, and establishing basic facts about them.
 
-### Contractible types
+### 可缩类型
 
 If $A$ and $B$ are contractible types, then any function $f : A \to B$
 must be homotopic to the function which sends everything in $A$ to the
@@ -956,7 +956,7 @@ is-involutive→is-equiv : {f : A → A} → (∀ a → f (f a) ≡ a) → is-eq
 is-involutive→is-equiv inv = is-iso→is-equiv (iso _ inv inv)
 ```
 
-## Closure properties
+## 封闭性
 
 :::{.definition #two-out-of-three}
 We will now show a rather fundamental property of equivalences: they are

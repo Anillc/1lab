@@ -142,8 +142,8 @@ makes the following two identity proofs equal:
 
 ```{.quiver}
 \[\begin{tikzcd}
-	{P\,W} && {P\,C} & {P\,W} && {P\,C} \\
-	\\
+	{P\,W} && {P\,C} & {P\,W} && {P\,C} \
+	\
 	W && C & W && C
 	\arrow["{\text{sup}}"', from=1-1, to=3-1]
 	\arrow["c", from=1-3, to=3-3]

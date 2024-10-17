@@ -22,7 +22,7 @@ private variable
 ```
 -->
 
-# Properties of Π types
+# Π 类型的性质
 
 This module contains properties of dependent function types, not necessarily
 organised in any way.

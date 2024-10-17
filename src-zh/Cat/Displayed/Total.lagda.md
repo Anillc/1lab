@@ -142,10 +142,10 @@ characterization. Consider the following pair of commuting squares.
 
 ```{.quiver}
 \begin{tikzcd}
-  & {P'} && {Y'} \\
-  {X'} && {X'} \\
-  & P && Y \\
-  X && Z \\
+  & {P'} && {Y'} \
+  {X'} && {X'} \
+  & P && Y \
+  X && Z \
   \arrow[lies over, from=2-1, to=4-1]
   \arrow[lies over, from=1-4, to=3-4]
   \arrow["f", from=4-1, to=4-3]

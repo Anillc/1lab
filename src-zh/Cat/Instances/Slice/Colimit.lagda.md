@@ -47,7 +47,7 @@ no global initial object.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  c & d \\
+  c & d \
   a & b
   \arrow[from=2-1, to=1-1]
   \arrow[from=2-2, to=1-2]
@@ -80,7 +80,7 @@ and a colimiting cocone $a \to a + b \ot b$ in $\cC$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a & {a+b} & b \\
+  a & {a+b} & b \
   & c
   \arrow[from=1-1, to=1-2]
   \arrow[from=1-1, to=2-2]

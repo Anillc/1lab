@@ -17,7 +17,7 @@ open import Meta.Invariant
 module 1Lab.Classical where
 ```
 
-# The law of excluded middle {defines="LEM law-of-excluded-middle excluded-middle"}
+# 排中律 {defines="LEM law-of-excluded-middle excluded-middle"}
 
 While we do not assume any classical principles in the 1Lab, we can still state
 them and explore their consequences.
@@ -63,7 +63,7 @@ LEM≃DNE : LEM ≃ DNE
 LEM≃DNE = prop-ext LEM-is-prop DNE-is-prop LEM→DNE DNE→LEM
 ```
 
-## Weak excluded middle {defines="weak-excluded-middle"}
+## 弱排中律 {defines="weak-excluded-middle"}
 
 The **weak law of excluded middle** (WLEM) is a slightly weaker variant
 of excluded middle which asserts that every proposition is either false
@@ -89,7 +89,7 @@ WLEM-is-prop : is-prop WLEM
 WLEM-is-prop = hlevel 1
 ```
 
-## The axiom of choice {defines="axiom-of-choice"}
+## 选择公理 {defines="axiom-of-choice"}
 
 The **axiom of choice** is a stronger classical principle which allows us to commute
 propositional truncations past Π types.

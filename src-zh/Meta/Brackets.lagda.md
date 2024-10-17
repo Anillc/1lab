@@ -8,7 +8,7 @@ open import 1Lab.Type
 module Meta.Brackets where
 ```
 
-# Semantic bracket notation
+# 语义括号标记
 
 In many of our developments (primarily, but not limited to, those in
 logic), we have a notion of a type $T$ being a _syntactic presentation_

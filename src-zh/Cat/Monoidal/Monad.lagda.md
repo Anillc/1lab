@@ -74,7 +74,7 @@ following two diagrams:
 
 ```{.quiver}
 \[\begin{tikzcd}[column sep=tiny]
-  & 1 \\
+  & 1 \
   1 && M1
   \arrow[Rightarrow, no head, from=1-2, to=2-1]
   \arrow["\epsilon", from=1-2, to=2-3]
@@ -84,7 +84,7 @@ following two diagrams:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {A \otimes B} & {MA \otimes MB} \\
+  {A \otimes B} & {MA \otimes MB} \
   {A \otimes B} & {M (A \otimes B)}
   \arrow[Rightarrow, no head, from=1-1, to=2-1]
   \arrow["{\eta_A \otimes \eta_B}", from=1-1, to=1-2]
@@ -110,7 +110,7 @@ Then, for $\mu$ to be monoidal means that these two diagrams commute:
 
 ```{.quiver}
 \[\begin{tikzcd}[column sep=tiny]
-  & 1 \\
+  & 1 \
   {M^21} && M1
   \arrow["{M\epsilon \circ \epsilon}"', from=1-2, to=2-1]
   \arrow["{\mu_1}"', from=2-1, to=2-3]
@@ -120,8 +120,8 @@ Then, for $\mu$ to be monoidal means that these two diagrams commute:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {M^2 A \otimes M^2 B} & {MA \otimes MB} \\
-  {M (MA \otimes MB)} \\
+  {M^2 A \otimes M^2 B} & {MA \otimes MB} \
+  {M (MA \otimes MB)} \
   {M^2 (A \otimes B)} & {M (A \otimes B)}
   \arrow["{\varphi_{MA,MB}}"', from=1-1, to=2-1]
   \arrow["{M\varphi_{A,B}}"', from=2-1, to=3-1]
@@ -219,8 +219,8 @@ the `mult-φ`{.Agda} diagram if we label the monadic "layers" as follows:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {M_1 M_2 A \otimes M_3 M_4 B} & {M_{12} A \otimes M_{34} B} \\
-  {M^1_3 (M_2 A \otimes M_4 B)} \\
+  {M_1 M_2 A \otimes M_3 M_4 B} & {M_{12} A \otimes M_{34} B} \
+  {M^1_3 (M_2 A \otimes M_4 B)} \
   {M^1_3 M^2_4 (A \otimes B)} & {M^{12}_{34} (A \otimes B)}
   \arrow["{\varphi_{MA,MB}}"', from=1-1, to=2-1]
   \arrow["{M\varphi_{A,B}}"', from=2-1, to=3-1]
@@ -337,10 +337,10 @@ associator.
 
 ```{.quiver}
 \[\begin{tikzcd}[column sep=small]
-  {(A\otimes MB)\otimes C} &&& {A\otimes (MB\otimes C)} \\
-  {(MA\otimes MB)\otimes C} &&& {A\otimes (MB\otimes MC)} \\
-  {M(A\otimes B)\otimes C} & {(MA\otimes MB)\otimes MC} & {MA\otimes (MB\otimes MC)} & {A\otimes M(B\otimes C)} \\
-  {M(A\otimes B)\otimes MC} &&& {MA\otimes M(B\otimes C)} \\
+  {(A\otimes MB)\otimes C} &&& {A\otimes (MB\otimes C)} \
+  {(MA\otimes MB)\otimes C} &&& {A\otimes (MB\otimes MC)} \
+  {M(A\otimes B)\otimes C} & {(MA\otimes MB)\otimes MC} & {MA\otimes (MB\otimes MC)} & {A\otimes M(B\otimes C)} \
+  {M(A\otimes B)\otimes MC} &&& {MA\otimes M(B\otimes C)} \
   {M((A\otimes B)\otimes C)} &&& {M(A\otimes (B\otimes C))}
   \arrow[from=1-1, to=1-4]
   \arrow[from=5-1, to=5-4]
@@ -382,10 +382,10 @@ of the following diagram; the other direction is completely symmetric.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {MA\otimes MB} && {MA \otimes MB} \\
-  {MA\otimes M^2 B} & {M^2 A\otimes M^2 B} \\
-  {M(A\otimes MB)} \\
-  {M(MA\otimes MB)} \\
+  {MA\otimes MB} && {MA \otimes MB} \
+  {MA\otimes M^2 B} & {M^2 A\otimes M^2 B} \
+  {M(A\otimes MB)} \
+  {M(MA\otimes MB)} \
   {M^2(A\otimes B)} && {M(A\otimes B)}
   \arrow["{MA \otimes \eta_{MB}}"', from=1-1, to=2-1]
   \arrow["\varphi"', from=2-1, to=3-1]
@@ -453,9 +453,9 @@ The `unit-φ`{.Agda} coherence is not very interesting.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {A\otimes B} && {MA\otimes MB} \\
-  & {A\otimes MB} & {M(A\otimes MB)} \\
-  && {M²(A\otimes B)} \\
+  {A\otimes B} && {MA\otimes MB} \
+  & {A\otimes MB} & {M(A\otimes MB)} \
+  && {M²(A\otimes B)} \
   {M(A \otimes B)} && {M(A\otimes B)}
   \arrow["{\eta_A \otimes \eta_B}", from=1-1, to=1-3]
   \arrow["\tau", from=1-3, to=2-3]
@@ -493,14 +493,14 @@ commutation of the strengths is highlighted.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {M^2 A\otimes M^2 B} &&& {MA\otimes MB} \\
-  {M(MA\otimes M^2 B)} && {MA\otimes M^2B} \\
-  {M^2(MA\otimes MB)} & {M^2(A \otimes M^2 B)} \\
-  {M(MA\otimes MB)} & {M^3(A \otimes MB)} & {M(A\otimes M^2 B)} \\
-  &&& {M(A\otimes MB)} \\
-  {M^2(A\otimes MB)} && {M^3(A\otimes B)} \\
-  & {M(A \otimes MB)} \\
-  {M^3(A\otimes B)} &&& {M^2(A\otimes B)} \\
+  {M^2 A\otimes M^2 B} &&& {MA\otimes MB} \
+  {M(MA\otimes M^2 B)} && {MA\otimes M^2B} \
+  {M^2(MA\otimes MB)} & {M^2(A \otimes M^2 B)} \
+  {M(MA\otimes MB)} & {M^3(A \otimes MB)} & {M(A\otimes M^2 B)} \
+  &&& {M(A\otimes MB)} \
+  {M^2(A\otimes MB)} && {M^3(A\otimes B)} \
+  & {M(A \otimes MB)} \
+  {M^3(A\otimes B)} &&& {M^2(A\otimes B)} \
   &&& {M(A\otimes B)}
   \arrow["{\mu\otimes \mu}", from=1-1, to=1-4]
   \arrow["\tau"', from=1-1, to=2-1]
@@ -657,9 +657,9 @@ as follows to conclude that the induced monoidal functor is symmetric:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {MA \otimes MB} && {MB \otimes MA} \\
-  {M(A \otimes MB)} & {M(MA \otimes B)} & {M (B \otimes MA)} \\
-  {M^2 (A \otimes B)} && {M^2 (B \otimes A)} \\
+  {MA \otimes MB} && {MB \otimes MA} \
+  {M(A \otimes MB)} & {M(MA \otimes B)} & {M (B \otimes MA)} \
+  {M^2 (A \otimes B)} && {M^2 (B \otimes A)} \
   {M (A \otimes B)} && {M (B \otimes A)}
   \arrow["\beta", from=1-1, to=1-3]
   \arrow["\tau"', from=1-1, to=2-1]

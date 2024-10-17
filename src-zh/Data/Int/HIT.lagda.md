@@ -370,8 +370,8 @@ and imposes no further structure on $X$[^1]:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {f(a,b,x,y)} && {f(a,b,\rm{S}x,\rm{S}y)} \\
-  \\
+  {f(a,b,x,y)} && {f(a,b,\rm{S}x,\rm{S}y)} \
+  \
   {f(\rm{S}a,\rm{S}b, x, y)} && {f(\rm{S}a,\rm{S}b,\rm{S}x,\rm{S}y)}
   \arrow["{pl(a,b,x,y)}", from=1-1, to=3-1]
   \arrow["{pr(a,b,x,y)}", from=1-1, to=1-3]

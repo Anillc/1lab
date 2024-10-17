@@ -8,7 +8,7 @@ open import Prim.Type
 module Prim.Interval where
 ```
 
-# Primitives: The interval
+# 原始类型：区间
 
 The interval type, and its associated operations, are also very magical.
 

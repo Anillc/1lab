@@ -16,7 +16,7 @@ open import Homotopy.Space.Sphere
 module Homotopy.Base where
 ```
 
-# Synthetic homotopy theory
+# 综合同伦论
 
 This module contains the basic definitions for the study of synthetic
 homotopy theory. Synthetic homotopy theory is the name given to studying
