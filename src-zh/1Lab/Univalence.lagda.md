@@ -12,7 +12,7 @@ open import 1Lab.Type
 module 1Lab.Univalence where
 ```
 
-# Univalence {defines=univalence}
+# 泛等性 {defines=univalence}
 
 In Homotopy Type Theory, **univalence** is the principle stating that
 \[\[equivalent|equivalence]] types can be \[\[identified|path]]. When [the
@@ -113,8 +113,8 @@ defined type, we get a type which [[extends|extension type]] $T$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {T(i0)} && {T(i1)} \\
-  \\
+  {T(i0)} && {T(i1)} \
+  \
   {A(i0)} && {A(i1)}
   \arrow[dashed, from=1-1, to=1-3]
   \arrow["A", from=3-1, to=3-3]
@@ -367,7 +367,7 @@ ua-pathp≃path eqv .snd .is-eqv y .centre = strict-fibres (ua-pathp→path eqv)
 ua-pathp≃path eqv .snd .is-eqv y .paths = strict-fibres (ua-pathp→path eqv) y .snd
 ```
 
-# The “axiom” {defines=univalence-axiom}
+# 泛等公理 {defines=univalence-axiom}
 
 The actual “univalence axiom”, as stated in the HoTT book, says that the
 canonical map `A ≡ B`, defined using `J`{.Agda}, is an equivalence. This

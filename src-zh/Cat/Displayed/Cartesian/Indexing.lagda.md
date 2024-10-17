@@ -245,10 +245,10 @@ which is witnessed by the commutativity of the whole diagram.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {f^*a'} \\
-  {\id^*f^*a'} & {f^*a'} \\
-  {(f \circ \id)^*a'} \\
-  {f^*a'} && {a'} \\
+  {f^*a'} \
+  {\id^*f^*a'} & {f^*a'} \
+  {(f \circ \id)^*a'} \
+  {f^*a'} && {a'} \
   b && a
   \arrow["f", from=5-1, to=5-3]
   \arrow["{\rm{lift}(f)}"', from=4-1, to=4-3]
@@ -284,10 +284,10 @@ is equal to the lift of $f$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {f^*a'} && {a'} \\
-  {f^*\id^*a'} && {\id^*a'} \\
-  {(\id \circ f)^*a'} \\
-  {f^*a'} && {a'} \\
+  {f^*a'} && {a'} \
+  {f^*\id^*a'} && {\id^*a'} \
+  {(\id \circ f)^*a'} \
+  {f^*a'} && {a'} \
   b && a
   \arrow["f", from=5-1, to=5-3]
   \arrow["{\rm{lift}(f)}"', from=4-1, to=4-3]
@@ -327,10 +327,10 @@ lifts, by the commutativity of the following diagram.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {f^*g^*h^*a'} &&&&&& {f^*g^*h^*a'} \\
-  {f^*g^*h^*a'} & {g^*h^*a'} &&&& {g^*h^*a'} & {(gf)^*h^*a'} \\
-  {f^*(hg)^*a'} & {(hg)^*a'} & {h^*a'} && {h^*a'} && {(h(gf))^*a'} \\
-  {((hg)f)^*a'} &&& {a'} &&& {((hg)f)^*a'} \\
+  {f^*g^*h^*a'} &&&&&& {f^*g^*h^*a'} \
+  {f^*g^*h^*a'} & {g^*h^*a'} &&&& {g^*h^*a'} & {(gf)^*h^*a'} \
+  {f^*(hg)^*a'} & {(hg)^*a'} & {h^*a'} && {h^*a'} && {(h(gf))^*a'} \
+  {((hg)f)^*a'} &&& {a'} &&& {((hg)f)^*a'} \
   d & c & b & a & b & c & d
   \arrow["f", from=5-1, to=5-2]
   \arrow["g", from=5-2, to=5-3]

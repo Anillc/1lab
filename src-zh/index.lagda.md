@@ -4,14 +4,7 @@ module index where
 
 # 1Lab
 
-This website is an experiment in **discoverable formalisation**: an
-extensive library of formalised mathematics, presented as an explorable
-reference resource. Our implementation of a mathematical library, using
-_literate source code_, has allowed us a dual approach to the
-explanation of mathematical concepts: the code and the prose are
-complementary, and everyone is presented with the opportunity to choose
-their own balance between the rigid formalisation and the intuitive
-explanations.
+本网站是一个**可探索的形式化**实验：它提供了一个广泛的形式化数学库，并且所有参考资源可供探索。 我们使用_文学编程_构建数学库，使我们能够以两种方式解释数学概念：代码与描述性文字互为补充，用户可以自由选择在严格形式化和直观解释之间的平衡。
 
 <!--
 ```agda
@@ -25,14 +18,9 @@ _ = Precategory
 ```
 -->
 
-Rather than _yet another category theory library_, the 1Lab aims to be
-an accessible introduction to structuralist mathematics, formalised in
-the setting of homotopy type theory, using a theorem prover to check and
-structure our work. As a result of using Agda, everything we mention
-_knows its own definition_, whether we are talking about a specific
-principle (like `univalence`{.Agda}), a big idea (like [[monoidal
-categories]]), or a punctual observation (like [[surjections are
-quotient maps]]).
+1Lab 并非只是_另一个范畴论库_，它旨在成为结构主义数学的一个易于理解的介绍，并在同伦类型论（homotopy type theory）的框架下进行形式化。我们使用定理证明工具来校验和组织我们的工作。 由于我们采用 Agda 进行形式化处理，因此无论当我们提到某个特定的原则（如泛等性 `univalence`{.Agda}）、宏观的概念（如[[幺半范畴|monoidal
+categories]]）、还是具体的观察（如[[满射是商映射|surjections are
+quotient maps]]）时，都能明确它的定义。
 
 ::: mathpar
 
@@ -43,153 +31,79 @@ _ = univalence
 
 :::
 
-The code snippet above, a re-statement of `univalence`{.Agda},
-demonstrates how to explore the formalisation. Every mention of a
+上面的代码片段是对“泛等性”`univalence`{.Agda}的重述，它展示了如何探索形式化内容。 Every mention of a
 non-local name in the code above is a link to its definition (try
 clicking on `path→equiv`{.Agda}!) --- on hover, you're presented with a
-pop-up of their types. Everything we have formalised is accompanied by
-prose, just like this --- which will contain links to the higher-level
-concepts involved in the proof, such as [[universes]], [[path]] types,
-and [[equivalences]].
+pop-up of their types. 我们形式化的所有内容都配有解释性文字，就像这里一样，其中包含通往证明中涉及的高级概念的链接，例如[[宇宙|universe]]、[[路径|path]]类型以及[[等价|equivalences]]。
 
-We have developed a sizeable library of formalised mathematics, centered
-around category theory and "adjacent" fields: abstract algebra, order
-theory, logic, and synthetic homotopy theory. Unlike some of the [other
-resources] listed below, the 1Lab takes an opinionated stance on its
-type-theoretic foundations: we use **cubical type theory** (in the style
-of @CCHM), and freely assume [[**propositional resizing**]].
+我们已经开发出一个规模庞大的数学形式化库，围绕范畴论及其“邻近”领域：包括抽象代数、序理论、逻辑学以及综合同伦论。 与下面列出的一些[其他资源]不同，1Lab 对其类型论基础持有明确的立场：我们采用 @CCHM 风格的**立方类型论**，并自由假设[[**命题降级**]]。
 
-Since the size of the library may make jumping into a particular topic
-slightly daunting, we have put a lot of effort into making entry points
-accessible as well. The simplest way to find something is by searching
-for it. You can hit <kbd>Ctrl+K</kbd>/<kbd>Cmd+K</kbd> to bring up the
-search prompt, as long as you have JavaScript enabled. Anything that has
-a name can be searched for:
+由于库的规模较大，直接进入某个特定主题可能会让人望而生畏，因此我们在易用性方面投入了大量精力。 最简单的查找方式是使用搜索功能。 只要启用了 JavaScript，你可以按 <kbd>Ctrl+K</kbd>/<kbd>Cmd+K</kbd> 调出搜索提示。 任何有名称的内容都可以通过搜索找到：
 
-- Pages can be looked up by their module name (e.g. _[Algebra.Ring]_),
-  or by their title (e.g. _[Abelian groups]_). These are organised
+- 页面可以通过其模块名称（如 [Algebra.Ring]）或标题（如 [Abelian groups]）进行查找。 These are organised
   hierarchically like an ordinary software library: Foundational results
   are under `1Lab`, a variety of data types are under `Data`, abstract
   algebra is under `Algebra`, category theory is under `Cat`, etc.
 
 - Sections within a page can be looked up by their title, like _[The
-  canonical self-indexing > As a fibration][selfindex]_. Keep in mind that
-  the fuzzy matching means that writing out the prefix is entirely
-  optional --- it's only displayed in the search results so you know where
-  you'll be taken.
+  canonical self-indexing > As a fibration][selfindex]_. 请注意，模糊匹配意味着输入前缀是可选的，它只会在搜索结果中显示，以便你知道将前往哪里。
 
-- Particular _concepts_ can be looked up by a number of specific
-  shorthands, e.g. [[adjunctions compose]] or [[composition of
-  adjunctions]].
+- 具体_概念_可以通过特定的缩写查找，例如 [[adjunctions compose]] 或 [[composition of adjunctions]]。
 
-- Every definition in the library can be looked up by its identifier,
-  like `Precategory`{.Agda}.
+- 库中的每个定义都可以通过其标识符查找，例如 `Precategory`{.Agda}。
 
 [Algebra.Ring]: Algebra.Ring.html
 [Abelian groups]: Algebra.Group.Ab.html
 [selfindex]: Cat.Displayed.Instances.Slice.html#as-a-fibration
 
-While the library's size makes it infeasible to curate a list of every
-single page, we have made an attempt to catalogue results we have
-formalised and which appear in standard reference materials, essentially
-by enumerating each book's index:
+虽然库的规模使得无法列出每个页面的清单，但我们努力编纂了标准参考资料中出现的结果，你可以查看每本书的索引：
 
-- The [HoTT](HoTT.html) page correlates with the book _Homotopy Type
-  Theory: Univalent Foundations of Mathematics_ [-@HoTT], which is also
-  referred throughout the 1Lab as _the HoTT book_;
+- [HoTT](HoTT.html) 页面对应于《同伦类型论：泛等数学基础》 [-@HoTT]一书，在 1Lab 中也称为 _HoTT 之书_；
 
-- The [Borceux](Borceux.html) page correlates with the first volume
-  of the _Handbook of Categorical Algebra_ [-@Borceux:vol1].
+- [Borceux](Borceux.html) 页面对应于《范畴代数手册》第一卷 [-@Borceux:vol1]；
 
-- The [Elephant](Elephant.html) page correlates with Johnstone's
-  _Sketches of an Elephant: A Topos Theory Compendium_ [-@Elephant].
+- [Elephant](Elephant.html) 页面对应于 Johnstone 的《大象素描：拓扑理论概要》 [-@Elephant]。
 
-Since both of these pages are also indexed for searching, you can
-navigate to a specific section in these book indices by searching for
-their names or section numbers: For example, try searching for [_the
-Freudenthal suspension theorem_][hott86] or for section
-[_A1.3_][elephanta13].
+由于这些页面也被编入了搜索索引，你可以通过搜索这些书的名称或章节号来导航到书中某个特定部分。例如，尝试搜索“[_Freudenthal 纬悬定理_][hott86]”或“章节 [_A1.3_][elephanta13]”。
 
 [hott86]: HoTT.html#the-freudenthal-suspension-theorem
 [elephanta13]: Elephant.html#a1.3-regular-categories
 
-## Getting involved
+## 参与方式
 
-Our purpose is to make univalent mathematics accessible to everyone who
-is interested, regardless of cultural background, age, educational
-background, ethnicity, gender identity, or gender expression. **HoTT is
-for everyone, and we are committed to fostering a kind, welcoming
-environment**.
+我们的目标是让泛等性数学对所有感兴趣的人都易于接触，无论其文化背景、年龄、教育背景、种族、性别认同或性别表达如何。 **HoTT 是为所有人开放的，我们致力于营造一个友好、包容的环境。**
 
-Even though the 1Lab is maintained primarily by [the authors][authors],
-it is first and foremost a community project. The actual formalisation
-work takes place on [GitHub], but ongoing discussion happens on
-[Discord]. We welcome all contributions, though we would kindly ask that
+尽管 1Lab 主要由[作者们][authors]维护，但首先它是一个社区项目。 实际的形式化工作是在 [GitHub] 上进行的，而讨论则在 [Discord] 上展开。 We welcome all contributions, though we would kindly ask that
 anyone submitting a substantial change discuss it on Discord first.
 
 [GitHub]: https://github.com/the1lab/1lab
 [Discord]: https://discord.gg/eQDNM26uKP
 [authors]: Authors.html
 
-We accept contributions in all areas of mathematics, not just the ones
-which already feature, or the ones listed above. Our lack of results in
-real analysis is not because real analysis is _forbidden_, but rather
-just because it's not the area of expertise of any of the authors. We
-would be happy to help anyone to formalise and write about their
-favourite subject, but do keep in mind that developing all of the
-supporting theory might be a significant undertaking.
+我们欢迎所有领域的贡献，不仅限于已经涉及的领域或上文提到的那些领域。 我们在实分析方面的缺少成果并不是因为实分析被禁止，而仅仅是因为它不是作者们的专业领域。 我们很乐意帮助任何人形式化并撰写他们喜爱的主题，但请注意，开发所有相关的理论可能是一个相当大的工作量。
 
-## Technology
+## 技术
 
-The 1Lab would not be possible without a myriad other free and
-open-source projects. In addition to our dearest proof assistant
-[Agda](https://github.com/agda/agda) --- no part of which is distributed
-\--- we would like to mention the following open-source projects for
-their fundamental importance:
+1Lab 的实现离不开众多免费的开源项目。 除了我们最为依赖的证明助手 [Agda](https://github.com/agda/agda)（本项目没有任何部分重新分发）外，我们还要感谢以下开源项目，它们对我们项目的实现至关重要：
 
-- **Fonts**: Our monospace typeface is [Julia Mono] ([license][LICENSE.JuliaMono]),
-  chosen for its excellent unicode coverage. The textual content can be
+- **字体**：我们使用 [Julia Mono] ([许可证][LICENSE.JuliaMono]) 作为等宽字体，因为它涵盖了大多数 Unicode 字符。 The textual content can be
   read in either [Inria Sans] ([license][LICENSE.InriaSans]) or [EB
   Garamond][EB
     Garamond] ([license][LICENSE.EBGaramond]), according to the user's
   preference. All of these fonts are distributed under the terms of the
   [SIL Open Font License, v1.1][OFL].
 
-- **Prose**: We write our textual content in Markdown, which is rendered
-  using [Pandoc], then put through a variety of filters to implement
-  things like diagrams, folding equations, highlighted divs/details,
-  etc. Despite our extensive use of Pandoc, no part of the project is
-  distributed.
+- **文本**：我们以 Markdown 编写文本内容，并使用 [Pandoc] 渲染，随后通过各种过滤器来实现图表、折叠公式、突出显示的 div/details 等功能。 尽管我们大量使用了 Pandoc，但项目中并未分发任何部分。
 
-- **Mathematics**: We type-set our mathematics, at build-time, using
-  [KaTeX](https://katex.org). Even though the rendering is done
-  ahead-of-time, we distribute their CSS and fonts. KaTeX is distributed
-  under the terms of the MIT license: a copy is available
-  [here][LICENSE.KaTeX].
+- **数学**：我们在构建时使用 [KaTeX](https://katex.org) 排版数学公式。 虽然渲染是在预处理阶段完成的，但我们分发了 KaTeX 的 CSS 和字体。 KaTeX 根据 MIT 许可证分发，相关许可副本可以[在此][LICENSE.KaTeX]找到。
 
-- **Iconography**: Our favicon is the ice-cube emoji from Noto
-  Emoji, distributed under
-  the terms of the Apache License, 2.0; a copy is available
-  [here][LICENSE.Noto]. Other icons come from
-  [octicons](https://github.com/primer/octicons), distributed under the
-  terms of the MIT license, which you can find [here][LICENSE.Octicons].
+- **图标**：我们的 favicon 是来自 [Noto Emoji](https://github.com/googlefonts/noto-emoji) 的冰块表情符号，使用 Apache License 2.0 许可证分发；你可以在[这里][LICENSE.Noto]找到副本。 其他图标来自 [octicons](https://github.com/primer/octicons)，使用 MIT 许可证发布，你可以在[这里][LICENSE.Octicons]找到许可证的副本。
 
-- **Diagrams**: Our diagrams are created using [quiver], and rendered
-  to SVG using [LaTeX] and [pdftocairo], which is part of the
-  Poppler project. No part of these projects is redistributed.
+- **图表**：我们的图表使用 [quiver] 创建，并通过 [LaTeX] 和 [pdftocairo]（Poppler 项目的一部分）渲染为 SVG。 我们未分发这些项目的任何部分。
 
-- **Web**: All of the JavaScript we ship is free and open source
-  software, and most of it is developed in-house --- you can find it on
-  [our GitHub]. We use the [fast-fuzzy] library to power the search
-  dialog, which is distributed under the terms of the ISC license,
-  available [here][LICENSE.fast-fuzzy].
+- **网站**：我们提供的所有 JavaScript 都是免费且开源的软件，其中大部分是我们自行开发的，你可以在我们的 GitHub 上找到相关内容。 我们使用 [fast-fuzzy] 库为搜索对话框提供支持，使用 MIT 许可证发布，你可以在\[这里]\[LICENSE.fastfuzzy]找到许可证的副本。
 
-  None of our content relies on JavaScript to function, but enabling it
-  does improve the experience --- allowing you control over theming, use
-  of the search function, exploring the link graph, type-on-hover, and
-  more. If you have JS disabled for privacy concerns, rest assured: The
-  1Lab does not track you, or collect any sort of personally identifying
-  information.
+  尽管我们的内容不需要 JavaScript 即可阅读，但它的确可以提升读者的体验，让我们能够提供如切换主题、搜索关键字、查阅网站地图、悬停提示等等便捷的功能。 如果你因担心隐私泄露而禁用了 JavaScript 的运行，请放心：1Lab 不会跟踪你的活动，也不会收集任何与你的身份相关的任何信息。
 
 [quiver]: https://q.uiver.app
 [LaTeX]: https://tug.org/texlive
@@ -210,65 +124,31 @@ their fundamental importance:
 [fast-fuzzy]: https://www.npmjs.com/package/fast-fuzzy
 [our GitHub]: https://github.com/the1lab/1lab/tree/main/support/web/js
 
-## Other resources
+## 其它资源
 
-This is a list of freely available, online resources on homotopy type
-theory, whose differing presentations (and axiomatics) might be more
-inviting to particular readers. Please check them out!
+以下是一些关于同伦类型论的免费在线资源，它们的呈现方式（和公理化方法）可能对特定读者更有吸引力。 请查看它们！
 
-- The aforementioned  [-@HoTT] is split
-  down the middle between being an introduction to the practice of
-  homotopy type theory, and to the beginnings of the applications of
-  univalence to category theory, homotopy theory, set theory and real
-  analysis.
+- 前面提到的[《同伦类型论：泛等性数学基础》](https://homotopytypetheory.org/book) [-@HoTT]一书分为两个部分：一部分是同伦类型论实践的入门介绍，另一部分是泛等数学在范畴论、同伦论、集合论和实分析中的应用初探。
 
-- Egbert Rijke's more recent _Introduction to Homotopy Type Theory_
-  [-@Rijke:2022] is a more comprehensive introduction to the practice of
-  dependent type theory in general, and homotopy type theory in
-  particular, with no pre-existing familiarity assumed; it also includes
-  applications of univalence to algebra, combinatorics, and homotopy
-  theory.
+- Egbert Rijke 最近的《同伦类型论入门》[-@Rijke:2022]是一部更全面的导论，涵盖了依值类型论的实践，尤其是同伦类型论，无需预先具备相关知识；该书还包括泛等数学在代数、组合数学和同伦论中的应用。
 
-- Martin Escardó's [_Introduction to Univalent Foundations of
-  Mathematics with Agda_][martin] applies a theorem prover to the
-  production of _lecture notes_, which are sequentially structured,
-  unlike the 1Lab. Escardó takes a rather unusual approach to
-  formalisation in Agda, using it as a proof assistant for a very basic
-  ("spartan") type theory. His lecture notes include an introduction to
-  working practically with type theory in its purest form.
+- Martin Escardó 的[《使用 Agda 的泛等性数学基础入门》][martin]使用定理证明器生成讲义，与 1Lab 不同，其结构是按顺序编排的。 Escardó 对 Agda 中的形式化采取了一种相对不寻常的方式，使用它作为一个非常基础（“极简”）类型论的证明助手。 他的讲义包括了如何实际操作最纯粹形式的类型论的介绍。
 
-- The [_agda-unimath_ library][*agda-unimath* library] is a project very similar to the 1Lab,
-  though using _axiomatic_ homotopy type theory, rather than the cubical
-  type theory which we prefer. It is currently maintained by Egbert
-  Rijke, Fredrik Bakke, and Vojtěch Štěpančík, and contains a
-  formalisation of a wide variety of topics in undergraduate
-  mathematics, and a considerable selection of novel results in the
-  field of univalent combinatorics.
+- \[agda-unimath 库]是一个与 1Lab 非常相似的项目，但它使用的是_公理化_的同伦类型论，而非我们偏好的立方类型论。 该项目目前由 Egbert Rijke、Fredrik Bakke 和 Vojtěch Štěpančík 维护，内容涵盖了广泛的本科数学主题，并在泛等组合数学领域提供了大量创新成果的形式化。
 
-- The [_TypeTopology_ library][*TypeTopology* library], primarily by Escardó, but featuring
-  collaborations, functions primarily as a formalisation of _novel_
-  results in constructive mathematics. Its authors describe it as a
-  _mathematical blackboard_; rather than employing a proof assistant to
-  record and verify existing knowledge, its authors use Agda primarily
-  to assist with discovering new ideas.
+- \[TypeTopology 库]主要由 Escardó 编写，但也有一些合作成果，主要用于形式化构造性数学中的_创新_成果。 其作者将其描述为一个_数学黑板_；与其使用证明助手来记录和验证已有知识，他们主要使用 Agda 来帮助发现新想法。
 
 [*agda-unimath* library]: https://unimath.github.io/agda-unimath/HOME.html
 [martin]: https://www.cs.bham.ac.uk/~mhe/HoTT-UF-in-Agda-Lecture-Notes/HoTT-UF-Agda.html
 [*TypeTopology* library]: https://www.cs.bham.ac.uk/~mhe/TypeTopology/
 
-# Highlighted topics
+# 重点主题
 
-While we can not maintain a list of every single page in the 1Lab, the
-following pages define some of the central concepts the fields we have
-formalised. They serve as great jumping-off points to explore them!
+尽管我们不可能在此列出 1Lab 中的每个页面， 不过下面这些我们已经形式化的核心概念也许可以作为你探索这些领域的新手村。
 
-## Type theory
+## 类型论
 
-The modules under the `1Lab` namespace serve to bootstrap our type
-theory. They provide the definitions of primitive concepts required for
-Agda to function, and a firm conceptual basis which allows us to develop
-higher-level mathematics. The highlights here are the key modules
-leading up to the proof of the [[univalence principle|univalence]]:
+`1Lab` 命名空间下的模块是类型论的引子。 它们提供了 Agda 所需的基本概念定义，并为我们掌握高级数学知识提供了坚实的概念基础。 以下是通向[[泛等性原理|univalence]]证明的一些关键模块：
 
 ```agda
 open import 1Lab.Type        -- Basics of type universes
@@ -278,14 +158,9 @@ open import 1Lab.Equiv       -- Equivalences, the notion of sameness for types
 open import 1Lab.Univalence  -- The proof of univalence, and a few equivalents
 ```
 
-### Metaprogramming
+### 元编程
 
-To support the rest of the formalisation, we engage not only in writing
-mathematics, but also _meta_mathematics. These are _tactics_, which
-teach Agda to handle more and more of what is _trivial_, allowing us to
-focus on what is truly interesting. These pages are primarily
-interesting for those interested in the use of Agda --- therefore, they
-are more code than prose.
+为了支持形式化的其余部分，我们不仅撰写数学，还写了_元_数学。 这些所谓的_策略_教会了 Agda 去处理更多的_显然_部分，使我们能够专注于真正有趣的内容。 这些页面主要对那些对 Agda 的使用方法感兴趣的读者有吸引力。因此，它们的代码多于解释。
 
 ```agda
 open import 1Lab.Reflection.HLevel
@@ -303,12 +178,9 @@ open import 1Lab.Reflection.Induction
   -- tactic automatically writes them.
 ```
 
-## Category theory
+## 范畴论
 
-The 1Lab was originally a project by one of the authors to learn
-category theory by formalising it; unsurprisingly, this attracted other
-category theorists, and this is the most comprehensive part of the
-library. These files set up the core of the subject:
+1Lab 最初是其中一位作者通过形式化范畴论学习该领域的项目；不出所料，它吸引了其他范畴论学者，并且成为该库中最全面的部分。 以下文件涵盖了该领域的核心内容：
 
 ```agda
 open import Cat.Base                -- Core definitions
@@ -343,7 +215,7 @@ open import Cat.Bi.Instances.Spans
 open import Cat.Bi.Diagram.Monad.Spans
 ```
 
-### Cartesian closed categories
+### 积闭范畴
 
 To a type theorist, a [[Cartesian closed]] category is exactly a
 simply-typed lambda calculus. To cement this connection, we have an
@@ -378,7 +250,7 @@ open import Cat.Allegory.Instances.Mat
   -- The allegory of matrices with values in a frame
 ```
 
-### Monoidal categories
+### 幺半范畴
 
 A [[monoidal category]] is the higher-dimensional counterpart of a
 [[monoid]] --- a _category_ with an associative and unital composition
@@ -440,7 +312,7 @@ open import Cat.Displayed.Comprehension -- An axiomatisation of context extensio
 open import Cat.Displayed.Doctrine      -- An axiomatisation of regular logic
 ```
 
-### Examples
+### 示例
 
 The following examples of displayed categories are particularly notable
 to motivate the subject.
@@ -459,7 +331,7 @@ externalisation.
 open import Cat.Displayed.Instances.Externalisation
 ```
 
-## Order theory
+## 序论
 
 The study of sets equipped with a notion of precendence, or containment;
 while the theory of [[partial orders]] is naturally seen as a
@@ -479,7 +351,7 @@ open import Order.Frame
 open import Order.Lattice
 ```
 
-### Domain theory
+### 域论
 
 Domain theory is the study of posets that are complete under various
 classes of [[least upper bounds]]. Domains naturally lead to
@@ -492,7 +364,7 @@ open import Order.DCPO.Free    -- Free DCPOs and free pointed DCPOs
 open import Order.DCPO.Pointed -- Pointed directed-complete partial orders
 ```
 
-## Synthetic homotopy theory
+## 综合同伦论
 
 **Synthetic homotopy theory** is the name given to the application of
 type theory to the study of homotopy invariants of spaces --- in fancier
@@ -522,7 +394,7 @@ open import Homotopy.Space.Sinfty -- The infinite-dimensional sphere
 open import Homotopy.Space.Suspension -- Suspensions
 ```
 
-## Algebra
+## 代数
 
 Formalisations of some of the basic notions in abstract algebra, such as
 [[monoids]], [[groups]], [[rings]], and [[modules]] over these. Groups,
@@ -536,7 +408,7 @@ open import Algebra.Ring
 open import Algebra.Ring.Module
 ```
 
-### Group theory
+### 群论
 
 Groups are an abstraction of the idea of _symmetry_ --- which is central
 to homotopy type theory. See also [synthetic homotopy theory] above.

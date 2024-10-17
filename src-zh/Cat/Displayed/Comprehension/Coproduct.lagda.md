@@ -58,10 +58,10 @@ has $\cE$-coproducts** when:
 
 ```{.quiver}
 \begin{tikzcd}
-	A &&& B \\
-	&& {A'} &&& {B'} \\
-	\\
-	{\Gamma,X} &&& {\Delta,Y} \\
+	A &&& B \
+	&& {A'} &&& {B'} \
+	\
+	{\Gamma,X} &&& {\Delta,Y} \
 	&& \Gamma &&& \Delta
 	\arrow["\pi"', from=4-1, to=5-3]
 	\arrow["\pi"', from=4-4, to=5-6]

@@ -37,8 +37,8 @@ _unique_ diagonal filler.
 
 ```{.quiver}
 \begin{tikzcd}
-  {\Gamma,_{\cE}X,_{\cD}A} && {\Delta,_{\cD}B} \\
-  \\
+  {\Gamma,_{\cE}X,_{\cD}A} && {\Delta,_{\cD}B} \
+  \
   {\Gamma,_{\cD}\coprod_X A} && \Delta
   \arrow["{\pi_{\cE},\langle X, A\rangle}"', from=1-1, to=3-1]
   \arrow["{\pi_{\cD}}", from=1-3, to=3-3]
@@ -216,8 +216,8 @@ morphism.
 
 ```{.quiver}
 \begin{tikzcd}
-  {\Gamma,_{\cE}X,_{\cD}A} && {\Gamma,_{\cD}\coprod X A} \\
-  \\
+  {\Gamma,_{\cE}X,_{\cD}A} && {\Gamma,_{\cD}\coprod X A} \
+  \
   {\Gamma,_{\cD}\coprod X A} && \Gamma
   \arrow["{\pi_{\cE},\langle X, A\rangle}"', from=1-1, to=3-1]
   \arrow["{\pi_{\cD}}", from=1-3, to=3-3]

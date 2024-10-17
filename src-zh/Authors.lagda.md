@@ -2,7 +2,7 @@
 module Authors where
 ```
 
-# About the authors
+# 关于作者
 
 This is a page where everyone who adds to the 1lab can write a little
 bit about themselves. I mean it: everyone can write a bit about

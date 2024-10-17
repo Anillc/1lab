@@ -39,7 +39,7 @@ private
 ```
 -->
 
-# Category of monoids
+# 幺半群范畴
 
 <!--
 ```agda

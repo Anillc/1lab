@@ -105,8 +105,8 @@ B \otimes C)$, i.e. making the following diagram commute:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {(A \otimes FB) \otimes C} & {A \otimes (FB \otimes C)} \\
-  {F(A \otimes B) \otimes C} & {A \otimes F(B \otimes C)} \\
+  {(A \otimes FB) \otimes C} & {A \otimes (FB \otimes C)} \
+  {F(A \otimes B) \otimes C} & {A \otimes F(B \otimes C)} \
   {F((A \otimes B) \otimes C)} & {F(A \otimes (B \otimes C))}
   \arrow["\alpha", from=1-1, to=1-2]
   \arrow["{\sigma \otimes C}"', from=1-1, to=2-1]
@@ -167,7 +167,7 @@ diagram.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {A \otimes FB} & {FB \otimes A} \\
+  {A \otimes FB} & {FB \otimes A} \
   {F (A \otimes B)} & {F (B \otimes A)}
   \arrow["\sigma"', from=1-1, to=2-1]
   \arrow["\tau", from=1-2, to=2-2]

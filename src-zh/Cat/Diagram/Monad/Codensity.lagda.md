@@ -74,8 +74,8 @@ commutativity of the $F$ -- $\Id$ -- $F$ triangle below.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\mathcal{A}} && B \\
-  \\
+  {\mathcal{A}} && B \
+  \
   B
   \arrow[""{name=0, anchor=center, inner sep=0}, "{\mathrm{Ran}_F F}"{description, pos=0.7}, curve={height=-12pt}, dashed, from=3-1, to=1-3]
   \arrow[""{name=1, anchor=center, inner sep=0}, "{\mathrm{Id}}"{description, pos=0.3}, curve={height=12pt}, from=3-1, to=1-3]

@@ -26,7 +26,7 @@ open import Meta.Bind
 module 1Lab.Resizing where
 ```
 
-# Propositional resizing {defines="propositional-resizing"}
+# 命题降级 {defines="propositional-resizing"}
 
 Ordinarily, the collection of all $\kappa$-small predicates on
 $\kappa$-small types lives in the next universe up, $\kappa^+$. This is

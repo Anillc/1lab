@@ -64,8 +64,8 @@ mutual compatibility of the multiplication and unit with the unitors.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {(MM)M} && {M(MM)} \\
-  \\
+  & {(MM)M} && {M(MM)} \
+  \
   MM && M && MM
   \arrow["\alpha", from=1-4, to=1-2]
   \arrow["{\mu\blacktriangleleft M}"', from=1-2, to=3-1]
@@ -77,8 +77,8 @@ mutual compatibility of the multiplication and unit with the unitors.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {M\mathrm{Id}} && MM && {\mathrm{Id}M} \\
-  \\
+  {M\mathrm{Id}} && MM && {\mathrm{Id}M} \
+  \
   && M
   \arrow["{M \blacktriangleright \eta}", from=1-1, to=1-3]
   \arrow["\mu", from=1-3, to=3-3]

@@ -16,7 +16,7 @@ open import Homotopy.Space.Circle
 module Homotopy.Space.Torus where
 ```
 
-# The torus
+# 环面
 
 In classical topology, the two-dimensional torus $T^2$ may be defined
 as the product of circles, i.e., $T^2$ may be defined as $S^1 \times

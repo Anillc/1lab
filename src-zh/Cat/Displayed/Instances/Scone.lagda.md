@@ -46,8 +46,8 @@ we have $f \circ su(u) = sv (uv u)$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  U && V \\
-  \\
+  U && V \
+  \
   {\mathcal{B}(1, X)} && {\mathcal{B}(1, Y)}
   \arrow["uv", from=1-1, to=1-3]
   \arrow["su"', from=1-1, to=3-1]
@@ -63,8 +63,8 @@ global sections functor.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\mathrm{Scn}(\mathcal{B})} && {\mathrm{Arr}(\mathbf{Sets})} \\
-  \\
+  {\mathrm{Scn}(\mathcal{B})} && {\mathrm{Arr}(\mathbf{Sets})} \
+  \
   {\mathcal{B}} && {\mathbf{Sets}}
   \arrow["{\mathrm{Slices}(\mathbf{Sets})}", from=1-3, to=3-3]
   \arrow["{\mathcal{B}(1,-)}"', from=3-1, to=3-3]

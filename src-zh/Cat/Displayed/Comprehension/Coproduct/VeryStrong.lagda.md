@@ -195,8 +195,8 @@ dealing with _very strong_ coproducts, they're the same extension.
 
 ```{.quiver}
 \begin{tikzcd}
-  {\Gamma,X,A} && {\Gamma,X} \\
-  \\
+  {\Gamma,X,A} && {\Gamma,X} \
+  \
   {\Gamma,\coprod X A} && \Gamma
   \arrow["{\pi,\langle X, A\rangle}"', from=1-1, to=3-1]
   \arrow["\pi", from=1-3, to=3-3]
@@ -211,8 +211,8 @@ $\Gamma, \coprod X A \to \Gamma, X, A$ using the first.
 
 ```{.quiver}
 \begin{tikzcd}
-  {\Gamma,X,A} && {\Gamma,X,A} \\
-  \\
+  {\Gamma,X,A} && {\Gamma,X,A} \
+  \
   {\Gamma,\coprod X A} && {\Gamma,X}
   \arrow["{\pi,\langle X, A\rangle}"', from=1-1, to=3-1]
   \arrow["\pi", from=1-3, to=3-3]

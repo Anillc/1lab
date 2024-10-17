@@ -26,8 +26,8 @@ $f : A \to B$ is an epimorphism iff. the square below is a pushout
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && b \\
-  \\
+  a && b \
+  \
   b && b
   \arrow["{\mathrm{id}}", from=1-3, to=3-3]
   \arrow["{\mathrm{id}}"', from=3-1, to=3-3]

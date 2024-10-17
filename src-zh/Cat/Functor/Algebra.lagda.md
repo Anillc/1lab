@@ -64,8 +64,8 @@ with the algebras on $A$ and $B$, as in the following digram.
 
 ```{.quiver}
 \begin{tikzcd}
-  {F(A)} && {F(B)} \\
-  \\
+  {F(A)} && {F(B)} \
+  \
   A && B
   \arrow["\alpha"', from=1-1, to=3-1]
   \arrow["f"', from=3-1, to=3-3]
@@ -402,8 +402,8 @@ homomorphism $F^{\*}(f)$, as in the following diagram:
 
 ```{.quiver}
 \begin{tikzcd}
-  {F(F^*(A))} && {F(F^*(B))} \\
-  \\
+  {F(F^*(A))} && {F(F^*(B))} \
+  \
   {F^*(A)} && {F^*(B)}
   \arrow["{\mathrm{roll}_A}"', from=1-1, to=3-1]
   \arrow["{F^*(f)}"', from=3-1, to=3-3]
@@ -480,8 +480,8 @@ as described in the following digram:
 
 ```{.quiver}
 \begin{tikzcd}
-  {F(F^*(A))} && {F(A)} \\
-  \\
+  {F(F^*(A))} && {F(A)} \
+  \
   {F^{*}(A)} && A
   \arrow["\alpha"', from=3-1, to=3-3]
   \arrow["{\mathrm{roll}}"', from=1-1, to=3-1]

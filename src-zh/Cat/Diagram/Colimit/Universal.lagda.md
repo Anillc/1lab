@@ -45,7 +45,7 @@ a coproduct diagram $A \to A + B \ot B$ --- along some morphism $f : X \to A + B
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {f^* A} & X & {f^* B} \\
+  {f^* A} & X & {f^* B} \
   A & {A+B} & B
   \arrow[from=1-1, to=1-2]
   \arrow[from=1-1, to=2-1]
@@ -67,9 +67,9 @@ along some morphism $f : X \to Y$ like so:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {f^* A} & {f^*(A + B)} & {f^* B} \\
-  & X \\
-  & Y \\
+  {f^* A} & {f^*(A + B)} & {f^* B} \
+  & X \
+  & Y \
   A & {A+B} & B
   \arrow[from=1-1, to=1-2]
   \arrow[from=1-1, to=2-2]
@@ -234,9 +234,9 @@ $\cJ^\triangleright \to \cC/X$) is colimiting.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  U & W & V \\
-  & X \\
-  & Y \\
+  U & W & V \
+  & X \
+  & Y \
   A & C & B
   \arrow[from=1-1, to=1-2]
   \arrow[from=1-1, to=2-2]

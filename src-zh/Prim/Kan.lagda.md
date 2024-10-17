@@ -10,7 +10,7 @@ open import Prim.Type
 module Prim.Kan where
 ```
 
-# Primitive: Kan operations
+# 原始类型：Kan 操作
 
 Using the machinery from the other `Prim` modules, we can define the Kan
 operations: [transport] and [composition].

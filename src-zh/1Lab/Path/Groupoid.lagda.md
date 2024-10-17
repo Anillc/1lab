@@ -23,7 +23,7 @@ _ = ap-∙
 ```
 -->
 
-# Types are groupoids {defines="types-are-higher-groupoids"}
+# 类型是高阶群胚 {defines="types-are-higher-groupoids"}
 
 The `Path`{.Agda} types equip every `Type`{.Agda} with the structure of
 an _$\infty$-groupoid_. The higher structure of a type begins with its
@@ -292,7 +292,7 @@ $p \bullet q \equiv p \bullet q$:
 
 ```{.quiver}
 \[\begin{tikzcd}
-	a & b \\
+	a & b \
 	b & c
 	\arrow["p", from=1-1, to=1-2]
 	\arrow["p"', from=1-1, to=2-1]

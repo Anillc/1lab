@@ -86,8 +86,8 @@ the associator, in the sense that the following hexagon commutes:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {A \otimes (B \otimes C)} & {(B \otimes C) \otimes A} \\
-  {(A \otimes B) \otimes C} &&& {B \otimes (C \otimes A)} \\
+  & {A \otimes (B \otimes C)} & {(B \otimes C) \otimes A} \
+  {(A \otimes B) \otimes C} &&& {B \otimes (C \otimes A)} \
   & {(B \otimes A) \otimes C} & {B \otimes (A \otimes C)}
   \arrow["{\beta \otimes C}"', from=2-1, to=3-2]
   \arrow["\alpha"', from=3-2, to=3-3]

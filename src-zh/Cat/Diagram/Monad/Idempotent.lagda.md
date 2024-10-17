@@ -123,7 +123,7 @@ morphism, in that it makes the outer square commute:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  MA & MB \\
+  MA & MB \
   A & B
   \arrow["a"', from=1-1, to=2-1]
   \arrow["b", from=1-2, to=2-2]
@@ -221,11 +221,11 @@ The proof is by chasing the following slightly wonky diagram.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  MA &&& {MA \times MA} & {M(A \times MA)} \\
-  & MMA \\
-  && {M(MA \times MA)} & {M^2(A \times MA)} \\
-  \\
-  {M(A \times A)} && {M(A \times MA)} && {M(A \times MA)} \\
+  MA &&& {MA \times MA} & {M(A \times MA)} \
+  & MMA \
+  && {M(MA \times MA)} & {M^2(A \times MA)} \
+  \
+  {M(A \times A)} && {M(A \times MA)} && {M(A \times MA)} \
   & {M^2(A \times A)}
   \arrow["\mu", curve={height=-6pt}, from=6-2, to=5-1]
   \arrow["M\delta"', from=1-1, to=5-1]

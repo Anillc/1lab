@@ -11,7 +11,7 @@ open import Prim.Kan
 module Prim.Data.Bool where
 ```
 
-# Primitive: Booleans
+# 原始类型：布尔类型
 
 The [booleans](Data.Bool.html) are the h-initial type with two inhabitants.
 

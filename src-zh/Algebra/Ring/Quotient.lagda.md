@@ -26,7 +26,7 @@ private module R = Kit R
 ```
 -->
 
-# Quotient rings
+# 商环
 
 Let $R$ be a [[ring]] and $I \sube R$ be an ideal. Because rings have an
 underlying [[abelian group]], the ideal $I \sube R$ determines a normal

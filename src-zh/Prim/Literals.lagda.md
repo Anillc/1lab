@@ -10,7 +10,7 @@ open import Prim.Type
 module Prim.Literals where
 ```
 
-# Primitive: Overloaded literals
+# 原始类型：重载的字面量
 
 We define the records `Number`{.Agda}, `Negative`{.Agda} and
 `String`{.Agda} to allow overloading of the numeric literals.

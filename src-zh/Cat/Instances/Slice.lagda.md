@@ -82,7 +82,7 @@ says that the map $h$ "respects reindexing", or less obliquely
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && b \\
+  a && b \
   & c
   \arrow["f"', from=1-1, to=2-2]
   \arrow["g", from=1-3, to=2-2]
@@ -167,8 +167,8 @@ commutativity for $g \circ f$).
 
 ```{.quiver}
 \[\begin{tikzcd}
-  x && y && z \\
-  & c \\
+  x && y && z \
+  & c \
   && c
   \arrow["{x_m}"', from=1-1, to=2-2]
   \arrow["{y_m}", from=1-3, to=2-2]
@@ -287,8 +287,8 @@ consisting of $f$ and $g$, but now in the slice category $\cC/c$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {a \times_c b} && a \\
-  \\
+  {a \times_c b} && a \
+  \
   b && c
   \arrow["{\pi_2}"', from=1-1, to=3-1]
   \arrow["{\pi_1}", from=1-1, to=1-3]
@@ -348,9 +348,9 @@ in the square below.
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  Q \\
-  \& {a\times_bc} \&\& a \\
-  \\
+  Q \
+  \& {a\times_bc} \&\& a \
+  \
   \& b \&\& c
   \arrow["g"', from=4-2, to=4-4]
   \arrow["f", from=2-4, to=4-4]

@@ -161,7 +161,7 @@ It follows, since $U$ preserves coequalisers, that both rows of the diagram
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {T^2o} & UFo & o \\
+  {T^2o} & UFo & o \
   {T^2o} & UFo & {UK\inv(o)}
   \arrow[shift left=1, from=1-1, to=1-2]
   \arrow[shift right=1, from=1-1, to=1-2]
@@ -220,7 +220,7 @@ unique dotted map which fits into
 
 ```{.quiver}
 \[\begin{tikzcd}
-  FUFUA & FUA & {K\inv KA} \\
+  FUFUA & FUA & {K\inv KA} \
   && {A.}
   \arrow[two heads, from=1-2, to=1-3]
   \arrow["{\eps'_{FUA}}"', shift right=1, from=1-1, to=1-2]

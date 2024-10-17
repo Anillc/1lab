@@ -44,8 +44,8 @@ _up to a natural transformation_ $\theta$. Note the similarity with a
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {F\downarrow G} && \mathcal{A} \\
-  \\
+  {F\downarrow G} && \mathcal{A} \
+  \
   \mathcal{B}     && \mathcal{C}
   \arrow["F", from=1-3, to=3-3]
   \arrow["G"', from=3-1, to=3-3]
@@ -94,8 +94,8 @@ component of a [naturality square].
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {F(x_a)} && {G(y_a)} \\
-  \\
+  {F(x_a)} && {G(y_a)} \
+  \
   {F(x_b)} && {G(y_b)}
   \arrow["{f_b}"', from=3-1, to=3-3]
   \arrow["{f_a}", from=1-1, to=1-3]
