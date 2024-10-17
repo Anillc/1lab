@@ -46,7 +46,7 @@ displayed objects is a set, and such that, for each right corner
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {y'} \\
+  & {y'} \
   x & {y\text{,}}
   \arrow[lies over, from=1-2, to=2-2]
   \arrow["f"', from=2-1, to=2-2]
@@ -99,9 +99,9 @@ So suppose we have an open diagram
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {u'} \\
-  & {a'} && {b'} \\
-  u \\
+  {u'} \
+  & {a'} && {b'} \
+  u \
   & a && {b,}
   \arrow["{f'}"', from=2-2, to=2-4]
   \arrow["f", from=4-2, to=4-4]
@@ -145,8 +145,8 @@ into a diagram like
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {a'} && {b'} && {a'} \\
-  \\
+  {a'} && {b'} && {a'} \
+  \
   x && x && {x\text{,}}
   \arrow["f", from=1-1, to=1-3]
   \arrow["g"', from=1-5, to=1-3]

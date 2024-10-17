@@ -13,7 +13,7 @@ open import Data.Fin
 module Algebra.Group.Instances.Symmetric where
 ```
 
-# Symmetric groups {defines="symmetric-group"}
+# 对称群 {defines="symmetric-group"}
 
 If $X$ is a set, then the type of all bijections $X \simeq X$ is also a
 set, and it forms the carrier for a [[group]]: The _symmetric group_ on $X$.

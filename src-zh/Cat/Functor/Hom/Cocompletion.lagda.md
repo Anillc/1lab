@@ -51,8 +51,8 @@ be able to the red and blue triangles in the diagram below to obtain a
 
 ```{.quiver}
 \[\begin{tikzcd}
-  \bullet && \bullet \\
-  \\
+  \bullet && \bullet \
+  \
   \bullet && \bullet
   \arrow[color={rgb,255:red,92;green,92;blue,214}, from=1-1, to=3-3]
   \arrow[color={rgb,255:red,92;green,92;blue,214}, from=3-1, to=1-1]

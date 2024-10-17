@@ -16,7 +16,7 @@ open import Meta.Brackets
 module Logic.Propositional.Classical where
 ```
 
-# Classical propositional logic {defines="classical-propositional-logic"}
+# 古典命题逻辑 {defines="classical-propositional-logic"}
 
 Classical propositional logic is a simple classical logic that only
 contains "atomic" propositions and connectives like "and", "or" and "not".
@@ -131,7 +131,7 @@ private variable
 ```
 -->
 
-## Weakening
+## 弱化
 
 Indexing the type of propositions by the number of atomic propositions
 makes our life easier later. However, it does mean that we need to
@@ -570,7 +570,7 @@ sound (dneg-elim {P = P} p) ρ hyps-true =
   sym (not-involutive (⟦ P ⟧ ρ)) ∙ sound p ρ hyps-true
 ```
 
-## Completeness
+## 完备性
 
 As mentioned earlier, we often think of classical propositional logic as
 having a _single_ semantics. This is largely justified by the fact that

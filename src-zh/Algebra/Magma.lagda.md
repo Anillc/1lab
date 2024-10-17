@@ -16,7 +16,7 @@ private variable
 ```
 -->
 
-# ∞-Magmas {defines="magma ∞-magma"}
+# ∞-原群 {defines="magma ∞-magma"}
 
 In common mathematical parlance, a **magma** is a set equipped with a
 binary operation. In HoTT, we free ourselves from considering sets as a

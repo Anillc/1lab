@@ -129,8 +129,8 @@ equaliser $e : E \to P$, then the square
 
 ```{.quiver}
 \[\begin{tikzcd}
-  E && X \\
-  \\
+  E && X \
+  \
   Y && Z
   \arrow["{fp_1}", from=1-1, to=1-3]
   \arrow["{fp_2}"', from=1-1, to=3-1]
@@ -180,7 +180,7 @@ equalisers to factor _that_ as a unique arrow $P' \to X \times_Z Y$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {X\times_ZY} & {X\times Y} & Z \\
+  {X\times_ZY} & {X\times Y} & Z \
   {P'}
   \arrow[from=1-1, to=1-2]
   \arrow["{f\pi_1}", shift left=1, from=1-2, to=1-3]
@@ -243,9 +243,9 @@ object $\*$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {P'} \\
-  & {A\times B} && B \\
-  \\
+  {P'} \
+  & {A\times B} && B \
+  \
   & A
   \arrow["g", from=2-2, to=2-4]
   \arrow["f"', from=2-2, to=4-2]
@@ -257,9 +257,9 @@ object $\*$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {P'} \\
-  & {A\times B} && B \\
-  \\
+  {P'} \
+  & {A\times B} && B \
+  \
   & A && {*}
   \arrow["g", from=2-2, to=2-4]
   \arrow["f"', from=2-2, to=4-2]
@@ -307,8 +307,8 @@ along the diagonal map:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\rm{eq}(f,g)} && A \\
-  \\
+  {\rm{eq}(f,g)} && A \
+  \
   B && {B \times B}
   \arrow["{\rm{equ}}", from=1-1, to=1-3]
   \arrow[from=1-1, to=3-1]
@@ -365,9 +365,9 @@ unique.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {E'} \\
-  & {\rm{eq}(f,g)} && A \\
-  \\
+  {E'} \
+  & {\rm{eq}(f,g)} && A \
+  \
   & B && {B \times B}
   \arrow["{\rm{equ}}", from=2-2, to=2-4]
   \arrow["{\langle f, g \rangle}", from=2-4, to=4-4]

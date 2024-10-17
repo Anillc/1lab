@@ -20,12 +20,12 @@ private variable
 ```
 -->
 
-# Properties of Σ types
+# Σ 类型的性质
 
 This module contains properties of $\Sigma$ types, not necessarily
 organised in any way.
 
-## Groupoid structure
+## 群胚结构
 
 The first thing we prove is that _paths in sigmas are sigmas of paths_.
 The type signatures make it clearer:

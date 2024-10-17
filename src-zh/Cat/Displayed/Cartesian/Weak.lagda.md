@@ -48,9 +48,9 @@ as the weak cartesian map. This situation is best understood graphically.
 
 ```{.quiver}
 \begin{tikzcd}
-	{u'} \\
-	& {x'} && {y'} \\
-	x \\
+	{u'} \
+	& {x'} && {y'} \
+	x \
 	& x && y
 	\arrow["f"', from=4-2, to=4-4]
 	\arrow[lies over, from=2-2, to=4-2]
@@ -309,8 +309,8 @@ cartesian lift $f^{\*}$ of $f$.
 
 ```{.quiver}
 \begin{tikzcd}
-	\textcolor{rgb,255:red,214;green,92;blue,92}{x^{*}} && {y'} \\
-	\\
+	\textcolor{rgb,255:red,214;green,92;blue,92}{x^{*}} && {y'} \
+	\
 	x && y
 	\arrow["f", from=3-1, to=3-3]
 	\arrow[lies over, color={rgb,255:red,214;green,92;blue,92}, from=1-1, to=3-1]
@@ -338,9 +338,9 @@ map:
 
 ```{.quiver}
 \begin{tikzcd}
-	{u'} \\
-	&& {x^{*}} && {y'} \\
-	u \\
+	{u'} \
+	&& {x^{*}} && {y'} \
+	u \
 	&& x && y
 	\arrow["f", from=4-3, to=4-5]
 	\arrow[lies over, from=2-3, to=4-3]

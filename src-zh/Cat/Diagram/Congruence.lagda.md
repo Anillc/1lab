@@ -94,8 +94,8 @@ under the [cospan] $R \xto{p\_1} X \xot{p\_2} R$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {d \times_A d} && d \\
-  \\
+  {d \times_A d} && d \
+  \
   d && A
   \arrow["{q_1}"', from=1-1, to=3-1]
   \arrow["{q_2}", from=1-1, to=1-3]
@@ -112,7 +112,7 @@ respectively --- factor _through_ $R$, somehow, i.e. we have a $t : (d
 
 ```{.quiver}
 \[\begin{tikzcd}
-  && d \\
+  && d \
   {d \times_Ad} && {A \times A}
   \arrow["t", from=2-1, to=1-3]
   \arrow["m", hook, from=1-3, to=2-3]

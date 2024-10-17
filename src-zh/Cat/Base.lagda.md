@@ -433,8 +433,8 @@ _components_, where the component at $x$ is a map $F(x) \to G(x)$. The
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {F_0(x)} && {F_0(y)} \\
-  \\
+  {F_0(x)} && {F_0(y)} \
+  \
   {G_0(x)} && {G_0(y)}
   \arrow["{\eta_x}"', from=1-1, to=3-1]
   \arrow["{\eta_y}", from=1-3, to=3-3]

@@ -27,7 +27,7 @@ open Functor
 ```
 -->
 
-# Group actions {defines="group-action"}
+# 群作用 {defines="group-action"}
 
 A useful way to think about [groups] is to think of their elements as
 encoding "symmetries" of a particular object. For a concrete example,

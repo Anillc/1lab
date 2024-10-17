@@ -141,8 +141,8 @@ pullback:
 
 ```{.quiver}
 \begin{tikzcd}
-  {C_x} && \top \\
-  \\
+  {C_x} && \top \
+  \
   {C_1} && {C_0}
   \arrow["src", from=3-1, to=3-3]
   \arrow["x", from=1-3, to=3-3]

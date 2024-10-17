@@ -26,7 +26,7 @@ private variable
 ```
 -->
 
-# Universes of n-types
+# n-类型的宇宙层级
 
 A common phenomenon in higher category theory is that the collection of
 all $n$-categories in a given universe $\ell$ assembles into an

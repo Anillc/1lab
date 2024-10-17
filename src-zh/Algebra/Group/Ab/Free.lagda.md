@@ -16,7 +16,7 @@ open import Cat.Prelude
 module Algebra.Group.Ab.Free where
 ```
 
-# Free abelian groups
+# 自由交换群
 
 We have already constructed the [[free group|free group construction]]
 on a [[set]] and the [[free abelian group on a group|abelianisation]];

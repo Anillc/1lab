@@ -46,8 +46,8 @@ overall square has to commute.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  P && Y \\
-  \\
+  P && Y \
+  \
   X && Z
   \arrow["g", from=1-3, to=3-3]
   \arrow["f"', from=3-1, to=3-3]
@@ -96,9 +96,9 @@ the square is a pullback.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {P'} \\
-  & P && Y \\
-  \\
+  {P'} \
+  & P && Y \
+  \
   & X && Z
   \arrow["g", from=2-4, to=4-4]
   \arrow["f"', from=4-2, to=4-4]
@@ -198,9 +198,9 @@ the following diagram.
 
 ```{.quiver}
 \begin{tikzcd}
-  X \\
-  & P && X \\
-  \\
+  X \
+  & P && X \
+  \
   & X && Y
   \arrow["u", from=1-1, to=2-2]
   \arrow["id", curve={height=-12pt}, from=1-1, to=2-4]
@@ -300,9 +300,9 @@ as in the following diagram:
 
 ```{.quiver}
 \begin{tikzcd}
-  {P'} \\
-  & P && X \\
-  \\
+  {P'} \
+  & P && X \
+  \
   & X && Y
   \arrow["{p_2}", curve={height=-12pt}, from=1-1, to=2-4]
   \arrow["{p_1}"', curve={height=12pt}, from=1-1, to=4-2]
@@ -318,9 +318,9 @@ it in by using the universal property of the kernel pair.
 
 ```{.quiver}
 \begin{tikzcd}
-  {P'} \\
-  & P && X \\
-  \\
+  {P'} \
+  & P && X \
+  \
   & X && Y
   \arrow["u", dashed, from=1-1, to=2-2]
   \arrow["{p_2}", curve={height=-12pt}, from=1-1, to=2-4]

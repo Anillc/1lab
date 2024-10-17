@@ -18,7 +18,7 @@ open is-monoid hiding (idl ; idr)
 module Algebra.Group where
 ```
 
-# Groups {defines=group}
+# 群 {defines=group}
 
 A **group** is a [monoid] that has inverses for every element. The
 inverse for an element is, [necessarily, unique]; thus, to say that "$(G,

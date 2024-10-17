@@ -22,7 +22,7 @@ import Data.List as List
 module Logic.Propositional.Classical.CNF where
 ```
 
-## Conjunctive normal forms {defines="conjunctive-normal-form CNF"}
+## 合取范式 {defines="conjunctive-normal-form CNF"}
 
 As a general theme, it is often very useful to have some notion of
 normal-form for logical and algebraic expressions, and
@@ -96,7 +96,7 @@ avoid-lit i (neg x) p = neg (avoid i x p)
 ```
 -->
 
-## Semantics
+## 语义
 
 Like their non-normal form brethren, expressions in CNF have a natural
 semantics in booleans. However, evaluation is particularly easy!

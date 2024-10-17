@@ -26,7 +26,7 @@ open Initial
 ```
 -->
 
-# Free groups {defines=free-group-construction}
+# 自由群 {defines=free-group-construction}
 
 We give a direct, higher-inductive constructor of the **free group
 $F(A)$ on a type $A$ of generators**. While we allow the parameter to be

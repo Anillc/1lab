@@ -111,8 +111,8 @@ this is the homotopy pushout
 
 ```{.quiver}
 \[\begin{tikzcd}
-  A && B \\
-  \\
+  A && B \
+  \
   \top && {\mathrm{Cofibre}(f)\text{,}}
   \arrow["{\mathrm{pt}}"', from=3-1, to=3-3]
   \arrow["{\mathrm{inr}}", from=1-3, to=3-3]

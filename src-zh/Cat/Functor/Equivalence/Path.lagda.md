@@ -49,8 +49,8 @@ essentially, the dashed line in the diagram
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\mathbf{Hom}_\mathcal{C}(x,y)} && {\mathbf{Hom}_\mathcal{D}(x,y)} \\
-  \\
+  {\mathbf{Hom}_\mathcal{C}(x,y)} && {\mathbf{Hom}_\mathcal{D}(x,y)} \
+  \
   {\mathbf{Hom}_\mathcal{D}(F_0x,F_0y)} && {\mathbf{Hom}_\mathcal{D}(x,y)}
   \arrow["{\mathrm{id}}", from=1-3, to=3-3]
   \arrow["{F_1}"', from=1-1, to=3-1]

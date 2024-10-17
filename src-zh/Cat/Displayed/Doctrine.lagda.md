@@ -214,8 +214,8 @@ provided that the square
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  d \&\& a \\
-  \\
+  d \&\& a \
+  \
   b \&\& c
   \arrow["k"', from=1-1, to=3-1]
   \arrow["h", from=1-1, to=1-3]

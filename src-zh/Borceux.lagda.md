@@ -120,7 +120,7 @@ of the results from Francis Borceux's "Handbook of Categorical Algebra"
 [@Borceux:vol1] in a single place.^[It also serves as an excellent place to
 find possible contributions!]
 
-# Volume 1
+# 第 1 卷
 
 ## 1 The language of categories
 
@@ -130,7 +130,7 @@ find possible contributions!]
 
 [Russell's paradox]: 1Lab.Counterexamples.Russell.html
 
-## 1.2 Categories and functors
+## 1.2 范畴与函子
 
 <!--
 ```agda
@@ -168,7 +168,7 @@ _ = Const
   - d. `Hom[_,-]`{.Agda}
   - e. `Const`{.Agda}
 
-### 1.3 Natural transformations
+### 1.3 自然变换
 
 <!--
 ```agda

@@ -80,7 +80,7 @@ the coproduct.
 
 ```{.quiver}
 \[\begin{tikzcd}
-	Z & {X + Y} & {X +_Z Y} \\
+	Z & {X + Y} & {X +_Z Y} \
 	&& {P'}
 	\arrow["{in_0f}", shift left=1, from=1-1, to=1-2]
 	\arrow["{in_1g}"', shift right=1, from=1-1, to=1-2]
@@ -96,8 +96,8 @@ represents a pushout
 
 ```{.quiver}
 \[\begin{tikzcd}
-  Z && X \\
-  \\
+  Z && X \
+  \
   Y && E
   \arrow["{g}", from=1-1, to=1-3]
   \arrow["{f}"', from=1-1, to=3-1]
@@ -193,8 +193,8 @@ limits]].
 
 ```{.quiver}
 \[\begin{tikzcd}
-	{A + A} && A \\
-	\\
+	{A + A} && A \
+	\
 	B && {\rm{coequ}}
 	\arrow[from=1-3, to=3-3]
 	\arrow["{[\id, \id]}", from=1-1, to=1-3]

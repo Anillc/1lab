@@ -292,8 +292,8 @@ following diagram:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  && {(A \oplus A) \oplus A} & {(B \oplus B) \oplus B} \\
-  A & {A \oplus A} &&& {B \oplus B} & B \\
+  && {(A \oplus A) \oplus A} & {(B \oplus B) \oplus B} \
+  A & {A \oplus A} &&& {B \oplus B} & B \
   && {A \oplus (A \oplus A)} & {B \oplus (B \oplus B)}
   \arrow["{(f \oplus g) \oplus h}", from=1-3, to=1-4]
   \arrow["\alpha"', from=1-3, to=3-3]
@@ -327,8 +327,8 @@ Commutativity follows from the following diagram, where $\beta$ is the
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {A \oplus A} & {B \oplus B} \\
-  A &&& B \\
+  & {A \oplus A} & {B \oplus B} \
+  A &&& B \
   & {A \oplus A} & {B \oplus B}
   \arrow["{f \oplus g}", from=1-2, to=1-3]
   \arrow["\beta"', from=1-2, to=3-2]
@@ -357,7 +357,7 @@ which is that the [[zero object]] is a left unit for $\oplus$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  A & {A \oplus A} & {B \oplus B} & B \\
+  A & {A \oplus A} & {B \oplus B} & B \
   && {0 \oplus B}
   \arrow["\delta", from=1-1, to=1-2]
   \arrow["{0 \oplus f}", from=1-2, to=1-3]

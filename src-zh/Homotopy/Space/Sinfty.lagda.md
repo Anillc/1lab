@@ -8,7 +8,7 @@ open import 1Lab.Prelude
 module Homotopy.Space.Sinfty where
 ```
 
-# The infinite sphere
+# 无限维球面
 
 The $(n+1)$-sphere can be constructed from the $n$-sphere via suspension.
 By writing a recursive HIT, we can define a type which is its own

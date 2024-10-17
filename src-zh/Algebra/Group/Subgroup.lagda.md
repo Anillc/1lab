@@ -29,7 +29,7 @@ private module _ {ℓ} where open Cat.Displayed.Instances.Subobjects (Groups ℓ
 ```
 -->
 
-# Subgroups
+# 子群
 
 A **subgroup** $m$ of a group $G$ is a [[monomorphism]] $H \xto{m} G$,
 that is, an object of the [[poset of subobjects]] $\Sub(G)$. Since group
@@ -85,7 +85,7 @@ predicate→subgroup {G = G} H p = record { map = it ; monic = ism } where
   ism = Homomorphism-monic it λ p → Σ-prop-path! p
 ```
 
-# Kernels and images
+# 核与像
 
 To a group homomorphism $f : A \to B$ we can associate two canonical
 subgroups, one of $A$ and one of $B$: $f$'s \[\[**image factorisation**]],
@@ -245,7 +245,7 @@ mentioned above).
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\ker f} & A & {A/\ker(f)} \\
+  {\ker f} & A & {A/\ker(f)} \
   && F
   \arrow["0", shift left=2, from=1-1, to=1-2]
   \arrow[shift right=2, hook, from=1-1, to=1-2]

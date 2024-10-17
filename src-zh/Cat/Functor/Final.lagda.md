@@ -65,7 +65,7 @@ and for every span
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & d \\
+  & d \
   Fa && Fb\text{,}
   \arrow["f", from=1-2, to=2-1]
   \arrow["g"', from=1-2, to=2-3]
@@ -78,7 +78,7 @@ $a \rightarrow a_0 \leftarrow b$:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & d \\
+  & d \
   Fa & {Fa_0} & Fb
   \arrow["f"', from=1-2, to=2-1]
   \arrow[from=2-1, to=2-2]
@@ -122,8 +122,8 @@ the following diagram:
 
 ```{.quiver .tall-1}
 \[\begin{tikzcd}
-  & DFa \\
-  Dd && K \\
+  & DFa \
+  Dd && K \
   & DFb
   \arrow["Df", from=2-1, to=1-2]
   \arrow["{\kappa_a}", from=1-2, to=2-3]
@@ -291,7 +291,7 @@ implies the existence of zigzags, meditate on the following diagram:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & d \\
+  & d \
   Fx && Fy
   \arrow["f"', from=1-2, to=2-1]
   \arrow["g", from=1-2, to=2-3]
@@ -414,8 +414,8 @@ F$:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & c \\
-  Gx && Gy \\
+  & c \
+  Gx && Gy \
   {GFx'} && {GFy'}
   \arrow["f", from=1-2, to=2-1]
   \arrow["g"', from=1-2, to=2-3]

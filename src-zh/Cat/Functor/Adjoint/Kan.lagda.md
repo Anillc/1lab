@@ -43,8 +43,8 @@ to "grow" the original extension diagram.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  {\mathcal{C}} && D && A \\
-  \\
+  {\mathcal{C}} && D && A \
+  \
   {\mathcal{C'}}
   \arrow["p"', from=1-1, to=3-1]
   \arrow["F", from=1-1, to=1-3]

@@ -21,7 +21,7 @@ import Algebra.Ring.Reasoning as Ringr
 module Algebra.Ring.Ideal where
 ```
 
-# Ideals in rings
+# 环上的理想
 
 An **ideal** in a ring $R$ is the \[$\Ab$-enriched] analogue of a
 [sieve], when $R$ is considered as an $\Ab$-category with a single

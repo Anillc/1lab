@@ -26,9 +26,9 @@ open import Data.Dec.Base
 module 1Lab.HIT.Truncation where
 ```
 
-# Propositional truncation {defines="propositional-truncation"}
+# 命题截断 {defines="propositional-truncation"}
 
-Let $A$ be a type. The **propositional truncation** of $A$ is a type
+设 $A$ 是一个类型。 The **propositional truncation** of $A$ is a type
 which represents the [[proposition]] "A is inhabited". In MLTT,
 propositional truncations can not be constructed without postulates,
 even in the presence of impredicative prop. However, Cubical Agda
@@ -215,7 +215,7 @@ from the HoTT book. For example, a type $X$ is said _merely equivalent_
 to $Y$ if the type $\| X \equiv Y \|$ is inhabited.
 :::
 
-## Maps into sets
+## 映射到集合
 
 The elimination principle for $\| A \|$ says that we can only use the
 $A$ inside in a way that _doesn't matter_: the motive of elimination
@@ -313,7 +313,7 @@ truncation onto a set using a constant map.
 ```
 -->
 
-## Maps into groupoids
+## 映射到群胚
 
 We can push this idea further: as discussed in [@Kraus:2015], in general,
 functions $\| A \| \to B$ are equivalent to **coherently constant**
@@ -422,9 +422,9 @@ or, since we're doing cubical type theory, a "cubical tetrahedron":
 
 ```{.quiver}
 \[\begin{tikzcd}
-	a &&& a \\
-	& b & b \\
-	& c & d \\
+	a &&& a \
+	& b & b \
+	& c & d \
 	a &&& a
 	\arrow[""{name=0, anchor=center, inner sep=0}, from=3-2, to=3-3]
 	\arrow[""{name=1, anchor=center, inner sep=0}, Rightarrow, no head, from=2-2, to=2-3]

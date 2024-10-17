@@ -234,8 +234,8 @@ dimension, say $i$.
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  x \&\& x \\
-  \\
+  x \&\& x \
+  \
   y \&\& y
   \arrow[dashed, "{p(j)}"', from=1-1, to=3-1]
   \arrow[dashed, "{q(j)}", from=1-3, to=3-3]
@@ -260,10 +260,10 @@ square is on the left, in red.
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  \textcolor{rgb,255:red,214;green,92;blue,92}{x} \&\&\&\& x \\
-  \& \textcolor{rgb,255:red,214;green,92;blue,92}{x} \&\& x \\
-  \\
-  \& \textcolor{rgb,255:red,214;green,92;blue,92}{y} \&\& y \\
+  \textcolor{rgb,255:red,214;green,92;blue,92}{x} \&\&\&\& x \
+  \& \textcolor{rgb,255:red,214;green,92;blue,92}{x} \&\& x \
+  \
+  \& \textcolor{rgb,255:red,214;green,92;blue,92}{y} \&\& y \
   \textcolor{rgb,255:red,214;green,92;blue,92}{x} \&\&\&\& x
   \arrow[color={rgb,255:red,214;green,92;blue,92}, from=1-1, to=2-2]
   \arrow["{p(j)}", color={rgb,255:red,214;green,92;blue,92}, dashed, from=2-2, to=4-2]
@@ -308,12 +308,12 @@ odd-looking $\alpha(x, x, k)$ instead.
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  x \&\&\&\&\&\& x \\
-  \\
-  \&\& x \&\& x \\
-  \\
-  \&\& y \&\& y \\
-  \\
+  x \&\&\&\&\&\& x \
+  \
+  \&\& x \&\& x \
+  \
+  \&\& y \&\& y \
+  \
   x \&\&\&\&\&\& x
   \arrow[from=1-1, to=3-3]
   \arrow[""{name=0, anchor=center, inner sep=0}, "pj", dashed, from=3-3, to=5-3]
@@ -394,8 +394,8 @@ _path_ composition, but it's always a good idea to practice writing
 
 ```{.quiver}
 \[\begin{tikzcd}
-  x && y \\
-  \\
+  x && y \
+  \
   {C \rm{.centre}} && {C .\rm{centre}}
   \arrow[dashed, from=1-1, to=1-3]
   \arrow["{C \rm{.paths}\ x\ j}", from=3-1, to=1-1]

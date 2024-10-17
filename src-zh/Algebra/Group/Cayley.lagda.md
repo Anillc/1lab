@@ -14,7 +14,7 @@ module Algebra.Group.Cayley {ℓ} (G : Group ℓ) where
 open Group-on (G .snd) renaming (underlying-set to G-set)
 ```
 
-# Cayley's theorem {defines="cayleys-theorem"}
+# Cayley 定理 {defines="cayleys-theorem"}
 
 Cayley's theorem says that any group $G$ admits a representation as a
 subgroup of a [[symmetric group]], specifically the symmetric group acting

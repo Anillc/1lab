@@ -69,8 +69,8 @@ concept at hand.
 
     ```{.quiver}
     \[\begin{tikzcd}[ampersand replacement=\&]
-      \& {\{0,1\}} \\
-      {\{0\}} \&\& {\{1\}} \\
+      \& {\{0,1\}} \
+      {\{0\}} \&\& {\{1\}} \
       \& {\{\}}
       \arrow[from=3-2, to=2-1]
       \arrow[from=3-2, to=2-3]
@@ -100,8 +100,8 @@ commutative diagram like
 
 ```{.quiver}
 \[\begin{tikzcd}[ampersand replacement=\&]
-  \& V \\
-  {U_i} \&\& {U_j} \\
+  \& V \
+  {U_i} \&\& {U_j} \
   \& {U\text{.}}
   \arrow["{h_i}"', from=2-1, to=3-2]
   \arrow["{h_j}", from=2-3, to=3-2]

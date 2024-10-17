@@ -73,7 +73,7 @@ import Algebra.Group.Free as Group
 module HoTT where
 ```
 
-# The HoTT Book?
+# HoTT 之书？
 
 While the 1Lab has not been consciously designed as a project to
 formalise the HoTT book, in the course of our explorations into
@@ -81,11 +81,11 @@ formalised univalent mathematics, we have formalised a _considerable_
 subset of the first part, and most of chapter 9. The vast majority of
 the 1Lab is material that was _not_ covered in the HoTT book.
 
-# Part 1: Foundations
+# 第 1 部分：基础
 
-## Chapter 2: Homotopy type theory
+## 第 2 章：同伦类型论
 
-### 2.1: Types are higher groupoids
+### 2.1：类型是高阶群胚
 
 <!--
 ```agda
@@ -113,7 +113,7 @@ _ = Ωⁿ
 - Definition 2.1.7: `Type∙`{.Agda}
 - Definition 2.1.8: `Ωⁿ`{.Agda}
 
-### 2.2: Functions are functors
+### 2.2：函数是函子
 
 <!--
 ```agda
@@ -129,7 +129,7 @@ _ = ap-∙
   iii. _Definitional in cubical type theory_
   iv. _Definitional in cubical type theory_
 
-### 2.3: Type families are fibrations
+### 2.3：类型族是纤维化
 
 <!--
 ```agda
@@ -147,7 +147,7 @@ _ = subst-∙
 - Lemma 2.3.9: `subst-∙`{.Agda}
 - Lemma 2.3.10: _Definitional in cubical type theory_
 
-### 2.4: Homotopies and equivalences
+### 2.4：同伦与等价
 
 <!--
 ```agda
@@ -167,7 +167,7 @@ _ = _∙e_
 - Example 2.4.9: `transport⁻transport`{.Agda}
 - Lemma 2.4.12: `id-equiv`{.Agda}, `Equiv.inverse`{.Agda}, `_∙e_`{.Agda}
 
-### 2.7: Cartesian product types
+### 2.7：积类型
 
 <!--
 ```agda
@@ -178,7 +178,7 @@ _ = Σ-pathp-iso
 - Theorem 2.7.2: `Σ-pathp-iso`{.Agda}
 - Theorem 2.7.3: Agda has definitional η equality for records.
 
-### 2.9: Π-types and function extensionality
+### 2.9：Π 类型和函数外延性
 
 <!--
 ```agda
@@ -190,7 +190,7 @@ _ = funext-dep
 - Theorem 2.9.3: `funext`{.Agda} (no longer an axiom)
 - Lemma 2.9.6: `funext-dep`{.Agda} (no longer an axiom)
 
-### 2.10: Universes and univalence
+### 2.10：宇宙与泛等
 
 <!--
 ```agda
@@ -235,7 +235,7 @@ _ = ⊎Path.Code≃Path
 
 - Theorem 2.12.5: `⊎Path.Code≃Path`{.Agda}
 
-### Exercises
+### 练习
 
 <!--
 ```agda
@@ -245,9 +245,9 @@ _ = Σ-assoc
 
 - Exercise 2.10: `Σ-assoc`{.Agda}
 
-## Chapter 3: Sets and Logic
+## 第 3 章：集合和逻辑
 
-### 3.1: Sets and n-types
+### 3.1：集合与 n-类型
 
 <!--
 ```agda
@@ -268,7 +268,7 @@ _ = is-hlevel-suc
 - Definition 3.1.7: `is-groupoid`{.Agda}
 - Lemma 3.1.8: `is-hlevel-suc`{.Agda} (special case)
 
-### 3.2: Propositions as types?
+### 3.2：命题是类型？
 
 <!--
 ```agda
@@ -297,7 +297,7 @@ _ = is-hlevel-is-prop
 - Lemma 3.3.4: `is-prop→is-set`{.Agda}
 - Lemma 3.3.5: `is-prop-is-prop`{.Agda}, `is-hlevel-is-prop`{.Agda}
 
-### 3.4: Classical vs. intuitionistic logic
+### 3.4：古典与直觉主义逻辑
 
 <!--
 ```agda
@@ -327,7 +327,7 @@ _ = □
 - Lemma 3.5.1: `Σ-prop-path`{.Agda}
 - Axiom 3.5.5: `Ω`{.Agda}, `□`{.Agda}.
 
-### 3.7: Propositional truncation
+### 3.7：命题截断
 
 <!--
 ```agda
@@ -339,7 +339,7 @@ _ = ∃
 The type itself is defined as a higher-inductive type `∥_∥`{.Agda}. We
 also define `∃`{.Agda} as a shorthand for the truncation of `Σ`{.Agda}.
 
-### 3.8: The axiom of choice
+### 3.8：选择公理
 
 <!--
 ```agda
@@ -362,7 +362,7 @@ _ = ∥-∥-out
 - Lemma 3.9.1: `is-prop→equiv∥-∥`{.Agda}
 - Corollary 3.9.2: Implicit in e.g. `∥-∥-univ`{.Agda}, `∥-∥-out`{.Agda}
 
-### 3.11: Contractibility
+### 3.11：可缩性
 
 <!--
 ```agda
@@ -381,7 +381,7 @@ _ = Σ-contr-eqv
 - Definition 3.11.8: `Singleton-is-contr`{.Agda}
 - Lemma 3.11.9: `Σ-contract`{.Agda}, `Σ-contr-eqv`{.Agda}
 
-### Exercises
+### 练习
 
 <!--
 ```agda
@@ -416,7 +416,7 @@ _ = Finite-choice
 - Exercise 3.21: `is-prop≃equiv∥-∥`{.Agda}
 - Exercise 3.22: `Finite-choice`{.Agda}
 
-## Chapter 4: Equivalences
+## 第 4 章：等价
 
 ### 4.2: Half adjoint equivalences
 
@@ -457,7 +457,7 @@ _ = is-biinv-is-prop
 - Definition 4.3.1: `is-biinv`{.Agda}
 - Theorem 4.3.2: `is-biinv-is-prop`{.Agda}
 
-### 4.4: Contractible fibres
+### 4.4：可缩纤维
 
 <!--
 ```agda
@@ -476,7 +476,7 @@ generally use it through the interface of half-adjoint equivalences.
 - Theorem 4.4.3: `is-equiv→is-half-adjoint-equiv`{.Agda}
 - Lemma 4.4.4: `is-equiv-is-prop`{.Agda}
 
-### 4.6: Surjections and embeddings
+### 4.6：满射和嵌入
 
 <!--
 ```agda
@@ -510,9 +510,9 @@ _ = Map-classifier
 - Lemma 4.8.2: `Total-equiv`{.Agda}
 - Theorem 4.8.3: `Map-classifier`{.Agda}
 
-## Chapter 5: Induction
+## 第 5 章：归纳类型
 
-### 5.3: W-types
+### 5.3：W 类型
 
 <!--
 ```agda
@@ -522,7 +522,7 @@ _ = W
 
 - W-types: `W`{.Agda}
 
-### 5.4: Inductive types are initial algebras
+### 5.4：归纳类型是始代数
 
 <!--
 ```agda
@@ -532,7 +532,7 @@ _ = W-initial
 
 - Theorem 5.4.7: `W-initial`{.Agda}
 
-## Chapter 6: Higher inductive types
+## 第 6 章：高阶归纳类型
 
 ### 6.2: Induction principles and dependent paths
 
@@ -550,7 +550,7 @@ _ = Ωⁿ≃Sⁿ-map
 - Lemma 6.2.5: `S¹-rec`{.Agda}
 - Lemma 6.2.9: `Ωⁿ≃Sⁿ-map`{.Agda} for `n = 1`{.Agda}
 
-### 6.3: The interval
+### 6.3：区间
 
 <!--
 ```agda
@@ -565,7 +565,7 @@ This is the higher inductive type `[0,1]`{.Agda}, not the interval type
 
 - Lemma 6.3.1: `interval-contractible`{.Agda}
 
-### 6.4: Circles and spheres
+### 6.4：圆周和球面
 
 <!--
 ```agda
@@ -579,7 +579,7 @@ _ = ap-square
 - Lemma 6.4.2: `always-loop`{.Agda}
 - Lemma 6.4.4: `ap-square`{.Agda}
 
-### 6.5: Suspensions
+### 6.5：纬悬
 
 <!--
 ```agda
@@ -595,7 +595,7 @@ _ = Σ-map∙≃map∙-Ω
 - Definition 6.5.2: `Sⁿ⁻¹`{.Agda}
 - Lemma 6.5.4: `Σ-map∙≃map∙-Ω`{.Agda}
 
-### 6.6: Cell complexes
+### 6.6：胞腔复形
 
 <!--
 ```agda
@@ -605,7 +605,7 @@ _ = T²
 
 - The torus: `T²`{.Agda}.
 
-### 6.8: Pushouts
+### 6.8：推出
 
 <!--
 ```agda
@@ -621,7 +621,7 @@ _ = Susp≡Pushout-⊤←A→⊤
 - Lemma 6.8.2: `Pushout-is-universal-cocone`{.Agda}
 - Observation: `Susp≡Pushout-⊤←A→⊤`{.Agda}
 
-### 6.9: Truncations
+### 6.9：截断
 
 <!--
 ```agda
@@ -631,7 +631,7 @@ _ = ∥-∥₀-elim
 
 - Lemma 6.9.1: `∥-∥₀-elim`{.Agda}
 
-### 6.10: Quotients
+### 6.10：商
 
 <!--
 ```agda
@@ -646,7 +646,7 @@ We define the quotient `_/_`{.Agda} in terms of coequalisers
 
 - Lemma 6.10.3: `Coeq-univ`{.Agda}.
 
-### 6.11: Algebra
+### 6.11：代数
 
 <!--
 ```agda
@@ -663,7 +663,7 @@ _ = Group.make-free-group
 - Lemma 6.11.5: `Monoid.Free-monoid⊣Forget`{.Agda}
 - Lemma 6.11.6: `Group.make-free-group`{.Agda}
 
-### Exercises
+### 练习
 
 <!--
 ```agda
@@ -673,9 +673,9 @@ _ = T²≃S¹×S¹
 
 - Exercise 6.3: `T²≃S¹×S¹`{.Agda}
 
-## Chapter 7: Homotopy n-types
+## 第 7 章：同伦 n-类型
 
-### 7.1: Definition of n-types
+### 7.1：n-类型的定义
 
 <!--
 ```agda
@@ -713,7 +713,7 @@ _ = hlevel→hubs-and-spokes
 - Theorem 7.2.6: `Discrete-Nat`{.Agda}
 - Theorem 7.2.7: `hubs-and-spokes→hlevel`{.Agda}, `hlevel→hubs-and-spokes`{.Agda}
 
-### 7.3: Truncations
+### 7.3：截断
 
 <!--
 ```agda
@@ -727,7 +727,7 @@ _ = n-Tr-path-equiv
 - Lemma 7.3.2: `n-Tr-elim`{.Agda}
 - Theorem 7.3.12: `n-Tr-path-equiv`{.Agda}
 
-### 7.5: Connectedness
+### 7.5：连通性
 
 <!--
 ```agda
@@ -746,7 +746,7 @@ _ = point-is-n-connected
 - Corollary 7.5.9: `is-n-connected→n-type-const`{.Agda}, `n-type-const→is-n-connected`{.Agda}
 - Lemma 7.5.11: `is-n-connected-point`{.Agda}, `point-is-n-connected`{.Agda}
 
-### Exercises
+### 练习
 
 <!--
 ```agda
@@ -756,14 +756,14 @@ _ = is-n-connected≃∥-∥
 
 - Exercise 7.6: `is-n-connected≃∥-∥`{.Agda}
 
-# Part 2: Mathematics
+# 第 2 部分：数学
 
-## Chapter 8: Homotopy theory
+## 第 8 章：同伦论
 
 The only non-trivial result worth mentioning from Chapter 8 is the
 fundamental group of the circle.
 
-### 8.1: π₁(S¹)
+### 8.1：π1(S1)
 
 <!--
 ```agda
@@ -810,7 +810,7 @@ _ = Wedge.elim
 - Lemma 8.6.1: `relative-n-type-const-plus`{.Agda}
 - Lemma 8.6.2: `Wedge.elim`{.Agda}
 
-## Chapter 9: Category theory
+## 第 9 章：范畴论
 
 Since a vast majority of the 1Lab's mathematics consists of pure
 category theory, or mathematics done with a very categorical
@@ -938,7 +938,7 @@ _ = Category-identity-system
 - Lemma 9.4.15: `Precategory-identity-system`{.Agda}
 - Theorem 9.4.16: `Category-identity-system`{.Agda}
 
-### 9.5: The Yoneda lemma
+### 9.5：Yoneda 引理
 
 <!--
 ```agda
@@ -1014,7 +1014,7 @@ _ = complete
 - Lemma 9.9.4: `weak-equiv→pre-equiv`{.Agda}, `weak-equiv→pre-iso`{.Agda}
 - Theorem 9.9.5: `Rezk-completion`{.Agda}, `Rezk-completion-is-category`{.Agda}, `complete`{.Agda}, `complete-is-ff`{.Agda}, `complete-is-eso`{.Agda}.
 
-### Exercises
+### 练习
 
 <!--
 ```agda
@@ -1033,9 +1033,9 @@ _ = Slice
 - Exercise 9.3: `is-equivalence.F⁻¹⊣F`{.Agda}
 - Exercise 9.4: `Prebicategory`{.Agda}
 
-## Chapter 10: Set theory
+## 第 10 章：集合论
 
-### 10.1: The category of sets
+### 10.1：集合范畴
 
 <!--
 ```agda

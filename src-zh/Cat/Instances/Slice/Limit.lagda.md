@@ -29,7 +29,7 @@ limit in the slice.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  & {(b,g)} && {(d,i)} \\
+  & {(b,g)} && {(d,i)} \
   {(a,f)} && {(c,h)}
   \arrow["x"', from=1-2, to=2-1]
   \arrow["y", from=1-2, to=2-3]
@@ -45,8 +45,8 @@ exists. But! Take a look at what that diagram _looks like_:
 
 ```{.quiver}
 \[\begin{tikzcd}
-  a && b \\
-  \\
+  a && b \
+  \
   & c
   \arrow["f"', from=1-1, to=3-2]
   \arrow["g", from=1-3, to=3-2]

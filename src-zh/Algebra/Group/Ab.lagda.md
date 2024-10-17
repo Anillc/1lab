@@ -14,7 +14,7 @@ import Cat.Reasoning
 module Algebra.Group.Ab where
 ```
 
-# Abelian groups {defines=abelian-group}
+# 交换群 {defines=abelian-group}
 
 A very important class of \[\[groups]] (which includes most familiar
 examples of groups: the integers, all finite cyclic groups, etc) are

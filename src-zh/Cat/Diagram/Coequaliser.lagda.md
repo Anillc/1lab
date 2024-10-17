@@ -29,7 +29,7 @@ and $g$.
 
 ```{.quiver}
 \[\begin{tikzcd}
-  A & B & E \\
+  A & B & E \
   && F
   \arrow["f", shift left=2, from=1-1, to=1-2]
   \arrow["g"', shift right=2, from=1-1, to=1-2]
